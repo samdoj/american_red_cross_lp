@@ -1,0 +1,26 @@
+/************************************\
+			  BUTTONS
+\************************************/
+
+.btn-sml {
+	background-color: $yellow;
+	width: 11.5rem;
+	text-align: center;
+	transition: all 0.2s ease;
+	color: $white;
+	a {
+		display: block;
+		color: inherit;
+		font-weight: $font-black;
+		font-size: 1.1875rem;
+		width: 100%;
+		@include padding(0.25rem 0.5rem 0.175rem 0.5rem);
+		&:hover {
+			@include breakpoint($laptop) {
+				background-color: $white;
+				color: $yellow;
+				transition: all 0.2s;
+			}
+		}
+	}
+}

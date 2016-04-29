@@ -1,0 +1,21 @@
+{
+  "name": "american_red_cross_lp",
+  "version": "0.1.0",
+  "authors": [
+    "Josh Lester <joshl@bayardad.com>"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bourbon": "~4.2.6",
+    "breakpoint-sass": "~2.6.1",
+    "susy": "~2.2.9"
+  }
+}

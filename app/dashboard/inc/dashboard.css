@@ -1,0 +1,65 @@
+label, input {
+	display: block;
+}
+.table-responsive {
+	border: 1px solid #eee;
+}
+.badge {
+	float: right;
+}
+
+header {
+	height: 50px;
+	background-color: #333;
+	color: #fff;
+}
+header p {
+	line-height: 50px;
+}
+.error-count-hdr {
+	background-color: #333;
+	color: #fff;
+}
+
+/* https://css-tricks.com/stripes-css/ */
+.nav-active {
+	background: repeating-linear-gradient(
+	  45deg,
+	  #fafafa,
+	  #fafafa 5px,
+	  #fff 5px,
+	  #fff 10px
+	);
+}
+
+
+/* File Upload for CSV Import Styling */
+.fileinput.input-group input[type=file] {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 100px;
+	height: 100px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	background-color: red;
+	cursor: pointer;
+}
+.fileinput.input-group .btn-file,
+.fileinput .input-group .btn-file {
+  border-radius: 4px 0 0 4px;
+}
+.fileinput.input-group .btn-file.btn-xs,
+.fileinput .input-group .btn-file.btn-xs,
+.fileinput.input-group .btn-file.btn-sm,
+.fileinput .input-group .btn-file.btn-sm {
+  border-radius: 3px 0 0 3px;
+}
+.fileinput.input-group .btn-file.btn-lg,
+.fileinput .input-group .btn-file.btn-lg {
+  border-radius: 6px 0 0 6px;
+}
+.fileinput .form-control {
+	cursor: pointer;
+	overflow: hidden;
+}

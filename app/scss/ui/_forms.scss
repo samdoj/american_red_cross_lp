@@ -1,0 +1,252 @@
+.form-intro {
+	h5 {
+		font-size: 1.4rem;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 0.9375rem;
+		line-height: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+#form-1-container {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: $grey-1;
+	float: left;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	@include bleed-x(6% 6%);
+	box-shadow: 0rem 0rem 0.3125rem 0rem rgba(0,0,0,0.25);
+	@include breakpoint($laptop) {
+		border-radius: 0.3125rem;
+		@include padding(1.5rem 1.24rem);
+		margin: 0;
+		@include span(4.5 last);
+	}
+	@include breakpoint($desktop) {
+		@include span(4.75 last);
+	}
+	.terms {
+		text-align: center;
+		font-size: 0.8125rem;
+		margin-top: 0.5rem;
+		line-height: 1.25;
+	}
+	em {
+		font-weight: $font-light;
+	}
+}
+
+input {
+	font-size: $input;
+	color: $grey-3;
+}
+.form-control {
+	width: 100%;
+	@include padding(0rem 0.5rem);
+	background-color: $white;
+	color: $grey-5 !important;
+	font-size: $input;
+	border-radius: 0px;
+	margin-bottom: 0.5rem;
+}
+.btn-group, .bootstrap-select {
+	width: 100% !important;
+	margin-bottom: 1rem;
+}
+.btn-info {
+	background-color: $white;
+	color: $grey-5;
+	border: 1px solid #bac4c9;
+	&:hover {
+		background-color: $blue-1;
+		border: 1px solid #bac4c9;
+		color: $white;
+	}
+	&:focus {
+		background-color: $blue-1;
+		border-color: $white;
+		color: $white;
+	}
+}
+.btn {
+	border-radius: 0px;
+	font-size: 1rem;
+}
+.bootstrap-select .dropdown-toggle:focus {
+	outline: none !important;
+}
+
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open > .dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open > .dropdown-toggle.btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open > .dropdown-toggle.btn-info,
+.open > .dropdown-toggle.btn-info.focus {
+	color: $white;
+	background-color: $blue-1;
+	border-color: $white;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a {
+	transition: none;
+	&:hover {
+		background-color: $blue-1;
+		color: $white;
+		transition: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.dropdown-menu.open {
+	padding: 0;
+}
+
+.caret {
+    border-top: 6px dashed;
+    border-top: 6px solid \9;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+.radio-btns {
+	width: 100%;
+	float: left;
+	@include padding(0 0.25rem);
+	margin-bottom: 0.5rem;
+	label {
+		float: left;
+		width: auto;
+		display: inline-block;
+		margin-right: 1.5rem;
+		font-weight: $font-light;
+	}
+	input {
+		@include padding(0.05rem);
+		display: inline-block;
+		width: auto;
+		float: left;
+		margin-right: 0.25rem;
+		margin-top: -0.015rem;
+	}
+}
+
+.fileinput.input-group input[type=file] {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 100px;
+	height: 100px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	background-color: red;
+	cursor: pointer;
+}
+.fileinput.input-group .btn-file,
+.fileinput .input-group .btn-file {
+  border-radius: 0;
+  border-color: $grey-2;
+  background-color: $grey-2;
+  color: #fff;
+  font-weight: $font-bold;
+  transition: all 0.1s;
+}
+.fileinput.input-group .btn-file:hover {
+	border-color: #6084ac;
+	background-color: $blue-1;
+	color: #fff;
+	transition: all 0.1s;
+}
+.fileinput.input-group .btn-file.btn-xs,
+.fileinput .input-group .btn-file.btn-xs,
+.fileinput.input-group .btn-file.btn-sm,
+.fileinput .input-group .btn-file.btn-sm {
+  border-radius: 0;
+}
+.fileinput.input-group .btn-file.btn-lg,
+.fileinput .input-group .btn-file.btn-lg {
+  border-radius: 0;
+}
+.fileinput .form-control {
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.submit-btn {
+	background-color: $blue-1;
+	border: none;
+	width: 100%;
+	font-family: inherit;
+	color: $white;
+	font-size: 1.375rem;
+	font-weight: $font-black;
+	@include padding(0.5rem 1rem 0.3rem 1rem);
+	letter-spacing: 0.05rem;
+	transition: all 0.2s;
+	&:hover {
+		@include breakpoint($laptop) {
+			background-color: $yellow;
+			transition: all 0.2s;
+		}
+	}
+}
+
+label {
+	color: $grey-5;
+	font-size: $label;
+	font-weight: $font-bold;
+	width: 100%;
+}
+
+// FORM CLASSES
+
+#bottom-form {
+	display: none;
+	@include breakpoint($laptop) {
+		display: block;
+		#form-intro-2 {
+			h2 {
+				color: $yellow;
+			}
+			.line {
+				margin-top: 0.25rem;
+			}
+			h3 {
+				color: $blue-1;
+				text-align: center;
+				font-size: 1.65rem;
+				margin-top: 0.5rem;
+				margin-bottom: 0.2rem;
+			}
+		}
+		.form-col {
+			@include span(6);
+			&:first-child {
+				input {
+					&:first-child,
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4) {
+						margin-bottom: 0.8rem;
+					}
+				}
+			}
+			&:last-child {
+				@include last;
+			}
+		}
+		p {
+			text-align: center;
+			margin-top: 0.5rem;
+		}
+	}
+}

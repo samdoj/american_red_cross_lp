@@ -1,0 +1,133 @@
+/************************************\
+			   LINKS
+\************************************/
+
+a, a:visited {
+	text-decoration: none;
+	color: $link_color;
+	@include transition-all(.3s);
+}
+a:hover, a:active, a:focus {
+	color: $link_hover;
+	@include transition-all(.3s);
+}
+
+
+/************************************\
+		TYPOGRAPHY AND LINKS
+\************************************/
+
+h1,h2,h3,h4,h5,h6,p,a {
+	@include padding(0);
+	@include margin(0);
+}
+
+h4,h5,h6 {
+	color: $red;
+}
+
+h1 {
+	font-size: $h1;
+	line-height: 1.1;
+	font-weight: $font-semi-bold;
+	// letter-spacing: 0.05em;
+	color: $white;
+	text-align: center;
+	text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.4);
+	@include breakpoint($mobile-medium) {
+		font-size: $h1-mobile-md;
+	}
+	@include breakpoint($mobile-large) {
+		font-size: 3.6875rem;
+	}
+}
+
+h2 {
+	font-size: $h2;
+	color: $blue-1;
+	font-weight: $font-light;
+	line-height: 1.1;
+	text-align: center;
+	margin-bottom: 0.25rem;
+	@include breakpoint($mobile-medium) {
+		font-size: $h2-mobile-md;
+	}
+}
+
+h3 {
+	font-size: $h3;
+	font-weight: $font-bold;
+	color: $grey-4;
+	line-height: 1.25;
+    margin-top: 1.5rem;
+    margin-bottom: 1.75rem;
+	@include breakpoint($mobile-medium) {
+		font-size: $h3-mobile-md;
+	}
+    @include breakpoint($desktop) {
+    	margin-top: 1.5rem;
+    	font-size: 1.64rem;
+    }
+}
+
+h4 {
+	font-size: $h4;
+	color: $blue-1;
+	font-weight: $font-bold;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+	@include breakpoint($mobile-medium) {
+		font-size: $h4-mobile-md;
+	}
+}
+
+h5 {
+	font-size: $h5;
+	font-weight: $font-black;
+	color: $blue-1;
+	@include margin(1.25rem 0);
+	line-height: 1.2;
+	@include breakpoint($mobile-medium) {
+		font-size: $h5-mobile-md;
+	}
+}
+
+h6 {
+	font-size: $h6;
+	font-weight: $font-bold;
+	color: $blue-1;
+	margin-bottom: 0.15rem;
+	@include breakpoint($mobile-medium) {
+		font-size: $h6-mobile-md;
+	}
+}
+
+p {
+	font-size: $p;
+	font-weight: $font-light;
+	color: $grey-4;
+	line-height: 1.65;
+	margin-bottom: 0.5rem;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	@include breakpoint($mobile-medium) {
+		font-size: $p-mobile-md;
+	}
+}
+
+a {
+	font-family: $font-family-1;
+}
+
+strong {
+	font-weight: $font-black;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.underline {
+	text-decoration: underline;
+}

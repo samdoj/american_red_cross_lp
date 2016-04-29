@@ -1,0 +1,110 @@
+// VARIABLES
+
+// LAYOUT
+
+$small-container	: 90%;
+$medium-container	: 94%;
+$xl-container		: 1200px;
+
+
+// GENERAL BREAKPOINTS
+
+$mobile-small	: 375px;
+$mobile-medium 	: 480px;
+$mobile-large	: 640px;
+$tablet			: 768px;
+$laptop			: 1024px;
+$desktop		: 1300px;
+$desktop-xl		: 2560px;
+
+
+// PADDING
+
+$section-padding-mobile: 2.5rem;
+$section-padding-desktop: 3.25rem;
+
+
+// FONT FAMILY
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,300);
+$font-family-1: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+// FONT WEIGHT
+
+$font-light		: 300;
+$font-semi-bold : 600;
+$font-bold		: 700;
+$font-black		: 900;
+
+
+// FONT STYLE
+
+$font-italic: italic;
+
+
+// FONT SIZE
+
+$font-size-default	: 100%;
+$line-height		: 1.625;
+$font-size-desktop	: 110%;
+$line-height-mobile	: 1.625;
+
+
+// TYPOGRAPHY
+
+$h1	: 2.55rem;
+$h2	: 2.25rem;
+$h3	: 1.4rem;
+$h4	: 1.35rem;
+$h5	: 1.275rem;
+$h6	: 1.175rem;
+$p	: 1rem;
+
+// TYPOGRAPHY MOBILE MEDIUM
+$h1-mobile-md	: 2.7087rem;
+$h2-mobile-md	: 2.8125rem;
+$h3-mobile-md	: 1.4rem;
+$h4-mobile-md	: 1.75rem;
+$h5-mobile-md	: 2rem;
+$h6-mobile-md	: 1.4375rem;
+$p-mobile-md	: 1.075rem;
+
+
+// FORM TYPOGRAPHY
+$form-title 		: $h3;
+$form-instruction	: 1rem;
+$input				: 0.875rem;
+$label				: 0.89rem;
+$upload				: 0.875rem;
+$submit				: 1.375rem;
+
+
+// COLORS
+$white		: #FFFFFF;
+$blue-1 	: #026cb6;
+$blue-2		: #015289;
+
+$black-1	: #48494E;
+$black-3	: #282E33;
+
+$grey-1		: #e8e5e2;
+$grey-2		: #cecac5;
+$grey-3 	: #6b6a65;
+$grey-4 	: #565458;
+$grey-5 	: #48494e;
+$green-1	: #AAD75D;
+$green-3	: #56BAB7;
+$green-5	: #24646D;
+$yellow 	: #fdbb30;
+$red 		: #B82542;
+
+
+// ALPHA COLORS
+$alpha-black-3	: rgba(0,0,0,0.6);
+$alpha-black-4	: rgba(0,0,0,0.8);
+$alpha-white-2	: rgba(255,255,255,0.35);
+
+
+// LINKS
+$link_color	: $blue-1;
+$link_hover	: $yellow;
