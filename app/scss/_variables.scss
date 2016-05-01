@@ -2,32 +2,40 @@
 
 // LAYOUT
 
-$small-container	: 90%;
-$medium-container	: 94%;
-$xl-container		: 1200px;
+$sml-container	: 90%;
+$md-container	: 736px;
+$lg-container 	: 960px;
+$xl-container	: 1140px;
 
 
 // GENERAL BREAKPOINTS
 
-$mobile-small	: 375px;
-$mobile-medium 	: 480px;
-$mobile-large	: 640px;
+$mobile-md 		: 480px;
+$mobile-lg		: 640px;
 $tablet			: 768px;
 $laptop			: 1024px;
 $desktop		: 1300px;
-$desktop-xl		: 2560px;
+$desktop-xl		: 1920px;
 
+// LINE HEIGHT
 
-// PADDING
+$line-height-sml	: 1.25;
+$line-height-md		: 1.5;
+$line-height-lg		: 1.75;
 
-$section-padding-mobile: 2.5rem;
-$section-padding-desktop: 3.25rem;
+// TEXT SPACING
+$text-spacing-sml 	: 1rem;
+$text-spacing-md	: 1.5rem;
+$text-spacing-lg	: 3rem;
 
+// BOX SPACING
+$-box-spacing-form	: 1rem;
+$-box-spacing-sml 	: 1.5rem;
+$-box-spacing-md	: 3rem;
+$-box-spacing-lg	: 4.5rem;
 
 // FONT FAMILY
-@import url(https://fonts.googleapis.com/css?family=Lato:400,900,300);
-$font-family-1: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+$font-family-1: Arial, sans-serif;
 
 // FONT WEIGHT
 
@@ -35,7 +43,6 @@ $font-light		: 300;
 $font-semi-bold : 600;
 $font-bold		: 700;
 $font-black		: 900;
-
 
 // FONT STYLE
 
@@ -106,5 +113,5 @@ $alpha-white-2	: rgba(255,255,255,0.35);
 
 
 // LINKS
-$link_color	: $blue-1;
-$link_hover	: $yellow;
+$link_color	: $red;
+$link_hover	: $grey-2;

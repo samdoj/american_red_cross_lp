@@ -1,0 +1,135 @@
+/************************************\
+		   	   LAYOUT
+\************************************/
+
+.row {
+	@include container($sml-container);
+	margin-bottom: $-box-spacing-md;
+	@include position(relative);
+	clear: both;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	@include breakpoint($tablet) {
+		@include container($md-container);
+	}
+	@include breakpoint($laptop) {
+		@include container($lg-container);
+		margin-bottom: $-box-spacing-sml;
+	}
+	@include breakpoint($desktop) {
+		@include container($xl-container);
+	}
+}
+
+.col-1 {
+	@include breakpoint($laptop) {
+		@include span(1);
+	}
+}
+
+.col-2 {
+	@include breakpoint($laptop) {
+		@include span(2);
+	}
+}
+
+.col-3 {
+	@include breakpoint($laptop) {
+		@include span(3);
+	}
+}
+
+.col-4 {
+	@include breakpoint($laptop) {
+		@include span(4);
+	}
+}
+
+.col-5 {
+	@include breakpoint($laptop) {
+		@include span(5);
+	}
+}
+
+.col-6 {
+	@include breakpoint($laptop) {
+		@include span(6);
+	}
+}
+
+.col-7 {
+	@include breakpoint($laptop) {
+		@include span(7);
+	}
+}
+
+.col-8 {
+	@include breakpoint($laptop) {
+		@include span(8);
+	}
+}
+
+.col-9 {
+	@include breakpoint($laptop) {
+		@include span(9);
+	}
+}
+
+.col-10 {
+	@include breakpoint($laptop) {
+		@include span(10);
+	}
+}
+
+.col-11 {
+	@include breakpoint($laptop) {
+		@include span(11);
+	}
+}
+
+.col-12 {
+	@include breakpoint($laptop) {
+		@include span(12);
+	}
+}
+
+[class^="col-"] {
+	margin-bottom: $-box-spacing-sml;
+	@include breakpoint($laptop) {
+		margin-bottom: 0;
+	}
+	p {
+		width: 100%;
+	}
+	&:last-child {
+		margin-bottom: 0;
+		@include breakpoint($laptop) {
+			@include last;
+		}
+	}
+}
+
+.push-1 {
+	@include breakpoint($laptop) {
+		@include push(1);
+	}
+}
+
+.push-2 {
+	@include breakpoint($laptop) {
+		@include push(2);
+	}
+}
+
+.push-3 {
+	@include breakpoint($laptop) {
+		@include push(3);
+	}
+}
+
+.push-4 {
+	@include breakpoint($laptop) {
+		@include push(4);
+	}
+}

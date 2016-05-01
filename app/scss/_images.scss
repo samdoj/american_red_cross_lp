@@ -11,3 +11,8 @@ img {
 embed, iframe, object {
 	max-width: 100%;
 }
+
+figure {
+	@include padding(0);
+	@include margin(0);
+}

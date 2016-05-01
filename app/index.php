@@ -234,7 +234,7 @@ ga('send', 'pageview');
 </head>
 <body>
     <header id="header" class="header closed-nav">
-        <div class="wrap">
+        <div class="row">
             <img class="logo" id="header-logo" src="media/img/apria_logo.svg" alt="Apria Healthcare">
             <div id="nav-btn">
                 <div class="nav-btn-line"></div>
@@ -244,28 +244,19 @@ ga('send', 'pageview');
             <nav id="main-nav">
                 <ul class="nav-wrap">
                     <li class="nav-item">
-                        <a class="nav-link" href="#top-form-wrap"><strong>Apply now</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hiring">Job description</a>
+                        <a class="nav-link" href="#hiring">We're Hiring</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#benefits">Benefits</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#day">Video</a>
+                        <a class="nav-link" href="#day">Culture</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#mission">Stories</a>
+                        <a class="nav-link" href="#mission">Who we are</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Who we are</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#awards">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://www.lifeatapria.com" target="_blank"><strong>lifeatapria</strong></a>
+                        <a class="nav-link" href="#form-1-container"><strong>Join us</strong></a>
                     </li>
                 </ul><!-- END .nav-wrap -->
             </nav><!-- END .main-nav -->
@@ -276,7 +267,7 @@ ga('send', 'pageview');
     =                 HERO HOME                  =
     ===========================================-->
     <section id="hero-home">
-        <div class="wrap">
+        <div class="row">
             <div id="hero-content" class="hero">
                 <h1>Delivering life.</h1>
             </div><!-- END .hero-content -->
@@ -285,179 +276,196 @@ ga('send', 'pageview');
     <!--=========  End of HERO HOME  ==========-->
 
     <!--==========================================
-    =                   HIRING                   =
+    =                   WELCOME                  =
     ===========================================-->
-    <section id="hiring">
-        <div class="wrap">
-            <div class="content-2-3">
-                <div class="intro-txt">
-                    <h2>Apria is looking for Driver&nbsp;Technicians</h2>
-                    <p>As an Apria Technician, you’ll deliver the necessary products and services on which patients rely such as Oxygen, Nebulizers, Negative Pressure Wound Therapy equipment, Non-Invasive Ventilators and much more.</p>
-                    <p>Apria has a fleet of 2,000 vehicles and 1,400 drivers; and each day, there are 1,350 routes to serve our patients nationwide.  No two days are the same, but the average is about 16 stops per day.</p>
-                </div><!-- END .intro-txt -->
-                <h3>We offer Full time, Part-time and Per Diem Opportunities</h3>
-                <div class="jobs">
-                    <div class="content-1-2">
-                        <h4>Positions available</h4>
-                        <ul class="position-list">
-                            <li class="position"><p><strong>Delivery Technician</strong> (DT)</p>
-                                <ul class="requirements-list">
-                                    <li class="requirement">Class C Driver’s License required only</li>
-                                    <li class="requirement">No prior driver experience required</li>
-                                </ul>
-                            </li>
-                            <li class="position"><p><strong>Patient Services Technician</strong> (PST)</p>
-                                <ul class="requirements-list">
-                                    <li class="requirement">Commercial Driver’s License</li>
-                                    <li class="requirement">HazMat Endorsement</li>
-                                    <li class="requirement">1 year experience as a CDL driver</li>
-                                </ul>
-                            </li>
-                            <li class="position"><p><strong>Clinical Service Technician</strong> (CST)</p>
-                                <ul class="requirements-list">
-                                    <li class="requirement">Commercial Driver’s License</li>
-                                    <li class="requirement">HazMat Endorsement</li>
-                                    <li class="requirement">3 years experience as a CDL driver</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content-1-2"></div>
-                </div><!-- END .jobs -->
-            </div><!-- END .content-2-3 -->
+    <section id="welcome">
+        <div class="row">
+            <div class="col-6">
+                <p>If you’re looking to gain new skills, help save lives and contribute to the mission of one of the nation’s most respected humanitarian organizations, consider a career in biomedical services at the American Red Cross. We have openings nationwide for phlebotomists, nurses, truck drivers, medical technologists and sales professionals. As a Red Cross employee, you’ll have opportunities to grow your career and be recognized and rewarded for your efforts. Most importantly, you’ll work alongside dedicated individuals like yourself who live the values of our organization every day. Join us for a career that will motivate you to be your very best.</p>
+                <p>Our mission to prevent and alleviate human suffering in the face of emergencies inspires us daily. As the provider of nearly half of the nation’s blood supply, we collect, test and distribute over 5 million life-saving units of blood a year. Fulfilling our mission requires focused, energized employees, so we offer outstanding benefits that really help you, as you help others.</p>
+            </div><!-- END .content-narrow-center -->
+            <div id="form-1-container" class="col-6">
+                <div class="form-intro" id="apply1">
+                    <h5>Join our team</h5>
+                </div><!-- END #apply-1 -->
+                <?php include('form.inc'); ?>
+            </div><!-- END #form-1-container -->
         </div><!-- END .wrap -->
-    </section><!-- END #hiring -->
-    <!--===========  End of HIRING  ===========-->
-
+    </section><!-- END #welcome -->
+    <!--===========  End of WELCOME  ==========-->
     <!--==========================================
-    =                   AWARDS                   =
-    ===========================================-->
-    <section id="awards">
-        <div class="wrap">
-            <h2>Did you <strong>know?</strong></h2>
-            <div class="line"></div>
-            <div class="content content-1-2">
-                <h5>Apria ranks in the top 100 in the nation for commercial truck fleet size.</h5>
-                <img src="media/img/icon_trophy.svg" alt="Apria ranks in the top 100 in the nation for commercial truck fleet size.">
-            </div><!-- END .content-1-2 -->
-            <div class="content content-1-2">
-                <img src="media/img/img_top_500.jpg" alt="America's Top 500 Private Fleets">
-            </div><!-- END .content-1-2 -->
-        </div><!-- END .wrap -->
-    </section><!-- END #awards -->
-    <!--=========== End of AWARDS =============-->
-
-    <!--==========================================
-    =                   FORM 1                   =
+    =               WHO WE'RE HIRING             =
     ===========================================-->
     <section class="container">
-      <h2>Accordion Example</h2>
-      <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-            </h4>
-          </div>
-          <div id="collapse1" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>Who We're Hiring</h2>
+                <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Phlebotomists</a>
+                            </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <div class="panel-body ">
+                                    <figure>
+                                        <img src="http://placehold.it/1200x420" alt="">
+                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
+                                    </figure>
+                                <div>
+                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
+                                </div>
+                                <div class="requirements">
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>High school diploma or equivalent</li>
+                                        <li>A current valid driver's license and good driving record</li>
+                                        <li>Some prior medical experience preferred but not required</li>
+                                    </ul>
+                                    <div class="btn-sml">
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Phlebotomists</a>
+                            </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body ">
+                                    <figure>
+                                        <img src="http://placehold.it/1200x420" alt="">
+                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
+                                    </figure>
+                                <div>
+                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
+                                </div>
+                                <div class="requirements">
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>High school diploma or equivalent</li>
+                                        <li>A current valid driver's license and good driving record</li>
+                                        <li>Some prior medical experience preferred but not required</li>
+                                    </ul>
+                                    <div class="btn-sml">
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Phlebotomists</a>
+                            </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body ">
+                                    <figure>
+                                        <img src="http://placehold.it/1200x420" alt="">
+                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
+                                    </figure>
+                                <div>
+                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
+                                </div>
+                                <div class="requirements">
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>High school diploma or equivalent</li>
+                                        <li>A current valid driver's license and good driving record</li>
+                                        <li>Some prior medical experience preferred but not required</li>
+                                    </ul>
+                                    <div class="btn-sml">
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Phlebotomists</a>
+                            </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body ">
+                                    <figure>
+                                        <img src="http://placehold.it/1200x420" alt="">
+                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
+                                    </figure>
+                                <div>
+                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
+                                </div>
+                                <div class="requirements">
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>High school diploma or equivalent</li>
+                                        <li>A current valid driver's license and good driving record</li>
+                                        <li>Some prior medical experience preferred but not required</li>
+                                    </ul>
+                                    <div class="btn-sml">
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Phlebotomists</a>
+                            </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body ">
+                                    <figure>
+                                        <img src="http://placehold.it/1200x420" alt="">
+                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
+                                    </figure>
+                                <div>
+                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
+                                </div>
+                                <div class="requirements">
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>High school diploma or equivalent</li>
+                                        <li>A current valid driver's license and good driving record</li>
+                                        <li>Some prior medical experience preferred but not required</li>
+                                    </ul>
+                                    <div class="btn-sml">
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
-            </h4>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-            </h4>
-          </div>
-          <div id="collapse3" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Collapsible Group 4</a>
-            </h4>
-          </div>
-          <div id="collapse4" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Collapsible Group 5</a>
-            </h4>
-          </div>
-          <div id="collapse5" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-      </div> 
     </section>
-    <!--========== End of POSITIONS ===========-->
-
-    <!--==========================================
-    =                   FORM 1                   =
-    ===========================================-->
-    <div class="wrap" id="top-form-wrap">
-        <div id="form-1-container" class="content-1-3">
-            <div class="form-intro" id="apply1">
-                <h5>Join our team</h5>
-                <p>Complete the short form below and someone from our recruiting team will get in touch with&nbsp;you.</p>
-            </div><!-- END #apply-1 -->
-            <?php include('form.inc'); ?>
-        </div><!-- END #form-1-container -->
-    </div><!-- END .wrap -->
-    <!--=========== End of FORM 1 =============-->
+    <!--======= End of WHO WE'RE HIRING =======-->
 
     <!--==========================================
     =                  BENEFITS                  =
     ===========================================-->
     <section id="benefits">
-        <div class="wrap">
+        <div class="row">
             <h2><strong>Benefits</strong> with your well-being in mind</h2>
             <div class="line"></div>
             <div class="content-full">
@@ -494,6 +502,42 @@ ga('send', 'pageview');
                         <img src="media/img/icon8.svg" alt="icon">
                         <p>375+ branch network</p>
                     </li>
+                    <li class="icon">
+                        <img src="media/img/icon1.svg" alt="icon">
+                        <p>Bonus potential</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon2.svg" alt="icon">
+                        <p>Training/Cross training</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon3.svg" alt="icon">
+                        <p>Promote from within</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon4.svg" alt="icon">
+                        <p>Career Advancement</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon5.svg" alt="icon">
+                        <p>GPS provided</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon6.svg" alt="icon">
+                        <p>Shoe allowance</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon7.svg" alt="icon">
+                        <p>Paid uniforms</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon8.svg" alt="icon">
+                        <p>375+ branch network</p>
+                    </li>
+                    <li class="icon">
+                        <img src="media/img/icon8.svg" alt="icon">
+                        <p>375+ branch network</p>
+                    </li>
                 </ul><!-- END #icon-wrap -->
             </div><!-- END .content -->
         </div><!-- END .wrap -->
@@ -504,7 +548,7 @@ ga('send', 'pageview');
     =                DAY IN THE LIFE             =
     ===========================================-->
     <section id="day">
-        <div class="wrap">
+        <div class="row">
             <div class="content-narrow-center">
                 <h2><strong>A day in the life</strong></h2>
                 <p>It begins the night before with the driver leaving the vehicle in road-ready condition, gassed and with the right paperwork.  Each day starts the same: clock in, login in with the Nextel smart phone, check with the Logistics Center of Excellence (LCE) for route planning, load and secure equipment for delivery, complete the necessary Driver Daily Log paperwork, then do the pre-trip vehicle inspection checklist before hitting the road.  The hours may vary each day with potential overtime, so if you’re flexible and looking for a rewarding position with the opportunity for growth (DT to PST to CST and beyond) then this is the opportunity for you!  If you’re a student looking for part-time work, an ex-truck driver looking to be home each night or if you’re seeking to give back in a meaningful way, then you’re on the right path!</p>
@@ -514,102 +558,9 @@ ga('send', 'pageview');
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/kYLaY2wI3lg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div><!-- END .video-container -->
             </div><!-- END .content -->
-            <div class="content-narrow-center">
-                <h6>Interested? <em>Join our team.</em></h6>
-                <div class="btn-sml">
-                    <a href="#form-1-container">Get Started - Apply</a>
-                </div>
-            </div><!-- END .content-narrow-center -->
         </div><!-- END .wrap -->
     </section><!-- END #day -->
-    <!--=======  End of DAY IN THE LIFE  =======-->
-
-    <!--==========================================
-    =               MISSION STATEMENT            =
-    ===========================================-->
-    <section id="mission">
-        <div class="wrap">
-            <div class="content-narrow-center">
-                <h2>Apria's mission statement in action&hellip;</h2>
-                <h4>Improving the quality of life for our patients at home.</h4>
-                <p>IA much appreciated and grateful patient called recently to the Kingston, NY branch to express his gratitude to <strong>Michael, Patient Service Technician.</strong> Michael went to the patient's home to deliver his oxygen supply, rang the door several times, and didn’t get a response.</p>
-                <p>He quickly called the patient by phone, who finally answered. Michael asked if he was OK, but the patient responded he was wobbly and disoriented due to his blood sugar being low. He indicated he had collapsed on his bed.</p>
-                <p>Michael called 911 and the ambulance rushed the patient to the hospital.</p>
-                <p>When the patient called the branch to share his thanks, he wanted everyone there to know that Michael really came through for him and is the reason he is breathing today.</p>
-            </div><!-- END .content-narrow-center -->
-            <div class="line"></div>
-            <div class="content-narrow-center">
-                <figure class="figure-lg">
-                    <img src="media/img/img_patient_service_technician.jpg" alt="">
-                    <figcaption><em>“It’s not just about <strong>serving people,</strong> it’s about <strong>being there</strong> for people.”</em></figcaption>
-                </figure>
-            </div><!-- END .content-narrow-center -->
-        </div><!-- END .wrap -->
-    </section><!-- END #mission -->
-    <!--======  End of MISSION STATEMENT  =====-->
-
-    <!--==========================================
-    =                MARKET POSITION             =
-    ===========================================-->
-    <section id="market-position">
-        <div class="wrap">
-            <figure class="figure-sml">
-                <div>
-                    <img src="media/img/icon_ranking.svg" alt="We're number 1!">
-                    <figcaption>Market position in Home Medical&nbsp;Equipment<br>
-                        <em>(Managed Care contracts)</em>
-                    </figcaption>
-                </div>
-            </figure>
-        </div><!-- END .wrap -->
-    </section><!-- END #market-position -->
-    <!--======  End of MARKET POSITION  =======-->
-
-    <!--==========================================
-    =                  WHO WE ARE                =
-    ===========================================-->
-    <section id="about">
-        <div class="wrap">
-            <div class="content-1-2">
-                <h2><strong>Who we are</strong></h2>
-                <p>As the nation’s largest, most successful provider of home healthcare products and services, Apria helps 1.8 million patients to live healthier and feel better – every day. We own and operate more than 375 locations throughout the United States. We do all this with the help of our team; we support each other’s talent to help each other learn and grow. As a member of our team, you’ll have all of this support, too.</p>
-                <h5>We’re at the forefront of respiratory care and other home healthcare product lines</h5>
-                <ul>
-                    <li><strong>#1 Market position</strong> in Sleep Apnea products and services</li>
-                    <li><strong>#1 Market position</strong> in Home Respiratory products/services (Managed Care contracts)</li>
-                    <li><strong>#1 Market position</strong> in Home Medical Equipment <em>(Managed Care contracts)</em></li>
-                    <li><strong>#2 Market position</strong> in Negative Pressure Wound Therapy products/services</li>
-                    <li><strong>Apria Healthcare has been continuously accredited</strong> for more than 25 years by The Joint Commission</li>
-                </ul>
-                <div class="contact" id="contact02">
-                    <h6>Interested? <em>Join our team.</em></h6>
-                    <div class="btn-sml">
-                        <a href="#form-1-container">Get Started - Apply</a>
-                    </div>
-                </div>
-            </div><!-- END .content-1-2 -->
-            <div class="content-1-2"></div>
-        </div><!-- END .wrap -->
-    </section><!-- END #about -->
-    <!--=========  End of WHO WE ARE  ==========-->
-
-    <!--==========================================
-    =                    FORM 2                  =
-    ===========================================-->
-    <section id="bottom-form">
-        <div class="wrap">
-            <div class="content-2-3-center">
-                <div class="form-intro" id="form-intro-2">
-                    <h2>Interested?</h2>
-                    <div class="line"></div>
-                    <h3>Join our team</h3>
-                    <p>Complete the short form below and someone from our recruiting team will get in touch with&nbsp;you.</p>
-                </div><!-- END #form-intro-2 -->
-                <?php include('form.inc'); ?>
-            </div><!-- END .content-2-3-center -->
-        </div><!-- END .wrap -->
-    </section><!-- END #mission -->
-    <!--======  End of MISSION STATEMENT  =====-->
+    <!--======  End of DAY IN THE LIFE  =======-->
 
     <!--==========================================
     =                   FOOTER                   =
@@ -634,12 +585,13 @@ ga('send', 'pageview');
         <!-- end appcast/appfeeder conversion code -->
     </div><!-- end tracking scripts -->
 
-    <script src="js/jquery.min.js"></script>
+    <!-- // <script src="js/jquery.min.js"></script> -->
     <!-- // <script src="js/bootstrap.min.js"></script> -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
+    <!-- // <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    <!-- // <script src="js/bootstrap-select.min.js"></script> -->
     <!-- // <script src="js/jasny-bootstrap.min.js"></script> -->
     
     <!-- // <script src="js/app.min.js"></script> -->
+    <script src="js/scrolltop_accordion.js"></script>
 </body>
 </html>

@@ -24,10 +24,6 @@
 		border-radius: 0.3125rem;
 		@include padding(1.5rem 1.24rem);
 		margin: 0;
-		@include span(4.5 last);
-	}
-	@include breakpoint($desktop) {
-		@include span(4.75 last);
 	}
 	.terms {
 		text-align: center;
@@ -205,48 +201,4 @@ label {
 	font-size: $label;
 	font-weight: $font-bold;
 	width: 100%;
-}
-
-// FORM CLASSES
-
-#bottom-form {
-	display: none;
-	@include breakpoint($laptop) {
-		display: block;
-		#form-intro-2 {
-			h2 {
-				color: $yellow;
-			}
-			.line {
-				margin-top: 0.25rem;
-			}
-			h3 {
-				color: $blue-1;
-				text-align: center;
-				font-size: 1.65rem;
-				margin-top: 0.5rem;
-				margin-bottom: 0.2rem;
-			}
-		}
-		.form-col {
-			@include span(6);
-			&:first-child {
-				input {
-					&:first-child,
-					&:nth-child(2),
-					&:nth-child(3),
-					&:nth-child(4) {
-						margin-bottom: 0.8rem;
-					}
-				}
-			}
-			&:last-child {
-				@include last;
-			}
-		}
-		p {
-			text-align: center;
-			margin-top: 0.5rem;
-		}
-	}
 }
