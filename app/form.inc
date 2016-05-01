@@ -54,7 +54,7 @@
             <input type="text" name="txtSalary" id="salary" class="form-control">
 
             <label>What type of employment are you seeking?<br>
-            <em>(Select all that apply)</em></label>
+            (Select all that apply)</label>
             <select class="selectpicker" multiple="multiple" name="typeEmployment[]">
                 <option value="Full-Time">Full-Time</option>
                 <option value="Part-Time">Part-Time</option>
@@ -115,8 +115,8 @@
         </div><!-- END #questions -->
     </div><!-- END #input-wrap -->
 
-    <input class="submit-btn" type="submit" name="btnSubmit" value="APPLY NOW">
+    <input class="submit-btn" type="submit" name="btnSubmit" value="CONTACT A RECRUITER NOW">
 
-    <p class="terms"><em>By submitting my information, I agree to the <a href="http://bayardclient.com/tos.html" target="_blank">Terms &amp; Conditions.</a></em></p>
+    <p class="terms">By submitting my information, I agree to the <a href="http://bayardclient.com/tos.html" target="_blank">Terms &amp; Conditions.</a></p>
 </form><!-- END #form -->
 <!--===========  End of FORM  ===========-->

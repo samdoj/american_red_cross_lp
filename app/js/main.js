@@ -1,6 +1,9 @@
 (function() {
-
-	console.log('main.js loaded');
+	// console.log('main.js loaded');
+	// $("a[href^=#]").on("click", function(e) {
+	//     e.preventDefault();
+	//     history.pushState({}, "", this.href);
+	// });
 
 	setUpMobile = function() {
 		var navButton 			= $('#nav-btn'),

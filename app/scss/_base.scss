@@ -169,87 +169,7 @@ footer {
 \************************************/
 
 #hiring {
-	padding-bottom: 0;
-	.intro-txt {
-		h2 {
-			text-align: left;
-		}
-	}
-	.content-2-3 {
-		@include breakpoint($laptop) {
-			@include span(7.75);
-		}
-		@include breakpoint($desktop) {
-			@include span(7.25);
-		}
-		h3 {
-			font-size: 1.65rem;
-		}
-	}
-	.jobs {
-		padding-top: 1.75rem;
-		padding-bottom: 1.75rem;
-		box-shadow: 0rem 0.125rem 0.15rem 0rem rgba(0,0,0,0.2);
-		@include bleed-x(6% 6%);
-		background-color: $grey-1;
-		@include breakpoint($mobile-lg) {
-			box-shadow: none;
-			display: flex;
-			flex-direction: row;
-			padding-right: 0;
-		}
-		@include breakpoint($laptop) {
-		@include bleed-x(9999px 9999px);
-		margin-right: 0;
-		padding-right: 0;
-		}
-		.content-1-2 {
-			@include breakpoint($mobile-lg) {
-				@include span(6);
-			}
-			&:last-child {
-				@include breakpoint($mobile-lg) {
-					@include bleed-y(1.75rem 1.75rem);
-					background-image: url('../media/img/img_van_580.jpg');
-					background-repeat: no-repeat;
-					background-position: center center;
-					background-size: cover;
-					margin-right: 0;
-				}
-				@include breakpoint($laptop) {
-					@include bleed-y(1.75rem 1.75rem);
-					@include last;
-				}
-			}
-		}
-		.position-list {
-			.position {
-				p {
-					margin-bottom: 0;
-				}
-				&:before {
-					content: '';
-					width: 0.925rem;
-					height: 0.925rem;
-					float: left;
-					margin-top: 0.27rem;
-					margin-right: 0.7rem;
-					background-image: url('../media/img/icon_yellow_bullet.svg');
-					background-repeat: no-repeat;
-				}
-				.requirements-list {
-					list-style-type: disc;
-					padding-left: 2.75rem;
-					.requirement {
-						margin-bottom: 0.25rem;
-						&:last-of-type {
-							margin-bottom: 0.85rem;
-						}
-					}
-				}
-			}
-		}
-	}
+
 }
 
 
@@ -269,12 +189,6 @@ footer {
 	}
 }
 
-
-#collapse1 {
-	.col-12 {
-		
-	}
-}
 
 /************************************\
 			  BENEFITS
@@ -362,13 +276,11 @@ footer {
 
 
 /************************************\
-		   DAY IN THE LIFE
+		   	  WHO WE ARE
 \************************************/
 
-#day {
-	background-color: $blue-1;
-	border-bottom: 5px solid $yellow;
-	.content-narrow-center {
+#about {
+	.col-6 {
 		h2 {
 			text-align: left;
 			color: $yellow;
@@ -417,8 +329,8 @@ footer {
 
 #footer {
 	background-color: $grey-2;
-	@include padding($-box-spacing-md 30);
-	text-align: end;
+	@include padding($-box-spacing-md 0);
+	// text-align: end;
 	a {
 		font-weight: $font-bold;
 		font-size: 44px;

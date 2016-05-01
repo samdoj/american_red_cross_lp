@@ -392,130 +392,6 @@ footer {
 
 /************************************			   HIRING
 \************************************/
-#hiring {
-  padding-bottom: 0;
-}
-
-#hiring .intro-txt h2 {
-  text-align: left;
-}
-
-@media (min-width: 1024px) {
-  #hiring .content-2-3 {
-    width: 63.36207%;
-    float: left;
-    margin-right: 3.44828%;
-  }
-}
-
-@media (min-width: 1300px) {
-  #hiring .content-2-3 {
-    width: 59.05172%;
-    float: left;
-    margin-right: 3.44828%;
-  }
-}
-
-#hiring .content-2-3 h3 {
-  font-size: 1.65rem;
-}
-
-#hiring .jobs {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-  box-shadow: 0rem 0.125rem 0.15rem 0rem rgba(0, 0, 0, 0.2);
-  margin-right: -6%;
-  margin-left: -6%;
-  padding-right: 6%;
-  padding-left: 6%;
-  background-color: #e8e5e2;
-}
-
-@media (min-width: 640px) {
-  #hiring .jobs {
-    box-shadow: none;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    padding-right: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  #hiring .jobs {
-    margin-right: -9999px;
-    margin-left: -9999px;
-    padding-right: 9999px;
-    padding-left: 9999px;
-    margin-right: 0;
-    padding-right: 0;
-  }
-}
-
-@media (min-width: 640px) {
-  #hiring .jobs .content-1-2 {
-    width: 48.27586%;
-    float: left;
-    margin-right: 3.44828%;
-  }
-}
-
-@media (min-width: 640px) {
-  #hiring .jobs .content-1-2:last-child {
-    margin-top: -1.75rem;
-    margin-bottom: -1.75rem;
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
-    background-image: url("../media/img/img_van_580.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  #hiring .jobs .content-1-2:last-child {
-    margin-top: -1.75rem;
-    margin-bottom: -1.75rem;
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-#hiring .jobs .position-list .position p {
-  margin-bottom: 0;
-}
-
-#hiring .jobs .position-list .position:before {
-  content: '';
-  width: 0.925rem;
-  height: 0.925rem;
-  float: left;
-  margin-top: 0.27rem;
-  margin-right: 0.7rem;
-  background-image: url("../media/img/icon_yellow_bullet.svg");
-  background-repeat: no-repeat;
-}
-
-#hiring .jobs .position-list .position .requirements-list {
-  list-style-type: disc;
-  padding-left: 2.75rem;
-}
-
-#hiring .jobs .position-list .position .requirements-list .requirement {
-  margin-bottom: 0.25rem;
-}
-
-#hiring .jobs .position-list .position .requirements-list .requirement:last-of-type {
-  margin-bottom: 0.85rem;
-}
-
 /************************************			   FORM 1
 \************************************/
 @media (min-width: 1024px) {
@@ -655,43 +531,38 @@ footer {
   }
 }
 
-/************************************		   DAY IN THE LIFE
+/************************************		   	  WHO WE ARE
 \************************************/
-#day {
-  background-color: #026cb6;
-  border-bottom: 5px solid #fdbb30;
-}
-
-#day .content-narrow-center h2 {
+#about .col-6 h2 {
   text-align: left;
   color: #fdbb30;
   margin-bottom: 0.25rem;
 }
 
 @media (min-width: 1024px) {
-  #day .content-narrow-center h2 {
+  #about .col-6 h2 {
     text-align: center;
   }
 }
 
-#day .content-narrow-center p {
+#about .col-6 p {
   color: #FFFFFF;
 }
 
-#day .content-narrow-center p:last-of-type {
+#about .col-6 p:last-of-type {
   margin-bottom: 0;
 }
 
-#day .content-narrow-center h6 {
+#about .col-6 h6 {
   color: #FFFFFF;
   font-weight: 900;
 }
 
-#day .content-narrow-center h6 em {
+#about .col-6 h6 em {
   font-weight: 300;
 }
 
-#day .video-container {
+#about .video-container {
   position: relative;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -701,7 +572,7 @@ footer {
   overflow: hidden;
 }
 
-#day .video-container iframe, #day .video-container .video-container object, #day .video-container .video-container embed {
+#about .video-container iframe, #about .video-container .video-container object, #about .video-container .video-container embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -718,8 +589,7 @@ footer {
 \************************************/
 #footer {
   background-color: #cecac5;
-  padding: 3rem 30;
-  text-align: end;
+  padding: 3rem 0;
 }
 
 #footer a {
@@ -742,27 +612,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.55rem;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  text-align: right;
+  line-height: 1.25;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #565458;
+}
+
+h2 strong {
+  color: red;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
 }
 
 h4 {
-  font-size: 1.35rem;
+  font-size: 1.9rem;
 }
 
 h5 {
-  font-size: 1.275rem;
+  font-size: 1.6rem;
 }
 
 h6 {
-  font-size: 1.175rem;
+  font-size: 1.3rem;
 }
 
 p {
@@ -777,7 +657,7 @@ p:last-of-type {
 
 a {
   font-size: 1rem;
-  color: #026cb6;
+  color: red;
   text-decoration: none;
 }
 
@@ -1501,21 +1381,21 @@ input {
 }
 
 .submit-btn {
-  background-color: #026cb6;
-  border: none;
+  background-color: red;
+  border: 1px solid transparent;
+  border-radius: 3px;
   width: 100%;
   font-family: inherit;
   color: #FFFFFF;
-  font-size: 1.375rem;
+  font-size: 1.15rem;
   font-weight: 900;
-  padding: 0.5rem 1rem 0.3rem;
-  letter-spacing: 0.05rem;
+  padding: 0.75rem 0.5rem 0.55rem;
   transition: all 0.2s;
 }
 
 @media (min-width: 1024px) {
   .submit-btn:hover {
-    background-color: #fdbb30;
+    background-color: #565458;
     transition: all 0.2s;
   }
 }
@@ -1525,6 +1405,73 @@ label {
   font-size: 0.89rem;
   font-weight: 700;
   width: 100%;
+}
+
+#accordion-wrap {
+  margin: auto;
+}
+
+/* --------- COLLAPSIBLE PANELS ----------*/
+.expandable-panel {
+  width: 100%;
+  position: relative;
+  min-height: 50px;
+  overflow: auto;
+  margin-bottom: 2px;
+}
+
+.expandable-panel-heading {
+  width: 100%;
+  cursor: pointer;
+  min-height: 50px;
+  clear: both;
+  background-color: red;
+  position: relative;
+}
+
+.expandable-panel-heading:hover {
+  color: #666;
+}
+
+.expandable-panel-heading h2 {
+  padding: 14px 10px 9px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  color: white;
+}
+
+.expandable-panel-content {
+  padding: 0 15px 0 15px;
+  margin-top: -999px;
+}
+
+.expandable-panel-content p {
+  padding: 4px 0 6px 0;
+}
+
+.expandable-panel-content p:first-child {
+  padding-top: 10px;
+}
+
+.expandable-panel-content p:last-child {
+  padding-bottom: 15px;
+}
+
+.icon-close-open {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url("../media/img/icon-close-open.png");
+  right: 15px;
+}
+
+.expandable-panel-content img {
+  float: right;
+  padding-left: 12px;
+}
+
+.header-active {
+  background-color: #565458;
 }
 
 /*# sourceMappingURL=../maps/style.css.map */

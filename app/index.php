@@ -195,12 +195,9 @@ if (isset($_POST['btnSubmit'])) {
 <meta name="theme-color" content="#026cb6">
 
 <!-- Styles -->
-<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-<!-- <link rel="stylesheet" href="css/bootstrap-select.css"> -->
-<!-- <link rel="stylesheet" href="css/jasny-bootstrap.min.css"> -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-select.css">
+<link rel="stylesheet" href="css/jasny-bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Typekit -->
@@ -220,22 +217,12 @@ if (isset($_POST['btnSubmit'])) {
 </script>
 
 <!-- begin google analytics code -->
-<!-- <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-69937701-2', 'auto');
-ga('send', 'pageview');
-
-</script> -->
 <!-- end google analytics code -->
 </head>
 <body>
     <header id="header" class="header closed-nav">
         <div class="row">
-            <img class="logo" id="header-logo" src="media/img/apria_logo.svg" alt="Apria Healthcare">
+            <img class="logo" id="header-logo" src="http://placehold.it/120x80" alt="Apria Healthcare">
             <div id="nav-btn">
                 <div class="nav-btn-line"></div>
                 <div class="nav-btn-line"></div>
@@ -260,7 +247,7 @@ ga('send', 'pageview');
                     </li>
                 </ul><!-- END .nav-wrap -->
             </nav><!-- END .main-nav -->
-        </div><!-- END .wrap -->
+        </div><!-- END .row -->
     </header><!-- END #header -->
 
     <!--==========================================
@@ -269,9 +256,9 @@ ga('send', 'pageview');
     <section id="hero-home">
         <div class="row">
             <div id="hero-content" class="hero">
-                <h1>Delivering life.</h1>
+                <h1>Countless opportunities.<br>One life-saving mission.<br>Join us.</h1>
             </div><!-- END .hero-content -->
-        </div><!-- END .wrap -->
+        </div><!-- END .row -->
     </section><!-- END #hero-home -->
     <!--=========  End of HERO HOME  ==========-->
 
@@ -290,169 +277,79 @@ ga('send', 'pageview');
                 </div><!-- END #apply-1 -->
                 <?php include('form.inc'); ?>
             </div><!-- END #form-1-container -->
-        </div><!-- END .wrap -->
+        </div><!-- END .row -->
     </section><!-- END #welcome -->
     <!--===========  End of WELCOME  ==========-->
     <!--==========================================
     =               WHO WE'RE HIRING             =
     ===========================================-->
-    <section class="container">
+    <section class="container" id="hiring">
         <div class="row">
             <div class="col-12">
                 <h2>Who We're Hiring</h2>
-                <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Phlebotomists</a>
-                            </h4>
+                <div id="accordion-wrap">
+                    <div class="expandable-panel" id="cp-1">
+                        <div class="expandable-panel-heading">
+                            <h2>Phlebotomists<span class="icon-close-open"></span></h2>
+                        </div>
+                        <div class="expandable-panel-content">
+                            <img src="http://placehold.it/1140x720" alt="">
+                            <h6>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</h6>
+                            <div class="description">
+                                <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
                             </div>
-                            <div id="collapse1" class="panel-collapse collapse">
-                                <div class="panel-body ">
-                                    <figure>
-                                        <img src="http://placehold.it/1200x420" alt="">
-                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
-                                    </figure>
-                                <div>
-                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
-                                </div>
-                                <div class="requirements">
-                                    <h6>Requirements</h6>
-                                    <ul>
-                                        <li>High school diploma or equivalent</li>
-                                        <li>A current valid driver's license and good driving record</li>
-                                        <li>Some prior medical experience preferred but not required</li>
-                                    </ul>
-                                    <div class="btn-sml">
-                                        <a href="#">Contact Us</a>
-                                    </div>
-                                </div>
+                            <div class="requirements">
+                                <h5>Requirements</h5>
+                                <ul>
+                                    <li>High school diploma or equivalent</li>
+                                    <li>A current valid driver's license and good driving record</li>
+                                    <li>Some prior medical experience preferred but not required</li>
+                                </ul>
+                                <div class="btn-sml"><a href="#">Contact Us</a></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Phlebotomists</a>
-                            </h4>
-                            </div>
-                            <div id="collapse2" class="panel-collapse collapse">
-                                <div class="panel-body ">
-                                    <figure>
-                                        <img src="http://placehold.it/1200x420" alt="">
-                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
-                                    </figure>
-                                <div>
-                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
-                                </div>
-                                <div class="requirements">
-                                    <h6>Requirements</h6>
-                                    <ul>
-                                        <li>High school diploma or equivalent</li>
-                                        <li>A current valid driver's license and good driving record</li>
-                                        <li>Some prior medical experience preferred but not required</li>
-                                    </ul>
-                                    <div class="btn-sml">
-                                        <a href="#">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
+
+                    <div class="expandable-panel" id="cp-2">
+                        <div class="expandable-panel-heading">
+                            <h2>Content heading 2<span class="icon-close-open"></span></h2>
+                        </div>
+                        <div class="expandable-panel-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est labore, deserunt repudiandae ullam quibusdam praesentium excepturi, quia nemo dolores dignissimos corporis quo, doloribus nihil natus iusto debitis reiciendis sapiente alias!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est labore, deserunt repudiandae ullam quibusdam praesentium excepturi, quia nemo dolores dignissimos corporis quo, doloribus nihil natus iusto debitis reiciendis sapiente alias!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est labore, deserunt repudiandae ullam quibusdam praesentium excepturi, quia nemo dolores dignissimos corporis quo, doloribus nihil natus iusto debitis reiciendis sapiente alias!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est labore, deserunt repudiandae ullam quibusdam praesentium excepturi, quia nemo dolores dignissimos corporis quo, doloribus nihil natus iusto debitis reiciendis sapiente alias!</p>
+
                         </div>
                     </div>
-                </div>
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Phlebotomists</a>
-                            </h4>
-                            </div>
-                            <div id="collapse3" class="panel-collapse collapse">
-                                <div class="panel-body ">
-                                    <figure>
-                                        <img src="http://placehold.it/1200x420" alt="">
-                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
-                                    </figure>
-                                <div>
-                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
-                                </div>
-                                <div class="requirements">
-                                    <h6>Requirements</h6>
-                                    <ul>
-                                        <li>High school diploma or equivalent</li>
-                                        <li>A current valid driver's license and good driving record</li>
-                                        <li>Some prior medical experience preferred but not required</li>
-                                    </ul>
-                                    <div class="btn-sml">
-                                        <a href="#">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
+
+                    <div class="expandable-panel" id="cp-3">
+                        <div class="expandable-panel-heading">
+                            <h2>Content heading 3<span class="icon-close-open"></span></h2>
+                        </div>
+                        <div class="expandable-panel-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est labore, deserunt repudiandae ullam quibusdam praesentium excepturi, quia nemo dolores dignissimos corporis quo, doloribus nihil natus iusto debitis reiciendis sapiente alias!</p>
                         </div>
                     </div>
-                </div>
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Phlebotomists</a>
-                            </h4>
-                            </div>
-                            <div id="collapse4" class="panel-collapse collapse">
-                                <div class="panel-body ">
-                                    <figure>
-                                        <img src="http://placehold.it/1200x420" alt="">
-                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
-                                    </figure>
-                                <div>
-                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
-                                </div>
-                                <div class="requirements">
-                                    <h6>Requirements</h6>
-                                    <ul>
-                                        <li>High school diploma or equivalent</li>
-                                        <li>A current valid driver's license and good driving record</li>
-                                        <li>Some prior medical experience preferred but not required</li>
-                                    </ul>
-                                    <div class="btn-sml">
-                                        <a href="#">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="expandable-panel" id="cp-4">
+                        <div class="expandable-panel-heading">
+                            <h2>Content heading 4<span class="icon-close-open"></span></h2>
+                        </div>
+                        <div class="expandable-panel-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est labore, deserunt repudiandae ullam quibusdam praesentium excepturi, quia nemo dolores dignissimos corporis quo, doloribus nihil natus iusto debitis reiciendis sapiente alias!</p>
                         </div>
                     </div>
-                </div>
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Phlebotomists</a>
-                            </h4>
-                            </div>
-                            <div id="collapse5" class="panel-collapse collapse">
-                                <div class="panel-body ">
-                                    <figure>
-                                        <img src="http://placehold.it/1200x420" alt="">
-                                        <figcaption>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</figcaption>
-                                    </figure>
-                                <div>
-                                    <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
-                                </div>
-                                <div class="requirements">
-                                    <h6>Requirements</h6>
-                                    <ul>
-                                        <li>High school diploma or equivalent</li>
-                                        <li>A current valid driver's license and good driving record</li>
-                                        <li>Some prior medical experience preferred but not required</li>
-                                    </ul>
-                                    <div class="btn-sml">
-                                        <a href="#">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="expandable-panel" id="cp-5">
+                        <div class="expandable-panel-heading">
+                            <h2>Content heading 5<span class="icon-close-open"></span></h2>
+                        </div>
+                        <div class="expandable-panel-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est labore, deserunt repudiandae ullam quibusdam praesentium excepturi, quia nemo dolores dignissimos corporis quo, doloribus nihil natus iusto debitis reiciendis sapiente alias!</p>
                         </div>
                     </div>
                 </div>
@@ -466,107 +363,130 @@ ga('send', 'pageview');
     ===========================================-->
     <section id="benefits">
         <div class="row">
-            <h2><strong>Benefits</strong> with your well-being in mind</h2>
-            <div class="line"></div>
+            <h2>Benefits with <strong>you</strong> in mind</h2>
+            <p>As a mission-based organization, we believe our team needs great support to do great work. Our comprehensive benefits help you in balancing home and work, retirement, getting healthy and more. With our resources and perks, you have amazing possibilities at the American Red Cross to advance and learn.</p>
             <div class="content-full">
                 <ul class="icon-wrap">
                     <li class="icon">
                         <img src="media/img/icon1.svg" alt="icon">
-                        <p>Bonus potential</p>
+                        <p>Medical</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon2.svg" alt="icon">
-                        <p>Training/Cross training</p>
+                        <p>Prescription Drugs</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon3.svg" alt="icon">
-                        <p>Promote from within</p>
+                        <p>Dental</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon4.svg" alt="icon">
-                        <p>Career Advancement</p>
+                        <p>Vision</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon5.svg" alt="icon">
-                        <p>GPS provided</p>
+                        <p>Health Savings Account</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon6.svg" alt="icon">
-                        <p>Shoe allowance</p>
+                        <p>Wellness Incentive Program</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon7.svg" alt="icon">
-                        <p>Paid uniforms</p>
+                        <p>Preventative Care</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon8.svg" alt="icon">
-                        <p>375+ branch network</p>
+                        <p>Financial Benefits</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon1.svg" alt="icon">
-                        <p>Bonus potential</p>
+                        <p>Savings Plan 401(k) and Match</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon2.svg" alt="icon">
-                        <p>Training/Cross training</p>
+                        <p>Supplemental Hospital Indemnity Plan</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon3.svg" alt="icon">
-                        <p>Promote from within</p>
+                        <p>Paid Time Off</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon4.svg" alt="icon">
-                        <p>Career Advancement</p>
+                        <p>Leave of Absence</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon5.svg" alt="icon">
-                        <p>GPS provided</p>
+                        <p>Personal Plans &amp; Discounts</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon6.svg" alt="icon">
-                        <p>Shoe allowance</p>
+                        <p>National Recognition Program</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon7.svg" alt="icon">
-                        <p>Paid uniforms</p>
+                        <p>Service Awards</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon8.svg" alt="icon">
-                        <p>375+ branch network</p>
+                        <p>Commuter Benefits</p>
                     </li>
                     <li class="icon">
                         <img src="media/img/icon8.svg" alt="icon">
-                        <p>375+ branch network</p>
+                        <p>Employee Assistance Program</p>
                     </li>
                 </ul><!-- END #icon-wrap -->
             </div><!-- END .content -->
-        </div><!-- END .wrap -->
+        </div><!-- END .row -->
     </section><!-- END #benefits -->
     <!--==========  End of BENEFITS  ==========-->
 
     <!--==========================================
-    =                DAY IN THE LIFE             =
+    =                   DIVERSITY                =
     ===========================================-->
-    <section id="day">
+    <section id="diversity">
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <h2>We believe in a <strong>diverse</strong> and <strong>inclusive</strong> environment</h2>
+                <p>Serving people in America and around the world requires a diverse group of employees ready to meet the challenge. Cultural sensitivity is key to how we operate with the public, and we want to ensure our employees reflect a rich diversity. Through external relationships and internal initiatives, we seek to achieve diversity in our workforce, partners and suppliers.</p>
+                <p>We are also proud to offer several resource groups for our employees. African-American, LGBT, and Latino Team Member Resource Groups provide mentoring and give voice to concerns and opinions of these valuable team members.</p>
+            </div><!-- END .content-narrow-center -->
+        </div><!-- END .row -->
+    </section><!-- END #diversity -->
+    <!--=========  End of DIVERSITY  ==========-->
+
+    <!--==========================================
+    =                 WHO WE ARE                 =
+    ===========================================-->
+
+    <section id="about">
         <div class="row">
             <div class="content-narrow-center">
-                <h2><strong>A day in the life</strong></h2>
-                <p>It begins the night before with the driver leaving the vehicle in road-ready condition, gassed and with the right paperwork.  Each day starts the same: clock in, login in with the Nextel smart phone, check with the Logistics Center of Excellence (LCE) for route planning, load and secure equipment for delivery, complete the necessary Driver Daily Log paperwork, then do the pre-trip vehicle inspection checklist before hitting the road.  The hours may vary each day with potential overtime, so if you’re flexible and looking for a rewarding position with the opportunity for growth (DT to PST to CST and beyond) then this is the opportunity for you!  If you’re a student looking for part-time work, an ex-truck driver looking to be home each night or if you’re seeking to give back in a meaningful way, then you’re on the right path!</p>
+                <h2>Who we are is <strong>more</strong> than just blood products</h2>
+                <p>As one of the nation’s oldest and most respected humanitarian organizations, the American Red Cross has been at the forefront of helping save lives since its founding in 1881. We strive to provide disaster relief in America and abroad. We support our active-duty military, veterans and their families. We collect, process and distribute about 40 percent of the nation’s blood supply. Health and safety education and training are also part of our goal.</p>
+                <p>We are a strong organization of passionate supporters, volunteers and employees dedicated to helping others. Every year, we collect over 5 million units of blood; respond to 66,000 disasters; provide more than 367,000 services to active-duty military, veterans and their families; and more.</p>
+                <p>Watch this short video to learn more about the life-saving impact our employees have every day.</p>
             </div><!-- END .content-narrow-center -->
-            <div class="content-narrow-center">
+            <div class="col-6">
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/kYLaY2wI3lg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div><!-- END .video-container -->
             </div><!-- END .content -->
-        </div><!-- END .wrap -->
-    </section><!-- END #day -->
-    <!--======  End of DAY IN THE LIFE  =======-->
+        </div><!-- END .row -->
+    </section><!-- END #about -->
+    <!--=========  End of WHO WE ARE  =========-->
 
     <!--==========================================
     =                   FOOTER                   =
     ===========================================-->
     <footer id="footer">
-        <a href="http://bayardad.com/careers/privacy-policy/" target="_blank">Privacy Policy</a>
+        <div class="row">
+            <div class="wrap">
+                <p>The American Red Cross is an Equal Opportunity/Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to sex, gender identity, sexual orientation, race, color, religion, national origin, disability, protected veteran status, age, or any other characteristic protected by law.</p>
+                <!-- <a href="http://bayardad.com/careers/privacy-policy/" target="_blank">Privacy Policy</a> -->
+            </div>
+        </div>
     </footer><!-- END #footer -->
     <!--===========  End of FOOTER  ===========-->
 
@@ -585,13 +505,12 @@ ga('send', 'pageview');
         <!-- end appcast/appfeeder conversion code -->
     </div><!-- end tracking scripts -->
 
-    <!-- // <script src="js/jquery.min.js"></script> -->
-    <!-- // <script src="js/bootstrap.min.js"></script> -->
-    <!-- // <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <!-- // <script src="js/bootstrap-select.min.js"></script> -->
-    <!-- // <script src="js/jasny-bootstrap.min.js"></script> -->
-    
-    <!-- // <script src="js/app.min.js"></script> -->
-    <script src="js/scrolltop_accordion.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/jasny-bootstrap.min.js"></script>
+    <script src="js/app.min.js"></script>
+<!--     // <script src="js/scrolltop_accordion.js"></script> -->
+    <script src="js/accordion.js"></script>
 </body>
 </html>
