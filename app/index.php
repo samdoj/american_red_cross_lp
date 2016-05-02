@@ -104,7 +104,7 @@ if (isset($_POST['btnSubmit'])) {
         $strClientAttachment    = mysql_real_escape_string($strClientAttachment);
         $strUtmSource           = mysql_real_escape_string($strUtmSource);
 
-        $sqlSaveSubmission = "INSERT INTO apps_drivers (first_name, last_name, email, phone, over_21, location, driver_experience, salary, type_employment, driver_license, cdl, hazMat_endorsed, hazMat_experience, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$over21', '$location', '$driverExperience', '$txtSalary', '$typeEmployment', '$driverLicense', '$cdl', '$hazMatEndorsement', '$hazMatExperience', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
+        $sqlSaveSubmission = "INSERT INTO apps_biomed_careers (first_name, last_name, email, phone, over_21, location, driver_experience, salary, type_employment, driver_license, cdl, hazMat_endorsed, hazMat_experience, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$over21', '$location', '$driverExperience', '$txtSalary', '$typeEmployment', '$driverLicense', '$cdl', '$hazMatEndorsement', '$hazMatExperience', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
 
         // execute query
         $sqlSaveSubmissionResult = mysql_query($sqlSaveSubmission);
@@ -120,9 +120,9 @@ if (isset($_POST['btnSubmit'])) {
 
             $strClientFrom = "MIME-Version: 1.0" . "\r\n"
                         . "Content-Type: text/html; charset=UTF-8" . "\r\n"
-                        . "From: Apria Logistics Careers <noreply@apria.careers>";
+                        . "From: American Red Cross BioMed Careers <noreply@redcrossbiomedcareers.org>";
 
-            $strClientSubject = "Interest in Apria Logistics Careers";
+            $strClientSubject = "Interest in American Red Cross BioMed Careers";
 
             $strClientFldMerge = "<html><body><p>"
                         . "<strong>Name:</strong> " . $txtFirstName . "<br>"
@@ -142,7 +142,7 @@ if (isset($_POST['btnSubmit'])) {
                 // include link to the uploaded resume if there is one
                 if($strClientAttachment) {
                     // add the domain/folder prefix - $strClientAttachment just displays the filename
-                    $strClientFldMerge .= "<p><strong>Resume:</strong> http://apria.careers/logistics/uploads/resumes/" . $strClientAttachment . "</p>";
+                    $strClientFldMerge .= "<p><strong>Resume:</strong> http://redcrossbiomedcareers.org/uploads/resumes/" . $strClientAttachment . "</p>";
                 }
                 // include the UTM source parameter value if there is one
                 if($strUtmSource) {
@@ -168,7 +168,7 @@ if (isset($_POST['btnSubmit'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Apria Careers - Driver Technicians</title>
+<title>American Red Cross BioMed Careers</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -222,7 +222,7 @@ if (isset($_POST['btnSubmit'])) {
 <body>
     <header id="header" class="header closed-nav">
         <div class="row">
-            <img class="logo" id="header-logo" src="http://placehold.it/120x80" alt="Apria Healthcare">
+            <img class="logo" id="header-logo" src="http://placehold.it/120x80" alt="American Red Cross Logo">
             <div id="nav-btn">
                 <div class="nav-btn-line"></div>
                 <div class="nav-btn-line"></div>

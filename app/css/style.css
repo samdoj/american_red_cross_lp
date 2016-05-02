@@ -1223,7 +1223,7 @@ input {
 
 .form-control {
   width: 100%;
-  padding: 0rem 0.5rem;
+  padding: 0 0.5rem;
   background-color: #FFFFFF;
   color: #48494e !important;
   font-size: 0.875rem;

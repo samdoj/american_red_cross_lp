@@ -1,8 +1,7 @@
 {
   "name": "american_red_cross_lp",
   "version": "0.1.0",
-  "description": "Landing page for American Red Cross careers
-",
+  "description": "Landing page for American Red Cross careers",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
