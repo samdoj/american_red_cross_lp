@@ -1,7 +1,7 @@
 (function($) {
     /*-------------------- EXPANDABLE PANELS ----------------------*/
     var panelspeed = 500; //panel animate speed in milliseconds
-    var totalpanels = 3; //total number of collapsible panels
+    var totalpanels = 5; //total number of collapsible panels
     var defaultopenpanel = 0; //leave 0 for no panel open
     var accordian = false; //set panels to behave like an accordian, with one panel only ever open at once      
 
