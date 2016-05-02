@@ -196,8 +196,7 @@ footer {
 
 #benefits {
 	@include breakpoint($laptop) {
-		box-shadow: 0rem -0.125rem 0.15rem 0rem rgba(0,0,0,0.2);
-		background-color: #fcfcfc;
+		background-color: $grey-1;
 		@include padding(4.0625rem 0);
 	}
 	.content {
@@ -281,12 +280,15 @@ footer {
 
 #diversity {
 	.col-6 {
-		&:first-child {
+		&:first-of-type {
 			background-image: url('http://placehold.it/768x420');
 			background-repeat: no-repeat;
 			background-position: center 10%;
 			background-size: cover;
 			padding-bottom: 80%;
+			@include breakpoint($laptop) {
+				padding-bottom: 40%;
+			}
 		}
 	}
 }
@@ -325,9 +327,14 @@ footer {
 \************************************/
 
 #footer {
-	background-color: $grey-2;
-	@include padding($-box-spacing-md 0);
-	// text-align: end;
+	background-color: $grey-1;
+	@include padding($-box-spacing-sml 0);
+	p {
+		color: $grey-2;
+		font-size: $footer-font;
+		max-width: 450px;
+		margin: 0 auto;
+	}
 	a {
 		font-weight: $font-bold;
 		font-size: 44px;

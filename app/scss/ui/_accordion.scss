@@ -1,7 +1,8 @@
 #accordion-wrap {
-    // width:300px;
     margin:auto;
-    // margin-top:100px;
+    @include breakpoint($laptop) {
+        display: none;
+    }
 }
  
 /* --------- COLLAPSIBLE PANELS ----------*/
@@ -22,11 +23,7 @@
     position:relative;
 }
 .expandable-panel-heading {
-    &:hover {
-        @include breakpoint($tablet) {
-            color:$grey-4;
-        }
-    }
+
 }
 .expandable-panel-heading {
     h6 {

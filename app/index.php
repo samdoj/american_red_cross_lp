@@ -222,7 +222,7 @@ if (isset($_POST['btnSubmit'])) {
 <body>
     <header id="header" class="header closed-nav">
         <div class="row">
-            <img class="logo" id="header-logo" src="http://placehold.it/120x80" alt="American Red Cross Logo">
+            <img class="logo" id="header-logo" src="media/img/american_red_cross_logo.svg" alt="American Red Cross Logo">
             <div id="nav-btn">
                 <div class="nav-btn-line"></div>
                 <div class="nav-btn-line"></div>
@@ -286,8 +286,8 @@ if (isset($_POST['btnSubmit'])) {
     ===========================================-->
     <section class="container" id="hiring">
         <div class="row">
+            <h2>Who We're <strong>Hiring</strong></h2>
             <div class="col-12">
-                <h2>Who We're <strong>Hiring</strong></h2>
                 <div id="accordion-wrap">
                     <div class="expandable-panel" id="cp-1">
                         <div class="expandable-panel-heading">
@@ -417,6 +417,34 @@ if (isset($_POST['btnSubmit'])) {
                         </div>
                     </div>
                 </div>
+                <div id="tabs">
+                    <div class="container">
+
+                        <ul class="tabs">
+                            <li class="tab-link current" data-tab="tab-1">Tab One</li>
+                            <li class="tab-link" data-tab="tab-2">Tab Two</li>
+                            <li class="tab-link" data-tab="tab-3">Tab Three</li>
+                            <li class="tab-link" data-tab="tab-4">Tab Four</li>
+                            <li class="tab-link" data-tab="tab-4">Tab Five</li>
+                        </ul>
+
+                        <div id="tab-1" class="tab-content current">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div id="tab-2" class="tab-content">
+                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div id="tab-3" class="tab-content">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </div>
+                        <div id="tab-4" class="tab-content">
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div id="tab-5" class="tab-content">
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div><!-- container -->
             </div>
         </div>
     </section>
@@ -429,7 +457,7 @@ if (isset($_POST['btnSubmit'])) {
         <div class="row">
             <h2>Benefits with <strong>you</strong> in mind</h2>
             <p>As a mission-based organization, we believe our team needs great support to do great work. Our comprehensive benefits help you in balancing home and work, retirement, getting healthy and more. With our resources and perks, you have amazing possibilities at the American Red Cross to advance and learn.</p>
-            <div class="content-full">
+            <div class="col-12">
                 <ul class="icon-wrap">
                     <li class="icon">
                         <img src="media/img/icon1.svg" alt="icon">
@@ -464,39 +492,39 @@ if (isset($_POST['btnSubmit'])) {
                         <p>Financial Benefits</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon1.svg" alt="icon">
+                        <img src="media/img/icon9.svg" alt="icon">
                         <p>Savings Plan 401(k) and Match</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon2.svg" alt="icon">
+                        <img src="media/img/icon10.svg" alt="icon">
                         <p>Supplemental Hospital Indemnity Plan</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon3.svg" alt="icon">
+                        <img src="media/img/icon11.svg" alt="icon">
                         <p>Paid Time Off</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon4.svg" alt="icon">
+                        <img src="media/img/icon12.svg" alt="icon">
                         <p>Leave of Absence</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon5.svg" alt="icon">
+                        <img src="media/img/icon13.svg" alt="icon">
                         <p>Personal Plans &amp; Discounts</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon6.svg" alt="icon">
+                        <img src="media/img/icon14.svg" alt="icon">
                         <p>National Recognition Program</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon7.svg" alt="icon">
+                        <img src="media/img/icon15.svg" alt="icon">
                         <p>Service Awards</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon8.svg" alt="icon">
+                        <img src="media/img/icon16.svg" alt="icon">
                         <p>Commuter Benefits</p>
                     </li>
                     <li class="icon">
-                        <img src="media/img/icon8.svg" alt="icon">
+                        <img src="media/img/icon17.svg" alt="icon">
                         <p>Employee Assistance Program</p>
                     </li>
                 </ul><!-- END #icon-wrap -->
@@ -510,12 +538,12 @@ if (isset($_POST['btnSubmit'])) {
     ===========================================-->
     <section id="diversity">
         <div class="row">
+            <h2>We believe in a <strong>diverse</strong> and <strong>inclusive</strong> environment</h2>
             <div class="col-6 bleed-x"></div>
             <div class="col-6">
-                <h2>We believe in a <strong>diverse</strong> and <strong>inclusive</strong> environment</h2>
                 <p>Serving people in America and around the world requires a diverse group of employees ready to meet the challenge. Cultural sensitivity is key to how we operate with the public, and we want to ensure our employees reflect a rich diversity. Through external relationships and internal initiatives, we seek to achieve diversity in our workforce, partners and suppliers.</p>
                 <p>We are also proud to offer several resource groups for our employees. African-American, LGBT, and Latino Team Member Resource Groups provide mentoring and give voice to concerns and opinions of these valuable team members.</p>
-            </div><!-- END .content-narrow-center -->
+            </div><!-- END .col-6 -->
         </div><!-- END .row -->
     </section><!-- END #diversity -->
     <!--=========  End of DIVERSITY  ==========-->
@@ -526,17 +554,17 @@ if (isset($_POST['btnSubmit'])) {
 
     <section id="about">
         <div class="row">
+            <h2>Who we are is <strong>more</strong> than just blood products</h2>
             <div class="col-6">
-                <h2>Who we are is <strong>more</strong> than just blood products</h2>
                 <p>As one of the nation’s oldest and most respected humanitarian organizations, the American Red Cross has been at the forefront of helping save lives since its founding in 1881. We strive to provide disaster relief in America and abroad. We support our active-duty military, veterans and their families. We collect, process and distribute about 40 percent of the nation’s blood supply. Health and safety education and training are also part of our goal.</p>
                 <p>We are a strong organization of passionate supporters, volunteers and employees dedicated to helping others. Every year, we collect over 5 million units of blood; respond to 66,000 disasters; provide more than 367,000 services to active-duty military, veterans and their families; and more.</p>
-                <p>Watch this short video to learn more about the life-saving impact our employees have every day.</p>
-            </div><!-- END .content-narrow-center -->
+            </div><!-- END .col-6 -->
             <div class="col-6">
+                <p>Watch this short video to learn more about the life-saving impact our employees have every day.</p>
                 <div class="video-container bleed-x">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/kYLaY2wI3lg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div><!-- END .video-container -->
-            </div><!-- END .content -->
+            </div><!-- END .col-6 -->
         </div><!-- END .row -->
     </section><!-- END #about -->
     <!--=========  End of WHO WE ARE  =========-->
@@ -563,7 +591,6 @@ if (isset($_POST['btnSubmit'])) {
 
 
         <!-- begin appcast/appfeeder conversion code -->
-        <!-- <script type='text/javascript' src='https://click.appcast.io/pixels/bayard1-1353.js?ent=8'></script> -->
         <!-- JOB VIEW -->
 
         <!-- end appcast/appfeeder conversion code -->

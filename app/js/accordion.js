@@ -62,11 +62,23 @@
     }
     
    //Uncomment these lines if the expandable panels are not a fixed width and need to resize
-   /* $( window ).resize(function() {
+    $( window ).resize(function() {
       panelinit();
-    });*/
+    });
 
     $(window).load(function() {
         panelinit();
     }); //END LOAD
 })(jQuery);
+
+(function(){
+    $('ul.tabs li').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+    });
+})();

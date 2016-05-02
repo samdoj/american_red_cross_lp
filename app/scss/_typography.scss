@@ -24,9 +24,12 @@ h1 {
 h2 {
 	font-size: $h2;
 	font-weight: $font-light;
-	color: $grey-4;
+	color: $black-1;
 	strong {
 		color: red;
+	}
+	@include breakpoint($laptop) {
+		text-align: center;
 	}
 }
 

@@ -1,0 +1,35 @@
+#tabs {
+	display: none;
+	@include breakpoint($laptop) {
+		display: block;
+		.container{
+			@include span(12);
+			margin: 0 auto;
+		}
+		ul.tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		ul.tabs li {
+			background: none;
+			color: $grey-4;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+
+		ul.tabs li.current{
+			// background: #ededed;
+			color: $red;
+		}
+		.tab-content{
+			display: none;
+			background: $white;
+			// padding: 15px;
+		}
+		.tab-content.current{
+			display: inherit;
+		}
+	}
+}

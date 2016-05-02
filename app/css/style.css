@@ -425,8 +425,7 @@ footer {
 \************************************/
 @media (min-width: 1024px) {
   #benefits {
-    box-shadow: 0rem -0.125rem 0.15rem 0rem rgba(0, 0, 0, 0.2);
-    background-color: #fcfcfc;
+    background-color: #e8e8e8;
     padding: 4.0625rem 0;
   }
 }
@@ -533,12 +532,18 @@ footer {
 
 /************************************		   	  WHO WE ARE
 \************************************/
-#diversity .col-6:first-child {
+#diversity .col-6:first-of-type {
   background-image: url("http://placehold.it/768x420");
   background-repeat: no-repeat;
   background-position: center 10%;
   background-size: cover;
   padding-bottom: 80%;
+}
+
+@media (min-width: 1024px) {
+  #diversity .col-6:first-of-type {
+    padding-bottom: 40%;
+  }
 }
 
 /************************************		   	  WHO WE ARE
@@ -569,8 +574,15 @@ footer {
 /************************************			   FOOTER
 \************************************/
 #footer {
-  background-color: #cecac5;
-  padding: 3rem 0;
+  background-color: #e8e8e8;
+  padding: 1.5rem 0;
+}
+
+#footer p {
+  color: #6d6e70;
+  font-size: 0.9375rem;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 #footer a {
@@ -619,11 +631,17 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-weight: 300;
-  color: #565458;
+  color: #333333;
 }
 
 h2 strong {
   color: red;
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    text-align: center;
+  }
 }
 
 h3 {
@@ -654,7 +672,7 @@ p:last-of-type {
 
 a {
   font-size: 1rem;
-  color: red;
+  color: #ed1b2e;
   text-decoration: none;
 }
 
@@ -665,7 +683,7 @@ strong {
 /************************************			   LINKS
 \************************************/
 a:hover, a:active, a:focus, a:visited {
-  color: #cecac5;
+  color: #6d6e70;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -1070,15 +1088,15 @@ ul.nav-wrap li.nav-item {
   display: block;
   height: auto;
   width: 100%;
-  border-bottom: 1px solid #cecac5;
+  border-bottom: 1px solid #6d6e70;
 }
 
 ul.nav-wrap li.nav-item:first-child {
-  border-top: 1px solid #cecac5;
+  border-top: 1px solid #6d6e70;
 }
 
 ul.nav-wrap li.nav-item:last-child {
-  border-bottom: 1px solid #cecac5;
+  border-bottom: 1px solid #6d6e70;
 }
 
 ul.nav-wrap li.nav-item:last-child .nav-link {
@@ -1190,7 +1208,7 @@ ul {
 #form-1-container {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  background-color: #e8e5e2;
+  background-color: #e8e8e8;
   float: left;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1342,8 +1360,8 @@ input {
 .fileinput.input-group .btn-file,
 .fileinput .input-group .btn-file {
   border-radius: 0;
-  border-color: #cecac5;
-  background-color: #cecac5;
+  border-color: #6d6e70;
+  background-color: #6d6e70;
   color: #fff;
   font-weight: 700;
   transition: all 0.1s;
@@ -1374,7 +1392,7 @@ input {
 }
 
 .submit-btn {
-  background-color: red;
+  background-color: #ed1b2e;
   border: 1px solid transparent;
   border-radius: 3px;
   width: 100%;
@@ -1404,6 +1422,12 @@ label {
   margin: auto;
 }
 
+@media (min-width: 1024px) {
+  #accordion-wrap {
+    display: none;
+  }
+}
+
 /* --------- COLLAPSIBLE PANELS ----------*/
 .expandable-panel {
   width: 100%;
@@ -1421,12 +1445,6 @@ label {
   clear: both;
   background-color: red;
   position: relative;
-}
-
-@media (min-width: 768px) {
-  .expandable-panel-heading:hover {
-    color: #565458;
-  }
 }
 
 .expandable-panel-heading h6 {
@@ -1450,6 +1468,45 @@ label {
 
 .header-active {
   background-color: #565458;
+}
+
+#tabs {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  #tabs {
+    display: block;
+  }
+  #tabs .container {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 auto;
+  }
+  #tabs ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+  #tabs ul.tabs li {
+    background: none;
+    color: #565458;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  #tabs ul.tabs li.current {
+    color: #ed1b2e;
+  }
+  #tabs .tab-content {
+    display: none;
+    background: #FFFFFF;
+  }
+  #tabs .tab-content.current {
+    display: inherit;
+  }
 }
 
 /*# sourceMappingURL=../maps/style.css.map */
