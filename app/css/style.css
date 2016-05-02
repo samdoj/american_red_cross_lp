@@ -1410,20 +1410,23 @@ label {
   position: relative;
   min-height: 45px;
   overflow: auto;
-  margin-bottom: 2px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid white;
 }
 
 .expandable-panel-heading {
+  height: 45px;
   width: 100%;
   cursor: pointer;
-  height: 45px;
   clear: both;
   background-color: red;
   position: relative;
 }
 
-.expandable-panel-heading:hover {
-  color: #666;
+@media (min-width: 768px) {
+  .expandable-panel-heading:hover {
+    color: #565458;
+  }
 }
 
 .expandable-panel-heading h6 {
@@ -1438,11 +1441,11 @@ label {
 }
 
 .icon-close-open {
-  width: 20px;
   height: 20px;
+  width: 20px;
   position: absolute;
+  right: 1rem;
   background-image: url("../media/img/icon-close-open.png");
-  right: 15px;
 }
 
 .header-active {
