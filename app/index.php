@@ -280,6 +280,7 @@ if (isset($_POST['btnSubmit'])) {
         </div><!-- END .row -->
     </section><!-- END #welcome -->
     <!--===========  End of WELCOME  ==========-->
+
     <!--==========================================
     =               WHO WE'RE HIRING             =
     ===========================================-->
@@ -290,7 +291,7 @@ if (isset($_POST['btnSubmit'])) {
                 <div id="accordion-wrap">
                     <div class="expandable-panel" id="cp-1">
                         <div class="expandable-panel-heading">
-                            <h2>Phlebotomists<span class="icon-close-open"></span></h2>
+                            <h6>Phlebotomists<span class="icon-close-open"></span></h6>
                         </div>
                         <div class="expandable-panel-content">
                             <img src="http://placehold.it/1140x720" alt="">
@@ -305,14 +306,14 @@ if (isset($_POST['btnSubmit'])) {
                                     <li>A current valid driver's license and good driving record</li>
                                     <li>Some prior medical experience preferred but not required</li>
                                 </ul>
-                                <div class="btn-sml"><a href="#">Contact Us</a></div>
+                                <a href="#form-1-container">Contact Us</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="expandable-panel" id="cp-2">
                         <div class="expandable-panel-heading">
-                            <h2>Content heading 2<span class="icon-close-open"></span></h2>
+                            <h6>Content heading 2<span class="icon-close-open"></span></h6>
                         </div>
                         <div class="expandable-panel-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
@@ -327,7 +328,7 @@ if (isset($_POST['btnSubmit'])) {
 
                     <div class="expandable-panel" id="cp-3">
                         <div class="expandable-panel-heading">
-                            <h2>Content heading 3<span class="icon-close-open"></span></h2>
+                            <h6>Content heading 3<span class="icon-close-open"></span></h6>
                         </div>
                         <div class="expandable-panel-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
@@ -336,7 +337,7 @@ if (isset($_POST['btnSubmit'])) {
                     </div>
                     <div class="expandable-panel" id="cp-4">
                         <div class="expandable-panel-heading">
-                            <h2>Content heading 4<span class="icon-close-open"></span></h2>
+                            <h6>Content heading 4<span class="icon-close-open"></span></h6>
                         </div>
                         <div class="expandable-panel-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
@@ -345,7 +346,7 @@ if (isset($_POST['btnSubmit'])) {
                     </div>
                     <div class="expandable-panel" id="cp-5">
                         <div class="expandable-panel-heading">
-                            <h2>Content heading 5<span class="icon-close-open"></span></h2>
+                            <h6>Content heading 5<span class="icon-close-open"></span></h6>
                         </div>
                         <div class="expandable-panel-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui debitis eius nobis rerum blanditiis consectetur, doloribus ea veniam alias quisquam tempora voluptas omnis dignissimos minus cum illo doloremque assumenda. Voluptatibus.</p>
@@ -446,7 +447,7 @@ if (isset($_POST['btnSubmit'])) {
     ===========================================-->
     <section id="diversity">
         <div class="row">
-            <div class="col-6"></div>
+            <div class="col-6 bleed-x"></div>
             <div class="col-6">
                 <h2>We believe in a <strong>diverse</strong> and <strong>inclusive</strong> environment</h2>
                 <p>Serving people in America and around the world requires a diverse group of employees ready to meet the challenge. Cultural sensitivity is key to how we operate with the public, and we want to ensure our employees reflect a rich diversity. Through external relationships and internal initiatives, we seek to achieve diversity in our workforce, partners and suppliers.</p>
@@ -462,14 +463,14 @@ if (isset($_POST['btnSubmit'])) {
 
     <section id="about">
         <div class="row">
-            <div class="content-narrow-center">
+            <div class="col-6">
                 <h2>Who we are is <strong>more</strong> than just blood products</h2>
                 <p>As one of the nation’s oldest and most respected humanitarian organizations, the American Red Cross has been at the forefront of helping save lives since its founding in 1881. We strive to provide disaster relief in America and abroad. We support our active-duty military, veterans and their families. We collect, process and distribute about 40 percent of the nation’s blood supply. Health and safety education and training are also part of our goal.</p>
                 <p>We are a strong organization of passionate supporters, volunteers and employees dedicated to helping others. Every year, we collect over 5 million units of blood; respond to 66,000 disasters; provide more than 367,000 services to active-duty military, veterans and their families; and more.</p>
                 <p>Watch this short video to learn more about the life-saving impact our employees have every day.</p>
             </div><!-- END .content-narrow-center -->
             <div class="col-6">
-                <div class="video-container">
+                <div class="video-container bleed-x">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/kYLaY2wI3lg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div><!-- END .video-container -->
             </div><!-- END .content -->

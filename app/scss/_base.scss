@@ -279,29 +279,26 @@ footer {
 		   	  WHO WE ARE
 \************************************/
 
+#diversity {
+	.col-6 {
+		&:first-child {
+			background-image: url('http://placehold.it/768x420');
+			background-repeat: no-repeat;
+			background-position: center 10%;
+			background-size: cover;
+			padding-bottom: 80%;
+		}
+	}
+}
+
+
+/************************************\
+		   	  WHO WE ARE
+\************************************/
+
 #about {
 	.col-6 {
-		h2 {
-			text-align: left;
-			color: $yellow;
-			margin-bottom: 0.25rem;
-			@include breakpoint($laptop) {
-				text-align: center;
-			}
-		}
-		p {
-			color: $white;
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-		}
-		h6 {
-			color: $white;
-			font-weight: $font-black;
-			em {
-				font-weight: $font-light;
-			}
-		}
+
 	}
 	.video-container {
 		@include position(relative);
@@ -338,6 +335,15 @@ footer {
 	}
 }
 
+.bleed-x {
+	@include bleed-x(6% 6%);
+	@include breakpoint($tablet) {
+		@include bleed-x(1rem 1rem);
+	}
+	@include breakpoint($laptop) {
+		@include bleed-x(0 0);
+	}
+}
 
 
 // /************************************\

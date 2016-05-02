@@ -533,35 +533,16 @@ footer {
 
 /************************************		   	  WHO WE ARE
 \************************************/
-#about .col-6 h2 {
-  text-align: left;
-  color: #fdbb30;
-  margin-bottom: 0.25rem;
+#diversity .col-6:first-child {
+  background-image: url("http://placehold.it/768x420");
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: cover;
+  padding-bottom: 80%;
 }
 
-@media (min-width: 1024px) {
-  #about .col-6 h2 {
-    text-align: center;
-  }
-}
-
-#about .col-6 p {
-  color: #FFFFFF;
-}
-
-#about .col-6 p:last-of-type {
-  margin-bottom: 0;
-}
-
-#about .col-6 h6 {
-  color: #FFFFFF;
-  font-weight: 900;
-}
-
-#about .col-6 h6 em {
-  font-weight: 300;
-}
-
+/************************************		   	  WHO WE ARE
+\************************************/
 #about .video-container {
   position: relative;
   margin-top: 2.5rem;
@@ -596,6 +577,22 @@ footer {
   font-weight: 700;
   font-size: 44px;
   color: #FFFFFF;
+}
+
+.bleed-x {
+  margin-right: -6%;
+  margin-left: -6%;
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+@media (min-width: 768px) {
+  .bleed-x {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 /************************************		TYPOGRAPHY AND LINKS
@@ -1197,10 +1194,6 @@ ul {
   float: left;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  margin-right: -6%;
-  margin-left: -6%;
-  padding-right: 6%;
-  padding-left: 6%;
   box-shadow: 0rem 0rem 0.3125rem 0rem rgba(0, 0, 0, 0.25);
 }
 
@@ -1415,7 +1408,7 @@ label {
 .expandable-panel {
   width: 100%;
   position: relative;
-  min-height: 50px;
+  min-height: 45px;
   overflow: auto;
   margin-bottom: 2px;
 }
@@ -1423,7 +1416,7 @@ label {
 .expandable-panel-heading {
   width: 100%;
   cursor: pointer;
-  min-height: 50px;
+  height: 45px;
   clear: both;
   background-color: red;
   position: relative;
@@ -1433,28 +1426,15 @@ label {
   color: #666;
 }
 
-.expandable-panel-heading h2 {
-  padding: 14px 10px 9px 15px;
-  font-size: 18px;
-  line-height: 20px;
-  color: white;
+.expandable-panel-heading h6 {
+  margin-bottom: 0;
+  padding: 0.5rem 0.75rem;
+  color: #FFFFFF;
 }
 
 .expandable-panel-content {
-  padding: 0 15px 0 15px;
+  padding: 0;
   margin-top: -999px;
-}
-
-.expandable-panel-content p {
-  padding: 4px 0 6px 0;
-}
-
-.expandable-panel-content p:first-child {
-  padding-top: 10px;
-}
-
-.expandable-panel-content p:last-child {
-  padding-bottom: 15px;
 }
 
 .icon-close-open {
@@ -1463,11 +1443,6 @@ label {
   position: absolute;
   background-image: url("../media/img/icon-close-open.png");
   right: 15px;
-}
-
-.expandable-panel-content img {
-  float: right;
-  padding-left: 12px;
 }
 
 .header-active {

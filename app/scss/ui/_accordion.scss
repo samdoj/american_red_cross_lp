@@ -9,14 +9,16 @@
 .expandable-panel {
     width:100%;
     position:relative;
-    min-height:50px;
+    min-height: 45px;
     overflow:auto;
     margin-bottom: 2px;
+    // height: 45px;
 }
 .expandable-panel-heading {
     width:100%;
     cursor:pointer;
-    min-height:50px;
+    // height: 45px;
+    height: 45px;
     clear:both;
     background-color: red;
     position:relative;
@@ -24,24 +26,29 @@
 .expandable-panel-heading:hover {
     color:#666;
 }
-.expandable-panel-heading h2 {
-    padding:14px 10px 9px 15px;
-    font-size:18px;
-    line-height:20px;
-    color: white;
+.expandable-panel-heading {
+    h6 {
+        margin-bottom: 0;
+        @include padding(0.5rem 0.75rem);
+        color:$white;
+    }
+    // padding:14px 10px 9px 15px;
+    // font-size:18px;
+    // line-height:20px;
+    // color: white;
 }
 .expandable-panel-content {
-    padding:0 15px 0 15px;
-    margin-top:-999px;
+    padding: 0;
+    margin-top: -999px;
 }
 .expandable-panel-content p {
-    padding:4px 0 6px 0;
+    // padding:4px 0 6px 0;
 }
 .expandable-panel-content p:first-child  {
-    padding-top:10px;
+    // padding-top:10px;
 }
 .expandable-panel-content p:last-child {
-    padding-bottom:15px;
+    // padding-bottom:15px;
 }
 .icon-close-open {
     width:20px;
@@ -51,8 +58,7 @@
     right:15px;
 }
 .expandable-panel-content img {
-    float:right;
-    padding-left:12px;
+    
 }
 .header-active {
     background-color: $grey-4;
