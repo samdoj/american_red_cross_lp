@@ -299,6 +299,14 @@ footer {
   }
 }
 
+@media (min-width: 1024px) {
+  .header #header-logo {
+    margin: 1.2rem 0 0;
+    height: auto;
+    width: 220px;
+  }
+}
+
 /************************************			 HERO CONTENT
 \************************************/
 #hero-home {
@@ -1135,6 +1143,12 @@ head:hover ~ body .row:before {
     width: 74.13793%;
     float: right;
     margin-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #main-nav {
+    margin-top: 2.2rem;
   }
 }
 

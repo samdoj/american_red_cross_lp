@@ -33,6 +33,9 @@
 		margin-top: 1.5rem;
 		@include span(9 last);
 	}
+	@include breakpoint($laptop) {
+		margin-top: 2.2rem;
+	}
 }
 
 ul.nav-wrap {
