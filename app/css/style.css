@@ -690,6 +690,7 @@ h1 {
 @media (min-width: 1440px) {
   h1 {
     font-size: 4rem;
+    text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.7);
   }
 }
 
