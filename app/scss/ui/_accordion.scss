@@ -1,5 +1,4 @@
 #accordion-wrap {
-    margin:auto;
     @include breakpoint($laptop) {
         display: none;
     }

@@ -3,7 +3,7 @@
 \************************************/
 
 #nav-btn {
-	@include position(absolute, 4.375rem 0 null null);
+	@include position(absolute, 1.35rem 0 null null);
 	cursor: pointer;
 	border: 1px solid transparent;
 	border-radius: 10px 0px 10px 0px;
@@ -11,9 +11,9 @@
 		display:none;
 	}
 	.nav-btn-line {
-		@include size(2.5rem 0.375rem);
-		margin-bottom: 0.375rem;
-		background-color: $grey-3;
+		@include size(2.75rem 0.375rem);
+		margin-bottom: 0.475rem;
+		background-color: $red;
 		border: 1px solid transparent;
 		border-radius: 0.1875rem;
 		&:last-child {
@@ -26,7 +26,7 @@
 	float: left;
 	@include position(relative);
 	z-index: 1000;
-	margin-top: 1.25rem;
+	margin-top: 0.75rem;
     width: 112%;
     margin-left: -6%;
 	@include breakpoint($laptop) {
@@ -69,10 +69,10 @@ ul.nav-wrap {
 			@include padding(1rem 5% 0.7rem 5%);
 			color: $grey-4;
 			font-size: 1rem;
-			font-weight: $font-light;
+			font-weight: $font-bold;
 			letter-spacing: 0.01em;
 			transition: all 0.3s;
-			line-height: 0.8;
+			line-height: 2;
 			@include breakpoint($laptop) {
 				font-size: 15px;
 				border-radius: 3px;
@@ -96,9 +96,9 @@ ul.nav-wrap {
 }
 
 .closed-nav {
-	height: 8.25rem;
+	height: 4.95rem;
 }
 
 .open-nav {
-	height: 29.968rem;
+	height: 23.8rem;
 }

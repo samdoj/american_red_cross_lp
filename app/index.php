@@ -271,7 +271,7 @@ if (isset($_POST['btnSubmit'])) {
                 <p>If you’re looking to gain new skills, help save lives and contribute to the mission of one of the nation’s most respected humanitarian organizations, consider a career in biomedical services at the American Red Cross. We have openings nationwide for phlebotomists, nurses, truck drivers, medical technologists and sales professionals. As a Red Cross employee, you’ll have opportunities to grow your career and be recognized and rewarded for your efforts. Most importantly, you’ll work alongside dedicated individuals like yourself who live the values of our organization every day. Join us for a career that will motivate you to be your very best.</p>
                 <p>Our mission to prevent and alleviate human suffering in the face of emergencies inspires us daily. As the provider of nearly half of the nation’s blood supply, we collect, test and distribute over 5 million life-saving units of blood a year. Fulfilling our mission requires focused, energized employees, so we offer outstanding benefits that really help you, as you help others.</p>
             </div><!-- END .content-narrow-center -->
-            <div id="form-1-container" class="col-6">
+            <div id="form-1-container" class="col-6 bleed-x">
                 <div class="form-intro" id="apply1">
                     <h5>Join our team</h5>
                 </div><!-- END #apply-1 -->
@@ -287,7 +287,7 @@ if (isset($_POST['btnSubmit'])) {
     <section class="container" id="hiring">
         <div class="row">
             <h2>Who We're <strong>Hiring</strong></h2>
-            <div class="col-12">
+            <div class="bleed-x col-12">
                 <div id="accordion-wrap">
                     <div class="expandable-panel" id="cp-1">
                         <div class="expandable-panel-heading">

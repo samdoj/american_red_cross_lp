@@ -97,8 +97,9 @@ footer {
 		@include position(absolute, 0 0 null 0);
 	}
 	#header-logo {
-		@include size(100% 4.3125rem);
-		@include margin(2.1875rem auto 1.625rem auto);
+		width: 10rem;
+		float: left;
+		@include margin(0.75rem 0 0 0);
 		@include breakpoint($laptop) {
 			@include size(175px auto);
 		}
@@ -116,17 +117,15 @@ footer {
 	background-repeat: no-repeat;
 	background-position: center 10%;
 	background-size: cover;
-	border-bottom: 0.3125rem solid $yellow;
 	@include breakpoint($mobile-lg) {
 		background-image: url('../media/img/hero_bg_768.jpg');
 	}
 
 	@include breakpoint($laptop) {
-		background-image: url('../media/img/hero_bg_1300.jpg');
+		background-image: url('../media/img/hero_bg_1024.jpg');
 	}
-	@include breakpoint($laptop) {
-		background-position: left top;
-		background-size: cover;
+	@include breakpoint($desktop) {
+		background-image: url('../media/img/hero_bg_1440.jpg');
 	}
 	@include breakpoint(1700px) {
 		background-image: url('../media/img/hero_bg_1720.jpg');
@@ -135,7 +134,7 @@ footer {
 
 .hero {
 	position: relative;
-	@include margin(16.375rem 0 1.1875rem 0);
+	@include margin(12.375rem 0 1.1875rem 0);
 	text-align: center;
 	@include breakpoint($mobile-lg) {
 		margin-top: 18.5rem;
@@ -164,12 +163,23 @@ footer {
 
 }
 
+
+/************************************\
+			  WELCOME
+\************************************/
+
+#welcome {
+	padding-bottom: 0;
+}
+
 /************************************\
 			   HIRING
 \************************************/
 
 #hiring {
-
+	.col-12 {
+		padding: 0;
+	}
 }
 
 
@@ -232,10 +242,13 @@ footer {
 		@include span(12);
 		margin-top: 2rem;
 		li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 			position: relative;
 			color: $grey-4;
 			margin-bottom: 2em;
-			@include span(6);
+			@include span(12);
 			min-height: 50px;
 			&:nth-child(2n) {
 				@include last;
@@ -248,23 +261,19 @@ footer {
 			}
 			img {
 				@include margin(0);
-				@include span(8 nest);
-				@include push(2);
-				height: 104px;
+				@include span(2.375);
+				// height: 104px;
 			}
 			p {
 				display: inline-block;
-			    position: absolute;
-			    top: 66%;
-			    left: 0%;
-			    width: 100%;
-				text-align: center;
+				float: left;
+				width: auto;
 				@include padding(0 0.25rem);
 				margin: 0;
+				line-height: 1.2;
 				color: $grey-4;
 				font-weight: $font-light;
-				font-size: 1rem;
-				line-height: 1.2;
+				font-size: 0.9375rem;
 				@include breakpoint($mobile-md) {
 					font-size: 1.125rem;
 				}
