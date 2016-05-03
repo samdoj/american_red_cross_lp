@@ -35,13 +35,17 @@ h1 {
 
 h2 {
 	font-size: $h2;
-	font-weight: $font-light;
+	font-weight: $font-bold;
 	color: $black-1;
+	margin-bottom: $text-spacing-md;
+	line-height: $line-height-sml;
 	strong {
 		color: red;
 	}
 	@include breakpoint($laptop) {
+		font-size: $h2-desktop;
 		text-align: center;
+		margin-bottom: $text-spacing-lg;
 	}
 }
 
@@ -71,6 +75,9 @@ p {
 	line-height: $line-height-lg;
 	&:last-of-type {
 		margin-bottom: 0;
+	}
+	@include breakpoint($laptop) {
+		font-size: $p-desktop;
 	}
 }
 

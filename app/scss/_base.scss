@@ -27,7 +27,6 @@ $susy: (
 
 html {
 	min-width: 320px;
-	font-size: $font-size-default;
 }
 
 body {
@@ -203,34 +202,12 @@ footer {
 	@include breakpoint($laptop) {
 		background-color: $grey-1;
 		@include padding(4.0625rem 0);
-	}
-	.content {
-		&:first-child {
-			.headline {
-				.accent {
-					@include breakpoint($laptop) {
-						@include span(2);
-					}
-				}
-				h2 {
-					font-weight: $font-light;
-					color: $white;
-					padding-bottom: 0;
-				}
+		p {
+			&:first-of-type {
+				@include span(7.75);
+				@include push(2.125);
+				margin-bottom: $text-spacing-sml;
 			}
-			p {
-				color: $white;
-				margin-top: 1rem;
-			}
-			@include breakpoint($laptop) {
-				@include span(5);
-				@include last;
-				border-left: 1px solid $white;
-				padding-left: 2.8%;
-			}
-		}
-		&:nth-child(2) {
-			clear: both;
 		}
 	}
 	.icon-wrap {
@@ -242,35 +219,52 @@ footer {
 			align-items: center;
 			position: relative;
 			color: $grey-4;
-			margin-bottom: 2em;
+			margin-bottom: 0.85rem;
 			@include span(12);
 			min-height: 50px;
-			&:nth-child(2n) {
-				@include last;
-			}
 			&:last-child {
 				margin-bottom: 0;
 			}
-			@include breakpoint($tablet) {
-				@include span(3);
+			@include breakpoint($mobile-lg) {
+				@include span(6);
+				margin-bottom: 1rem;
+				&:nth-child(2n) {
+					@include last;
+				}
 			}
+			@include breakpoint($laptop) {
+				@include span(4);
+				margin-bottom: $box-spacing-md;
+				&:nth-child(2n) {
+					float: left;
+					margin-right: 3.44828%; /*Reset nth selector*/
+				}
+				&:nth-child(3n) {
+					@include last;
+				}
+			}
+
 			img {
 				@include margin(0);
-				@include span(2.375);
+				// @include span(2.375);
 				// height: 104px;
+				@include size(48px 48px);
+				@include breakpoint($laptop) {
+					@include size(58px 58px);
+				}
 			}
 			p {
 				display: inline-block;
 				float: left;
 				width: auto;
-				@include padding(0 0.25rem);
+				@include padding(0 0 0 0.85rem);
 				margin: 0;
 				line-height: 1.2;
 				color: $grey-4;
 				font-weight: $font-light;
-				font-size: 0.9375rem;
-				@include breakpoint($mobile-md) {
-					font-size: 1.125rem;
+				font-size: 1rem;
+				@include breakpoint($laptop) {
+					font-size: 1.25rem;
 				}
 			}
 		}
@@ -285,13 +279,22 @@ footer {
 #diversity {
 	.col-6 {
 		&:first-of-type {
-			background-image: url('http://placehold.it/768x420');
+			background-image: url('../media/img/img_diversity_480.jpg');
 			background-repeat: no-repeat;
-			background-position: center 10%;
+			background-position: center center;
 			background-size: cover;
 			padding-bottom: 80%;
+			@include breakpoint($tablet) {
+				background-image: url('../media/img/img_diversity_768.jpg');
+				padding-bottom: 60%;
+				background-position-y: 20%;
+			}
 			@include breakpoint($laptop) {
+				background-image: url('../media/img/img_diversity_480.jpg');
 				padding-bottom: 40%;
+			}
+			@include breakpoint($desktop-xl) {
+				background-image: url('../media/img/img_diversity_768.jpg');
 			}
 		}
 	}
@@ -318,6 +321,10 @@ footer {
 		@include size(auto 0);
 		overflow: hidden;
 		@include breakpoint($laptop) {
+			margin: 0;
+			margin-top: $box-spacing-md;
+			padding-left: 0;
+			padding-right: 0;
 			margin-bottom: $box-spacing-md;
 		}
 		iframe, .video-container object, .video-container embed {

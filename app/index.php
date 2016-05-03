@@ -269,7 +269,7 @@ if (isset($_POST['btnSubmit'])) {
         <div class="row">
             <div class="col-6">
                 <p>If you’re looking to gain new skills, help save lives and contribute to the mission of one of the nation’s most respected humanitarian organizations, consider a career in biomedical services at the American Red Cross. We have openings nationwide for phlebotomists, nurses, truck drivers, medical technologists and sales professionals. As a Red Cross employee, you’ll have opportunities to grow your career and be recognized and rewarded for your efforts. Most importantly, you’ll work alongside dedicated individuals like yourself who live the values of our organization every day. Join us for a career that will motivate you to be your very best.</p>
-                <p>Our mission to prevent and alleviate human suffering in the face of emergencies inspires us daily. As the provider of nearly half of the nation’s blood supply, we collect, test and distribute over 5 million life-saving units of blood a year. Fulfilling our mission requires focused, energized employees, so we offer outstanding benefits that really help you, as you help others.</p>
+                <p>Our mission to prevent and alleviate human suffering in the face of emergencies inspires us daily. As the provider of nearly half of the nation’s blood supply, we collect, test and distribute over 5 million life-saving units of blood a year. Fulfilling our mission requires focused, energized employees, so we offer outstanding benefits that really help you, as you help&nbsp;others.</p>
             </div><!-- END .content-narrow-center -->
             <div id="form-1-container" class="col-6 bleed-x">
                 <div class="form-intro" id="apply1">
@@ -286,7 +286,7 @@ if (isset($_POST['btnSubmit'])) {
     ===========================================-->
     <section class="container" id="hiring">
         <div class="row">
-            <h2>Who We're <strong>Hiring</strong></h2>
+            <h2>Who We're&nbsp;<strong>Hiring</strong></h2>
             <div id="accordion-wrap">
                 <div class="expandable-panel" id="cp-1">
                     <div class="expandable-panel-heading">
@@ -296,7 +296,7 @@ if (isset($_POST['btnSubmit'])) {
                         <div class="col-12 bleed-x"></div>
                         <h6>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</h6>
                         <div class="description">
-                            <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
+                            <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the&nbsp;program!</p>
                         </div>
                         <div class="requirements">
                             <h5>Requirements</h5>
@@ -320,7 +320,7 @@ if (isset($_POST['btnSubmit'])) {
                         <div class="col-12 bleed-x"></div>
                         <h6>Are you a mission-oriented nurse who likes to travel and meet new people? You will thrive at the American Red Cross.</h6>
                         <div class="description">
-                            <p>We’re looking for both charge and apheresis nurses to accompany us on blood drives throughout the community. In this role, you’ll focus on customer service and compassion, working and making connections with healthy, happy blood donors. As a charge nurse you will lead a team, draw blood and, on occasion, supervise blood drives. As an apheresis nurse you will perform clinical apheresis procedures, along with other tasks, ensuring safe and appropriate care of patients. We work hard when we’re on the road and need a nurse who can accommodate a highly flexible schedule. You should also be comfortable performing venipuncture. You will need an RN (or LPN, depending on state requirements) license in the state prior to starting work.</p>
+                            <p>We’re looking for both charge and apheresis nurses to accompany us on blood drives throughout the community. In this role, you’ll focus on customer service and compassion, working and making connections with healthy, happy blood donors. As a charge nurse you will lead a team, draw blood and, on occasion, supervise blood drives. As an apheresis nurse you will perform clinical apheresis procedures, along with other tasks, ensuring safe and appropriate care of patients. We work hard when we’re on the road and need a nurse who can accommodate a highly flexible schedule. You should also be comfortable performing venipuncture. You will need an RN (or LPN, depending on state requirements) license in the state prior to starting&nbsp;work.</p>
                         </div>
                         <div class="requirements">
                             <h5>Requirements</h5>
@@ -341,9 +341,9 @@ if (isset($_POST['btnSubmit'])) {
                     </div>
                     <div class="expandable-panel-content">
                         <div class="col-12 bleed-x"></div>
-                        <h6>A unique opening for qualified truck drivers who want to transition into a new career making a difference in people’s lives.</h6>
+                        <h6>A unique opening for qualified truck drivers who want to transition into a new career making a difference in people’s&nbsp;lives.</h6>
                         <div class="description">
-                            <p>An American Red Cross driving career gives you a rewarding shift from day-to-day deliveries to helping save lives in your community. Say goodbye to boredom, because every day on the job is different. As part of our team, you’ll be transporting, setting up and breaking down blood collection equipment at work sites across the community, interacting with our donors and ensuring they have a top notch experience. In some locations, you’ll also work as a phlebotomist, but don’t worry – no experience is necessary! We’ll train and support you as you learn your new skills, through our full time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program! To be successful in this position you’ll need a flexible schedule to work variable shifts, and have experience driving large trucks.</p>
+                            <p>An American Red Cross driving career gives you a rewarding shift from day-to-day deliveries to helping save lives in your community. Say goodbye to boredom, because every day on the job is different. As part of our team, you’ll be transporting, setting up and breaking down blood collection equipment at work sites across the community, interacting with our donors and ensuring they have a top notch experience. In some locations, you’ll also work as a phlebotomist, but don’t worry – no experience is necessary! We’ll train and support you as you learn your new skills, through our full time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program! To be successful in this position you’ll need a flexible schedule to work variable shifts, and have experience driving large&nbsp;trucks.</p>
                         </div>
                         <div class="requirements">
                             <h5>Requirements</h5>
@@ -367,9 +367,9 @@ if (isset($_POST['btnSubmit'])) {
                     </div>
                     <div class="expandable-panel-content">
                         <div class="col-12 bleed-x"></div>
-                        <h6>Use your passion for blood banking to support our life-saving mission.</h6>
+                        <h6>Use your passion for blood banking to support our life-saving&nbsp;mission.</h6>
                         <div class="description">
-                            <p>Before our blood products go to patients in need, our immunohematology reference labs perform critical testing for safety. In this role, you will conduct basic and advanced donor and patient tests to resolve compatibility issues, and consult with hospitals and transfusion services—all while adhering to standard operating procedures and regulatory requirements.</p>
+                            <p>Before our blood products go to patients in need, our immunohematology reference labs perform critical testing for safety. In this role, you will conduct basic and advanced donor and patient tests to resolve compatibility issues, and consult with hospitals and transfusion services—all while adhering to standard operating procedures and regulatory&nbsp;requirements.</p>
                         </div>
                         <div class="requirements">
                             <h5>Requirements</h5>
@@ -408,9 +408,9 @@ if (isset($_POST['btnSubmit'])) {
                     </div><!-- END .expandable-panel-heading -->
                     <div class="expandable-panel-content">
                         <div class="col-12 bleed-x"></div>
-                        <h6>Bring your business-to-business sales experience to a philanthropic venture!</h6>
+                        <h6>Bring your business-to-business sales experience to a philanthropic&nbsp;venture!</h6>
                         <div class="description">
-                            <p>We’re looking for sales and marketing professionals who enjoy working with the public to set up, coordinate and promote blood drives with local businesses and civic organizations in their communities. We incentivize all hard work with bonuses and a supportive, growth-oriented atmosphere. All of our work centers around donors and volunteers, so great people skills, compassion and communication are priorities. Here, you’ll play a direct role in our life-saving mission, ensuring that others continue to receive the gift of life. Successful account managers should also be able to close deals and have a highly flexible schedule to accommodate the needs of our blood donors.</p>
+                            <p>We’re looking for sales and marketing professionals who enjoy working with the public to set up, coordinate and promote blood drives with local businesses and civic organizations in their communities. We incentivize all hard work with bonuses and a supportive, growth-oriented atmosphere. All of our work centers around donors and volunteers, so great people skills, compassion and communication are priorities. Here, you’ll play a direct role in our life-saving mission, ensuring that others continue to receive the gift of life. Successful account managers should also be able to close deals and have a highly flexible schedule to accommodate the needs of our blood&nbsp;donors.</p>
                         </div><!-- END .description -->
                         <div class="requirements">
                             <h5>Requirements</h5>
@@ -465,8 +465,8 @@ if (isset($_POST['btnSubmit'])) {
     ===========================================-->
     <section id="benefits">
         <div class="row">
-            <h2>Benefits with <strong>you</strong> in mind</h2>
-            <p>As a mission-based organization, we believe our team needs great support to do great work. Our comprehensive benefits help you in balancing home and work, retirement, getting healthy and more. With our resources and perks, you have amazing possibilities at the American Red Cross to advance and learn.</p>
+            <h2>Benefits with <strong>you</strong> in&nbsp;mind</h2>
+            <p>As a mission-based organization, we believe our team needs great support to do great work. Our comprehensive benefits help you in balancing home and work, retirement, getting healthy and more. With our resources and perks, you have amazing possibilities at the American Red Cross to advance and&nbsp;learn.</p>
             <div class="col-12">
                 <ul class="icon-wrap">
                     <li class="icon">
@@ -551,8 +551,10 @@ if (isset($_POST['btnSubmit'])) {
             <h2>We believe in a <strong>diverse</strong> and <strong>inclusive</strong> environment</h2>
             <div class="col-6 bleed-x"></div>
             <div class="col-6">
-                <p>Serving people in America and around the world requires a diverse group of employees ready to meet the challenge. Cultural sensitivity is key to how we operate with the public, and we want to ensure our employees reflect a rich diversity. Through external relationships and internal initiatives, we seek to achieve diversity in our workforce, partners and suppliers.</p>
-                <p>We are also proud to offer several resource groups for our employees. African-American, LGBT, and Latino Team Member Resource Groups provide mentoring and give voice to concerns and opinions of these valuable team members.</p>
+                <div class="text">
+                    <p>Serving people in America and around the world requires a diverse group of employees ready to meet the challenge. Cultural sensitivity is key to how we operate with the public, and we want to ensure our employees reflect a rich diversity. Through external relationships and internal initiatives, we seek to achieve diversity in our workforce, partners and suppliers.</p>
+                    <p>We are also proud to offer several resource groups for our employees. African-American, LGBT, and Latino Team Member Resource Groups provide mentoring and give voice to concerns and opinions of these valuable team&nbsp;members.</p>
+                </div>
             </div><!-- END .col-6 -->
         </div><!-- END .row -->
     </section><!-- END #diversity -->
@@ -567,10 +569,10 @@ if (isset($_POST['btnSubmit'])) {
             <h2>Who we are is <strong>more</strong> than just blood products</h2>
             <div class="col-6">
                 <p>As one of the nation’s oldest and most respected humanitarian organizations, the American Red Cross has been at the forefront of helping save lives since its founding in 1881. We strive to provide disaster relief in America and abroad. We support our active-duty military, veterans and their families. We collect, process and distribute about 40 percent of the nation’s blood supply. Health and safety education and training are also part of our goal.</p>
-                <p>We are a strong organization of passionate supporters, volunteers and employees dedicated to helping others. Every year, we collect over 5 million units of blood; respond to 66,000 disasters; provide more than 367,000 services to active-duty military, veterans and their families; and more.</p>
+                <p>We are a strong organization of passionate supporters, volunteers and employees dedicated to helping others. Every year, we collect over 5 million units of blood; respond to 66,000 disasters; provide more than 367,000 services to active-duty military, veterans and their families; and&nbsp;more.</p>
             </div><!-- END .col-6 -->
             <div class="col-6">
-                <p>Watch this short video to learn more about the life-saving impact our employees have every day.</p>
+                <p>Watch this short video to learn more about the life-saving impact our employees have every&nbsp;day.</p>
                 <div class="video-container bleed-x">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/kYLaY2wI3lg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div><!-- END .video-container -->
@@ -585,7 +587,7 @@ if (isset($_POST['btnSubmit'])) {
     <footer id="footer">
         <div class="row">
             <div class="wrap">
-                <p>The American Red Cross is an Equal Opportunity/Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to sex, gender identity, sexual orientation, race, color, religion, national origin, disability, protected veteran status, age, or any other characteristic protected by law.</p>
+                <p>The American Red Cross is an Equal Opportunity/Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to sex, gender identity, sexual orientation, race, color, religion, national origin, disability, protected veteran status, age, or any other characteristic protected by&nbsp;law.</p>
                 <!-- <a href="http://bayardad.com/careers/privacy-policy/" target="_blank">Privacy Policy</a> -->
             </div>
         </div>
