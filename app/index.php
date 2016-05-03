@@ -7,7 +7,7 @@ $loginname = 'root';
 $loginpassword = 'root';
 
 $cn = mysql_connect($hostname, $loginname , $loginpassword) or die( mysql_error() );
-mysql_select_db("bayard_php_test_db") or die( mysql_error() );
+mysql_select_db("arc_biomed_database") or die( mysql_error() );
 
 $thank_you_page = "thankyou.php";   // url of thank you page
 
@@ -87,24 +87,19 @@ if (isset($_POST['btnSubmit'])) {
         $txtLastName            = mysql_real_escape_string($txtLastName);
         $txtEmail               = mysql_real_escape_string($txtEmail);
         $txtPhone               = mysql_real_escape_string($txtPhone);
-        $over21                 = mysql_real_escape_string($over21);
         $location               = mysql_real_escape_string($location);
-        $driverExperience       = mysql_real_escape_string($driverExperience);
-        $txtSalary              = mysql_real_escape_string($txtSalary);
-        $driverLicense          = mysql_real_escape_string($driverLicense);
-        $cdl                    = mysql_real_escape_string($cdl);
-        $hazMatEndorsement         = mysql_real_escape_string($hazMatEndorsement);
-        $hazMatExperience       = mysql_real_escape_string($hazMatExperience);
-
-        // get values of multiple select fields, restructure the array values to a string of
-        // comma separated values, and remove the trailing comma
-        $typeEmployment   = implode(", ", $_POST['typeEmployment']);
-        $typeEmployment   = rtrim($typeEmployment, ", ");
-
+        $position               = mysql_real_escape_string($position);
+        $rdoDriverPhlebSched    = mysql_real_escape_string($rdoDriverPhlebSched);
+        $rdoDriverPhlebCDL      = mysql_real_escape_string($rdoDriverPhlebCDL);
+        $rdoMedTechLicense      = mysql_real_escape_string($rdoMedTechLicense);
+        $txtMedTechLicense      = mysql_real_escape_string($txtMedTechLicense);
+        $rdoNurseLicense        = mysql_real_escape_string($rdoNurseLicense);
+        $rdoPhlebSched          = mysql_real_escape_string($rdoPhlebSched);
+        $rdoPhlebPTSched        = mysql_real_escape_string($rdoPhlebPTSched);
         $strClientAttachment    = mysql_real_escape_string($strClientAttachment);
         $strUtmSource           = mysql_real_escape_string($strUtmSource);
 
-        $sqlSaveSubmission = "INSERT INTO apps_biomed_careers (first_name, last_name, email, phone, over_21, location, driver_experience, salary, type_employment, driver_license, cdl, hazMat_endorsed, hazMat_experience, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$over21', '$location', '$driverExperience', '$txtSalary', '$typeEmployment', '$driverLicense', '$cdl', '$hazMatEndorsement', '$hazMatExperience', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
+        $sqlSaveSubmission = "INSERT INTO apps_biomed_careers (first_name, last_name, email, phone, location, position, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$location', '$position', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
 
         // execute query
         $sqlSaveSubmissionResult = mysql_query($sqlSaveSubmission);
@@ -237,10 +232,10 @@ if (isset($_POST['btnSubmit'])) {
                         <a class="nav-link" href="#benefits">Benefits</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#day">Culture</a>
+                        <a class="nav-link" href="#diversity">Culture</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#mission">Who we are</a>
+                        <a class="nav-link" href="#about">Who we are</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#form-1-container"><strong>Join us</strong></a>
