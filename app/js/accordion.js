@@ -7,7 +7,7 @@
 
     var panelheight = new Array();
     var currentpanel = defaultopenpanel;
-    var iconheight = parseInt($('.icon-close-open').css('height'));
+    var iconheight = parseInt($('.icon-close-open-toggle').css('height'));
     var highlightopen = true;
 
     //Initialise collapsible panels
@@ -16,7 +16,7 @@
                 panelheight[i] = parseInt($('#cp-'+i).find('.expandable-panel-content').css('height'));
                 $('#cp-'+i).find('.expandable-panel-content').css('margin-top', -panelheight[i]);
                 if (defaultopenpanel == i) {
-                    $('#cp-'+i).find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+                    $('#cp-'+i).find('.icon-close-open-toggle').css('background-position', '0px -'+iconheight+'px');
                     $('#cp-'+i).find('.expandable-panel-content').css('margin-top', 0);
                 }
             }
@@ -33,7 +33,7 @@
         if (parseInt(obj.css('margin-top')) <= (panelheight[objid]*-1)) {
             obj.clearQueue();
             obj.stop();
-            obj.prev().find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+            obj.prev().find('.icon-close-open-toggle').css('background-position', '0px -'+iconheight+'px');
             obj.animate({'margin-top':0}, panelspeed);
             if (highlightopen == true) {
                 $('#cp-'+currentpanel + ' .expandable-panel-heading').addClass('header-active');
@@ -41,7 +41,7 @@
         } else {
             obj.clearQueue();
             obj.stop();
-            obj.prev().find('.icon-close-open').css('background-position', '0px 0px');
+            obj.prev().find('.icon-close-open-toggle').css('background-position', '0px 0px');
             obj.animate({'margin-top':(panelheight[objid]*-1)}, panelspeed);
             if (highlightopen == true) {
                 $('#cp-'+currentpanel + ' .expandable-panel-heading').removeClass('header-active');
@@ -52,7 +52,7 @@
     function resetpanels() {
         for (var i=1; i<=totalpanels; i++) {
             if (currentpanel != i) {
-                $('#cp-'+i).find('.icon-close-open').css('background-position', '0px 0px');
+                $('#cp-'+i).find('.icon-close-open-toggle').css('background-position', '0px 0px');
                 $('#cp-'+i).find('.expandable-panel-content').animate({'margin-top':-panelheight[i]}, panelspeed);
                 if (highlightopen == true) {
                     $('#cp-'+i + ' .expandable-panel-heading').removeClass('header-active');

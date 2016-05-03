@@ -52,7 +52,7 @@ ul.nav-wrap {
 		&:last-child {
 			border-bottom: 1px solid $grey-2;
 			.nav-link {
-				color: $blue-1;
+				color: $red;
 			}
 		}
 		@include breakpoint($laptop) {
@@ -79,15 +79,15 @@ ul.nav-wrap {
 				@include padding(0.25rem .5rem);
 				&:hover {
 					color: $white;
-					background-color: $blue-1;
+					background-color: $red;
 					transition: 0.2s all;
 				}
 			}
 			@include breakpoint($laptop) {
-				@include padding(0.45rem);
+				@include padding(0.25rem 0.575rem);
 				&:hover {
 					color: $white;
-					background-color: $blue-1;
+					background-color: $red;
 					transition: 0.2s all;
 				}
 			}
@@ -97,6 +97,12 @@ ul.nav-wrap {
 
 .closed-nav {
 	height: 4.95rem;
+	@include breakpoint($laptop) {
+		height: 84px;
+	}
+	@include breakpoint($desktop) {
+		height: 106px;
+	}
 }
 
 .open-nav {

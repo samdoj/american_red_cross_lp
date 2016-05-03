@@ -45,7 +45,7 @@ section {
 	@include position(relative);
 	float: left;
 	width: 100%;
-	@include padding($-box-spacing-md 0);
+	@include padding($box-spacing-md 0);
 	@include breakpoint($mobile-md) {
 		@include padding(3rem 0)
 	}
@@ -94,7 +94,8 @@ footer {
 	transition: 0.3s all;
 	z-index: 500;
 	@include breakpoint($laptop) {
-		@include position(absolute, 0 0 null 0);
+		background-color: $white;
+		// @include position(absolute, 0 0 null 0);
 	}
 	#header-logo {
 		width: 10rem;
@@ -115,17 +116,18 @@ footer {
 	@include padding(0);
 	background-image: url('../media/img/hero_bg_480.jpg');
 	background-repeat: no-repeat;
-	background-position: center 10%;
+	background-position: center center;
 	background-size: cover;
-	@include breakpoint($mobile-lg) {
+	@include breakpoint($tablet) {
 		background-image: url('../media/img/hero_bg_768.jpg');
+		background-position: 25% center;
 	}
-
 	@include breakpoint($laptop) {
 		background-image: url('../media/img/hero_bg_1024.jpg');
 	}
 	@include breakpoint($desktop) {
 		background-image: url('../media/img/hero_bg_1440.jpg');
+		background-position: 35% center;
 	}
 	@include breakpoint(1700px) {
 		background-image: url('../media/img/hero_bg_1720.jpg');
@@ -136,31 +138,24 @@ footer {
 	position: relative;
 	@include margin(12.375rem 0 1.1875rem 0);
 	text-align: center;
+	@include breakpoint($mobile-md) {
+		margin-top: 15rem;
+	}
 	@include breakpoint($mobile-lg) {
-		margin-top: 18.5rem;
+		margin-top: 19rem;
 	}
 	@include breakpoint($tablet) {
 		margin-top: 22.5rem;
 	}
-	@include breakpoint(920px) {
-		@include margin(22.5rem 0 2rem 0);
-	}
 	@include breakpoint($laptop) {
-		margin-top: 19rem;
-		h1 {
-			text-align: left;
-		}
+		margin-top: 27rem;
 	}
 	@include breakpoint($desktop) {
-		@include margin(22.5rem 0 2rem 0);
+		@include margin(28.25rem 0 2rem 0);
 	}
-	@include breakpoint(1550px) {
-		margin-top: 38rem;
+	@include breakpoint($desktop-xl) {
+		@include margin(25.5rem 0 2rem 0);
 	}
-	@include breakpoint(1700px) {
-		margin-top: 46rem;
-	}
-
 }
 
 
@@ -308,16 +303,23 @@ footer {
 \************************************/
 
 #about {
+	padding-bottom: 0;
+	@include breakpoint($laptop) {
+		padding-bottom: $box-spacing-md;
+	}
 	.col-6 {
 
 	}
 	.video-container {
 		@include position(relative);
 		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
+		margin-bottom: 0;
 		@include padding(30px 0 56.25% 0);
 		@include size(auto 0);
 		overflow: hidden;
+		@include breakpoint($laptop) {
+			margin-bottom: $box-spacing-md;
+		}
 		iframe, .video-container object, .video-container embed {
 			@include position(absolute, 0 null null 0);
 			@include size(100% 100%);
@@ -337,7 +339,7 @@ footer {
 
 #footer {
 	background-color: $grey-1;
-	@include padding($-box-spacing-sml 0);
+	@include padding($box-spacing-sml 0);
 	p {
 		color: $grey-2;
 		font-size: $footer-font;

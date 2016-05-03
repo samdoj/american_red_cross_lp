@@ -287,166 +287,176 @@ if (isset($_POST['btnSubmit'])) {
     <section class="container" id="hiring">
         <div class="row">
             <h2>Who We're <strong>Hiring</strong></h2>
-            <div class="bleed-x col-12">
-                <div id="accordion-wrap">
-                    <div class="expandable-panel" id="cp-1">
-                        <div class="expandable-panel-heading">
-                            <h6>Phlebotomists<span class="icon-close-open"></span></h6>
+            <div id="accordion-wrap">
+                <div class="expandable-panel" id="cp-1">
+                    <div class="expandable-panel-heading">
+                        <h6>Phlebotomists<span class="icon-close-open-toggle"></span></h6>
+                    </div>
+                    <div class="expandable-panel-content">
+                        <div class="col-12 bleed-x"></div>
+                        <h6>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</h6>
+                        <div class="description">
+                            <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
                         </div>
-                        <div class="expandable-panel-content">
-                            <img src="http://placehold.it/1140x720" alt="">
-                            <h6>Want to channel your customer-service skills into a dynamic job opportunity? Consider a phlebotomy career at the American Red Cross. (We train!)</h6>
-                            <div class="description">
-                                <p>As the front line of our blood collection services, you will be the face of the American Red Cross to our blood donors, making a personal connection with them and ensuring they have a top-notch donation experience. We’re looking for compassionate people who can connect with others, pay careful attention to details and support their team while working together to fulfill our mission. This role requires a highly flexible schedule and comes with competitive pay and benefits. No experience is necessary. We’ll train and support you as you learn your new skills, with our full-time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program!</p>
-                            </div>
-                            <div class="requirements">
-                                <h5>Requirements</h5>
-                                <ul>
-                                    <li>High school diploma or equivalent</li>
-                                    <li>A current valid driver's license and good driving record</li>
-                                    <li>Some prior medical experience preferred but not required</li>
-                                </ul>
+                        <div class="requirements">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>High school diploma or equivalent</span></li>
+                                <li><span>A current valid driver's license and good driving record</span></li>
+                                <li><span>Some prior medical experience preferred but not required</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
                                 <a href="#form-1-container">Contact Us</a>
                             </div>
-                        </div>
-                    </div>
+                        </div><!-- END .requirements -->
+                    </div><!-- END .expandable-panel-content -->
+                </div><!-- END #cp-1 -->
 
-                    <div class="expandable-panel" id="cp-2">
-                        <div class="expandable-panel-heading">
-                            <h6>Nurses<span class="icon-close-open"></span></h6>
+                <div class="expandable-panel" id="cp-2">
+                    <div class="expandable-panel-heading">
+                        <h6>Nurses<span class="icon-close-open-toggle"></span></h6>
+                    </div>
+                    <div class="expandable-panel-content">
+                        <div class="col-12 bleed-x"></div>
+                        <h6>Are you a mission-oriented nurse who likes to travel and meet new people? You will thrive at the American Red Cross.</h6>
+                        <div class="description">
+                            <p>We’re looking for both charge and apheresis nurses to accompany us on blood drives throughout the community. In this role, you’ll focus on customer service and compassion, working and making connections with healthy, happy blood donors. As a charge nurse you will lead a team, draw blood and, on occasion, supervise blood drives. As an apheresis nurse you will perform clinical apheresis procedures, along with other tasks, ensuring safe and appropriate care of patients. We work hard when we’re on the road and need a nurse who can accommodate a highly flexible schedule. You should also be comfortable performing venipuncture. You will need an RN (or LPN, depending on state requirements) license in the state prior to starting work.</p>
                         </div>
-                        <div class="expandable-panel-content">
-                            <img src="http://placehold.it/1140x720" alt="">
-                            <h6>Are you a mission-oriented nurse who likes to travel and meet new people? You will thrive at the American Red Cross.</h6>
-                            <div class="description">
-                                <p>We’re looking for both charge and apheresis nurses to accompany us on blood drives throughout the community. In this role, you’ll focus on customer service and compassion, working and making connections with healthy, happy blood donors. As a charge nurse you will lead a team, draw blood and, on occasion, supervise blood drives. As an apheresis nurse you will perform clinical apheresis procedures, along with other tasks, ensuring safe and appropriate care of patients. We work hard when we’re on the road and need a nurse who can accommodate a highly flexible schedule. You should also be comfortable performing venipuncture. You will need an RN (or LPN, depending on state requirements) license in the state prior to starting work.</p>
-                            </div>
-                            <div class="requirements">
-                                <h5>Requirements</h5>
-                                <ul>
-                                    <li>Registered nurse license (LPN may be acceptable in some states)</li>
-                                    <li>A current valid driver's license and good driving record</li>
-                                </ul>
+                        <div class="requirements">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>Registered nurse license (LPN may be acceptable in some states)</span></li>
+                                <li><span>A current valid driver's license and good driving record</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
                                 <a href="#form-1-container">Contact Us</a>
                             </div>
-                        </div>
-                    </div>
+                        </div><!-- END .requirements -->
+                    </div><!-- END .expandable-panel-content -->
+                </div><!-- END #cp-2 -->
 
-                    <div class="expandable-panel" id="cp-3">
-                        <div class="expandable-panel-heading">
-                            <h6>Phlebotomist/Drivers<span class="icon-close-open"></span></h6>
+                <div class="expandable-panel" id="cp-3">
+                    <div class="expandable-panel-heading">
+                        <h6>Phlebotomist/Drivers<span class="icon-close-open-toggle"></span></h6>
+                    </div>
+                    <div class="expandable-panel-content">
+                        <div class="col-12 bleed-x"></div>
+                        <h6>A unique opening for qualified truck drivers who want to transition into a new career making a difference in people’s lives.</h6>
+                        <div class="description">
+                            <p>An American Red Cross driving career gives you a rewarding shift from day-to-day deliveries to helping save lives in your community. Say goodbye to boredom, because every day on the job is different. As part of our team, you’ll be transporting, setting up and breaking down blood collection equipment at work sites across the community, interacting with our donors and ensuring they have a top notch experience. In some locations, you’ll also work as a phlebotomist, but don’t worry – no experience is necessary! We’ll train and support you as you learn your new skills, through our full time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program! To be successful in this position you’ll need a flexible schedule to work variable shifts, and have experience driving large trucks.</p>
                         </div>
-                        <div class="expandable-panel-content">
-                            <img src="http://placehold.it/1140x720" alt="">
-                            <h6>A unique opening for qualified truck drivers who want to transition into a new career making a difference in people’s lives.</h6>
-                            <div class="description">
-                                <p>An American Red Cross driving career gives you a rewarding shift from day-to-day deliveries to helping save lives in your community. Say goodbye to boredom, because every day on the job is different. As part of our team, you’ll be transporting, setting up and breaking down blood collection equipment at work sites across the community, interacting with our donors and ensuring they have a top notch experience. In some locations, you’ll also work as a phlebotomist, but don’t worry – no experience is necessary! We’ll train and support you as you learn your new skills, through our full time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program! To be successful in this position you’ll need a flexible schedule to work variable shifts, and have experience driving large trucks.</p>
-                            </div>
-                            <div class="requirements">
-                                <h5>Requirements</h5>
-                                <ul>
-                                    <li>High school diploma or equivalent</li>
-                                    <li>A current valid driver's license and good driving record</li>
-                                    <li>A valid CDL (Class A or B) may be required in some locations</li>
-                                    <li>Ability to lift, push and pull up to 75lbs</li>
-                                    <li>DOT certification may be required in some locations</li>
-                                </ul>
+                        <div class="requirements">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>High school diploma or equivalent</span></li>
+                                <li><span>A current valid driver's license and good driving record</span></li>
+                                <li><span>A valid CDL (Class A or B) may be required in some locations</span></li>
+                                <li><span>Ability to lift, push and pull up to 75lbs</span></li>
+                                <li><span>DOT certification may be required in some locations</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
                                 <a href="#form-1-container">Contact Us</a>
                             </div>
-                        </div>
-                    </div>
+                        </div><!-- END .requirements -->
+                    </div><!-- END .expandable-panel-content -->
+                </div><!-- END #cp-3 -->
 
-                    <div class="expandable-panel" id="cp-4">
-                        <div class="expandable-panel-heading">
-                            <h6>Medical Technologists<span class="icon-close-open"></span></h6>
+                <div class="expandable-panel" id="cp-4">
+                    <div class="expandable-panel-heading">
+                        <h6>Medical Technologists<span class="icon-close-open-toggle"></span></h6>
+                    </div>
+                    <div class="expandable-panel-content">
+                        <div class="col-12 bleed-x"></div>
+                        <h6>Use your passion for blood banking to support our life-saving mission.</h6>
+                        <div class="description">
+                            <p>Before our blood products go to patients in need, our immunohematology reference labs perform critical testing for safety. In this role, you will conduct basic and advanced donor and patient tests to resolve compatibility issues, and consult with hospitals and transfusion services—all while adhering to standard operating procedures and regulatory requirements.</p>
                         </div>
-                        <div class="expandable-panel-content">
-                            <img src="http://placehold.it/1140x720" alt="">
-                            <h6>Use your passion for blood banking to support our life-saving mission.</h6>
-                            <div class="description">
-                                <p>Before our blood products go to patients in need, our immunohematology reference labs perform critical testing for safety. In this role, you will conduct basic and advanced donor and patient tests to resolve compatibility issues, and consult with hospitals and transfusion services—all while adhering to standard operating procedures and regulatory requirements.</p>
-                            </div>
-                            <div class="requirements">
-                                <h5>Requirements</h5>
-                                <p><strong>Medical Technologist I</strong></p>
-                                <ul>
-                                    <li>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor’s degree with major in biological science or chemistry plus 3 years blood banking experience<br>
-                                    - or -<br>
-                                    MLT (ASCP) certification plus 5 years laboratory experience
-                                    </li>
-                                </ul>
-                                <p><strong>Medical Technologist II</strong></p>
-                                <ul>
-                                    <li>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor's degree with major in biological science or chemistry plus 6 years blood banking experience<br>
-                                    - or -<br>
-                                    MLT (ASCP) certification plus 4 years laboratory experience
-                                    </li>
-                                </ul>
-                                <p><strong>Medical Technologist III</strong></p>
-                                <ul>
-                                    <li>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor’s degree with major in biological science or chemistry plus blood banking experience<li>
-                                </ul>
-                                <p><strong>All</strong></p>
-                                <ul>
-                                    <li>State license where applicable<li>
-                                </ul>
+                        <div class="requirements">
+                            <h5>Requirements</h5>
+                            <p><strong>Medical Technologist I</strong></p>
+                            <ul>
+                                <li><span>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor’s degree with major in biological science or chemistry plus 3 years blood banking experience<br>
+                                - or -<br>
+                                MLT (ASCP) certification plus 5 years laboratory experience
+                                </span></li>
+                            </ul>
+                            <p><strong>Medical Technologist II</strong></p>
+                            <ul>
+                                <li><span>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor's degree with major in biological science or chemistry plus 6 years blood banking experience<br>
+                                - or -<br>
+                                MLT (ASCP) certification plus 4 years laboratory experience
+                                </span></li>
+                            </ul>
+                            <p><strong>Medical Technologist III</strong></p>
+                            <ul>
+                                <li><span>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor’s degree with major in biological science or chemistry plus blood banking experience</span></li>
+                            </ul>
+                            <p><strong>All</strong></p>
+                            <ul>
+                                <li><span>State license where applicable</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
                                 <a href="#form-1-container">Contact Us</a>
                             </div>
-                        </div>
-                    </div>
+                        </div><!-- END .requirements -->
+                    </div><!-- END .expandable-panel-content -->
+                </div><!-- END #cp-4 -->
 
-                    <div class="expandable-panel" id="cp-5">
-                        <div class="expandable-panel-heading">
-                            <h6>Sales Professionals<span class="icon-close-open"></span></h6>
-                        </div>
-                        <div class="expandable-panel-content">
-                            <img src="http://placehold.it/1140x720" alt="">
-                            <h6>Bring your business-to-business sales experience to a philanthropic venture!</h6>
-                            <div class="description">
-                                <p>We’re looking for sales and marketing professionals who enjoy working with the public to set up, coordinate and promote blood drives with local businesses and civic organizations in their communities. We incentivize all hard work with bonuses and a supportive, growth-oriented atmosphere. All of our work centers around donors and volunteers, so great people skills, compassion and communication are priorities. Here, you’ll play a direct role in our life-saving mission, ensuring that others continue to receive the gift of life. Successful account managers should also be able to close deals and have a highly flexible schedule to accommodate the needs of our blood donors.</p>
-                            </div>
-                            <div class="requirements">
-                                <h5>Requirements</h5>
-                                <ul>
-                                    <li>Bachelor's degree in marketing, sales, or communications OR equivalent combination of related education and experience</li>
-                                    <li>One year (minimum) related experience</li>
-                                    <li>A current, valid driver's license and good driving record</li>
-                                </ul>
+                <div class="expandable-panel" id="cp-5">
+                    <div class="expandable-panel-heading">
+                        <h6>Sales Professionals<span class="icon-close-open-toggle"></span></h6>
+                    </div><!-- END .expandable-panel-heading -->
+                    <div class="expandable-panel-content">
+                        <div class="col-12 bleed-x"></div>
+                        <h6>Bring your business-to-business sales experience to a philanthropic venture!</h6>
+                        <div class="description">
+                            <p>We’re looking for sales and marketing professionals who enjoy working with the public to set up, coordinate and promote blood drives with local businesses and civic organizations in their communities. We incentivize all hard work with bonuses and a supportive, growth-oriented atmosphere. All of our work centers around donors and volunteers, so great people skills, compassion and communication are priorities. Here, you’ll play a direct role in our life-saving mission, ensuring that others continue to receive the gift of life. Successful account managers should also be able to close deals and have a highly flexible schedule to accommodate the needs of our blood donors.</p>
+                        </div><!-- END .description -->
+                        <div class="requirements">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>Bachelor's degree in marketing, sales, or communications<br>
+                                - or -<br>
+                                Equivalent combination of related education and experience</span></li>
+                                <li><span>One year (minimum) related experience</span></li>
+                                <li><span>A current, valid driver's license and good driving record</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
                                 <a href="#form-1-container">Contact Us</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tabs">
-                    <div class="container">
-
-                        <ul class="tabs">
-                            <li class="tab-link current" data-tab="tab-1">Tab One</li>
-                            <li class="tab-link" data-tab="tab-2">Tab Two</li>
-                            <li class="tab-link" data-tab="tab-3">Tab Three</li>
-                            <li class="tab-link" data-tab="tab-4">Tab Four</li>
-                            <li class="tab-link" data-tab="tab-4">Tab Five</li>
-                        </ul>
-
-                        <div id="tab-1" class="tab-content current">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                        <div id="tab-2" class="tab-content">
-                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                        <div id="tab-3" class="tab-content">
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </div>
-                        <div id="tab-4" class="tab-content">
-                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                        <div id="tab-5" class="tab-content">
-                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                </div><!-- container -->
-            </div>
-        </div>
+                        </div><!-- END .requirements -->
+                    </div><!-- END .expandable-panel-content -->
+                </div><!-- END #cp-5 -->
+            </div><!-- END #accordion-wrap -->
+        </div><!-- END .row -->
+        <div id="tabs">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-1">Tab One</li>
+                        <li class="tab-link" data-tab="tab-2">Tab Two</li>
+                        <li class="tab-link" data-tab="tab-3">Tab Three</li>
+                        <li class="tab-link" data-tab="tab-4">Tab Four</li>
+                        <li class="tab-link" data-tab="tab-4">Tab Five</li>
+                    </ul>
+                    <div id="tab-1" class="tab-content current">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div><!-- END #tab-1 -->
+                    <div id="tab-2" class="tab-content">
+                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div><!-- END #tab-2 -->
+                    <div id="tab-3" class="tab-content">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </div><!-- END #tab-3 -->
+                    <div id="tab-4" class="tab-content">
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div><!-- END #tab-4 -->
+                    <div id="tab-5" class="tab-content">
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div><!-- END #tab-5 -->
+                </div><!-- END .col-12 -->
+            </div><!-- END .row -->
+        </div><!-- END #tabs -->
     </section>
     <!--======= End of WHO WE'RE HIRING =======-->
 

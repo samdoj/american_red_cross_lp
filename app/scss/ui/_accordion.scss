@@ -7,51 +7,139 @@
 /* --------- COLLAPSIBLE PANELS ----------*/
  
 .expandable-panel {
-    width:100%;
     position:relative;
     min-height: 45px;
     overflow: auto;
     margin-bottom: 0px;
     border-bottom: 2px solid white;
+    @include bleed-x(6% 6%);
+    @include breakpoint($tablet) {
+        @include bleed-x(1rem 1rem);
+    }
 }
 .expandable-panel-heading {
-    @include size(100% 45px);
+    height: 45px;
     cursor:pointer;
     clear:both;
-    background-color: red;
+    background-color: $red;
     position:relative;
-}
-.expandable-panel-heading {
-
-}
-.expandable-panel-heading {
+    overflow: hidden;
+    @include bleed-x(6% 6%);
+    @include breakpoint($tablet) {
+        @include bleed-x(1rem 1rem);
+    }
     h6 {
         margin-bottom: 0;
-        @include padding(0.5rem 0.75rem);
+        @include padding(0.5rem 0);
         color:$white;
     }
 }
 .expandable-panel-content {
-    padding: 0;
     margin-top: -999px;
 }
-.expandable-panel-content p {
-    // padding:4px 0 6px 0;
-}
-.expandable-panel-content p:first-child  {
-    // padding-top:10px;
-}
-.expandable-panel-content p:last-child {
-    // padding-bottom:15px;
-}
-.icon-close-open {
+.icon-close-open-toggle {
     @include size(20px 20px);
-    @include position(absolute, null 1rem null null);
-    background-image:url("../media/img/icon-close-open.png");
-}
-.expandable-panel-content img {
-    
+    @include position(absolute, 50% 1rem null null);
+    background-image:url("../media/img/icon-close-open-toggle.png");
+    transform: translateY(-50%);
 }
 .header-active {
     background-color: $grey-4;
+}
+.requirements {
+    ul {
+        list-style-type: disc;
+        li {
+            color:$black-1;
+            margin-left: 6%;
+            margin-bottom: 1rem;
+            line-height: $line-height-lg;
+            @include breakpoint($tablet) {
+                margin-left: 1rem;
+            }
+            span {
+                color: $grey-4;
+            }
+        }
+    }
+}
+
+#cp-1 {
+    .expandable-panel-content {
+        .col-12 {
+            background-image: url('../media/img/img_phlebotomist_480.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            padding-bottom: 80%;
+            @include breakpoint($tablet) {
+                background-image: url('../media/img/img_phlebotomist_768.jpg');
+                padding-bottom: 60%;
+            }
+        }
+    }
+}
+
+#cp-2 {
+    .expandable-panel-content {
+        .col-12 {
+            background-image: url('../media/img/img_nurse_480.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            padding-bottom: 80%;
+            @include breakpoint($tablet) {
+                background-image: url('../media/img/img_nurse_768.jpg');
+                padding-bottom: 60%;
+            }
+        }
+    }
+}
+
+#cp-3 {
+    .expandable-panel-content {
+        .col-12 {
+            background-image: url('../media/img/img_driver_480.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            padding-bottom: 80%;
+            @include breakpoint($tablet) {
+                background-image: url('../media/img/img_driver_768.jpg');
+                padding-bottom: 60%;
+            }
+        }
+    }
+}
+
+#cp-4 {
+    .expandable-panel-content {
+        .col-12 {
+            background-image: url('../media/img/img_medtech_480.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            padding-bottom: 80%;
+            @include breakpoint($tablet) {
+                background-image: url('../media/img/img_medtech_768.jpg');
+                padding-bottom: 60%;
+            }
+        }
+    }
+}
+
+#cp-5 {
+    .expandable-panel-content {
+        .col-12 {
+            background-image: url('../media/img/img_sales_480.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            padding-bottom: 80%;
+            @include breakpoint($tablet) {
+                background-image: url('../media/img/img_sales_768.jpg');
+                padding-bottom: 60%;
+            }
+        }
+    }
 }

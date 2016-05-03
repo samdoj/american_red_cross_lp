@@ -4,18 +4,14 @@
 
 .row {
 	@include container($sml-container);
-	margin-bottom: $-box-spacing-md;
 	@include position(relative);
 	clear: both;
-	&:last-of-type {
-		margin-bottom: 0;
-	}
 	@include breakpoint($tablet) {
 		@include container($md-container);
 	}
 	@include breakpoint($laptop) {
 		@include container($lg-container);
-		margin-bottom: $-box-spacing-sml;
+		margin-bottom: $box-spacing-sml;
 	}
 	@include breakpoint($desktop) {
 		@include container($xl-container);
@@ -95,7 +91,7 @@
 }
 
 [class^="col-"] {
-	margin-bottom: $-box-spacing-sml;
+	margin-bottom: $box-spacing-sml;
 	@include breakpoint($laptop) {
 		margin-bottom: 0;
 	}
