@@ -199,4 +199,19 @@ jQuery(document).ready(function() {
       $(this).closest('.file-container').find('.upload-path').text(name);
       
     });
+
+    // RETRIEVING FORM LOCATION & POSITION DATA
+    $("#location").change(function() {
+        $("#position").load("get_positions.php?location=" + $("#location").val());
+        setTimeout(function() {
+            $("#position").selectpicker('refresh');
+        }, 200);
+
+        if ($("#position").val().length > 1 ) {
+            $('#position-questions').empty();
+        }
+    });
+    $("#position").change(function() {
+        $("#position-questions").load("get_positions.php?position=" + $("#position").val());
+    });
 });
