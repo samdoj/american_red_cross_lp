@@ -833,51 +833,6 @@ figure {
   clear: both;
 }
 
-head {
-  display: block;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 999;
-  color: #333;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-head:before {
-  content: "|||";
-  display: block;
-  padding: 5px 10px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-head:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: red;
-}
-
-head:hover ~ .row,
-head:hover ~ body .row {
-  position: relative;
-}
-
-head:hover ~ .row:before,
-head:hover ~ body .row:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: " ";
-  z-index: 998;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(38, 38, 38, 0.25) 60%, transparent 60%);
-  background-size: 8.62069%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
-}
-
 @media (min-width: 768px) {
   .row {
     max-width: 736px;
@@ -888,25 +843,6 @@ head:hover ~ body .row:before {
     content: " ";
     display: block;
     clear: both;
-  }
-  head:hover ~ .row,
-  head:hover ~ body .row {
-    position: relative;
-  }
-  head:hover ~ .row:before,
-  head:hover ~ body .row:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: " ";
-    z-index: 998;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(38, 38, 38, 0.25) 60%, transparent 60%);
-    background-size: 8.62069%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top;
   }
 }
 
@@ -921,25 +857,6 @@ head:hover ~ body .row:before {
     display: block;
     clear: both;
   }
-  head:hover ~ .row,
-  head:hover ~ body .row {
-    position: relative;
-  }
-  head:hover ~ .row:before,
-  head:hover ~ body .row:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: " ";
-    z-index: 998;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(38, 38, 38, 0.25) 60%, transparent 60%);
-    background-size: 8.62069%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top;
-  }
 }
 
 @media (min-width: 1920px) {
@@ -952,25 +869,6 @@ head:hover ~ body .row:before {
     content: " ";
     display: block;
     clear: both;
-  }
-  head:hover ~ .row,
-  head:hover ~ body .row {
-    position: relative;
-  }
-  head:hover ~ .row:before,
-  head:hover ~ body .row:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: " ";
-    z-index: 998;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(38, 38, 38, 0.25) 60%, transparent 60%);
-    background-size: 8.62069%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top;
   }
 }
 
