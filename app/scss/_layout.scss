@@ -12,7 +12,7 @@
 	@include breakpoint($laptop) {
 		@include container($lg-container);
 	}
-	@include breakpoint($desktop) {
+	@include breakpoint($desktop-xl) {
 		@include container($xl-container);
 	}
 }

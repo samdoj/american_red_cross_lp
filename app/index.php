@@ -125,10 +125,11 @@ if (isset($_POST['btnSubmit'])) {
         $rdoNurseLicense        = mysql_real_escape_string($rdoNurseLicense);
         $rdoPhlebSched          = mysql_real_escape_string($rdoPhlebSched);
         $rdoPhlebPTSched        = mysql_real_escape_string($rdoPhlebPTSched);
+        $rdoDriveRecord         = mysql_real_escape_string($rdoDriveRecord);
         $strClientAttachment    = mysql_real_escape_string($strClientAttachment);
         $strUtmSource           = mysql_real_escape_string($strUtmSource);
 
-        $sqlSaveSubmission = "INSERT INTO apps_biomed_careers (first_name, last_name, email, phone, location, position, recruiter, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
+        $sqlSaveSubmission = "INSERT INTO apps_biomed (first_name, last_name, email, phone, location, position, recruiter, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, driving_record, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$rdoDriveRecord', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
 
         // execute query
         $sqlSaveSubmissionResult = mysql_query($sqlSaveSubmission);
@@ -184,7 +185,7 @@ if (isset($_POST['btnSubmit'])) {
     } // end if (!$txtNewsletter)
 
     // redirect user to the thank you page
-    // header('Location: ' . $thank_you_page . '');
+    header('Location: ' . $thank_you_page . '');
 } // end if (isset($_POST['btnSubmit']))
 ?>
 
@@ -197,25 +198,24 @@ if (isset($_POST['btnSubmit'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fdbb30">
-<meta name="msapplication-TileColor" content="#ffffff">
+<link rel="apple-touch-icon" sizes="57x57" href="media/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="media/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="media/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="media/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="media/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="media/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="media/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="media/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="media/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="media/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="media/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="media/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="media/favicons/manifest.json">
+<link rel="mask-icon" href="media/favicons/safari-pinned-tab.svg" color="#ed1b2e">
+<meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-<meta name="theme-color" content="#026cb6">
+<meta name="theme-color" content="#ed1b2e">
 
 <!-- Styles -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -240,6 +240,14 @@ if (isset($_POST['btnSubmit'])) {
 </script>
 
 <!-- begin google analytics code -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-75537316-1', 'auto');
+    ga('send', 'pageview');
+</script>
 <!-- end google analytics code -->
 </head>
 <body>
@@ -456,31 +464,128 @@ if (isset($_POST['btnSubmit'])) {
             <div class="row">
                 <div class="col-12">
                     <ul class="tabs">
-                        <li class="tab-link current" data-tab="tab-1">Tab One</li>
-                        <li class="tab-link" data-tab="tab-2">Tab Two</li>
-                        <li class="tab-link" data-tab="tab-3">Tab Three</li>
-                        <li class="tab-link" data-tab="tab-4">Tab Four</li>
-                        <li class="tab-link" data-tab="tab-4">Tab Five</li>
+                        <li class="tab-link current" data-tab="tab-1">Phlebotomists</li>
+                        <li class="tab-link" data-tab="tab-2">Nurses</li>
+                        <li class="tab-link" data-tab="tab-3">Phlebotomist/<br>Drivers</li>
+                        <li class="tab-link" data-tab="tab-4">Medical<br>Technologists</li>
+                        <li class="tab-link" data-tab="tab-5">Sales Account<br>Managers</li>
                     </ul>
                     <div id="tab-1" class="tab-content current">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <div class="col-12"></div>
+                        <h6>A unique opening for qualified truck drivers who want to transition into a new career making a difference in people’s&nbsp;lives.</h6>
+                        <div class="description col-6">
+                            <p>An American Red Cross driving career gives you a rewarding shift from day-to-day deliveries to helping save lives in your community. Say goodbye to boredom, because every day on the job is different. As part of our team, you’ll be transporting, setting up and breaking down blood collection equipment at work sites across the community, interacting with our donors and ensuring they have a top notch experience. In some locations, you’ll also work as a phlebotomist, but don’t worry – no experience is necessary! We’ll train and support you as you learn your new skills, through our full time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program! To be successful in this position you’ll need a flexible schedule to work variable shifts, and have experience driving large&nbsp;trucks.</p>
+                        </div>
+                        <div class="requirements col-6">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>High school diploma or equivalent</span></li>
+                                <li><span>A current valid driver's license and good driving record</span></li>
+                                <li><span>A valid CDL (Class A or B) may be required in some locations</span></li>
+                                <li><span>Ability to lift, push and pull up to 75lbs</span></li>
+                                <li><span>DOT certification may be required in some locations</span></li>
+                            </ul>
+                            <div class="btn-sml">
+                                <a href="#form-1-container">Contact Us</a>
+                            </div>
+                        </div><!-- END .requirements -->
                     </div><!-- END #tab-1 -->
                     <div id="tab-2" class="tab-content">
-                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="col-12"></div>
+                        <h6>Are you a mission-oriented nurse who likes to travel and meet new people? You will thrive at the American Red Cross.</h6>
+                        <div class="description col-6">
+                            <p>We’re looking for both charge and apheresis nurses to accompany us on blood drives throughout the community. In this role, you’ll focus on customer service and compassion, working and making connections with healthy, happy blood donors. As a charge nurse you will lead a team, draw blood and, on occasion, supervise blood drives. As an apheresis nurse you will perform clinical apheresis procedures, along with other tasks, ensuring safe and appropriate care of patients. We work hard when we’re on the road and need a nurse who can accommodate a highly flexible schedule. You should also be comfortable performing venipuncture. You will need an RN (or LPN, depending on state requirements) license in the state prior to starting&nbsp;work.</p>
+                        </div>
+                        <div class="requirements col-6">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>Registered nurse license (LPN may be acceptable in some states)</span></li>
+                                <li><span>A current valid driver's license and good driving record</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
+                                <a href="#form-1-container">Contact Us</a>
+                            </div>
+                        </div><!-- END .requirements -->
                     </div><!-- END #tab-2 -->
                     <div id="tab-3" class="tab-content">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        <div class="col-12"></div>
+                        <h6>A unique opening for qualified truck drivers who want to transition into a new career making a difference in people’s&nbsp;lives.</h6>
+                        <div class="description col-6">
+                            <p>An American Red Cross driving career gives you a rewarding shift from day-to-day deliveries to helping save lives in your community. Say goodbye to boredom, because every day on the job is different. As part of our team, you’ll be transporting, setting up and breaking down blood collection equipment at work sites across the community, interacting with our donors and ensuring they have a top notch experience. In some locations, you’ll also work as a phlebotomist, but don’t worry – no experience is necessary! We’ll train and support you as you learn your new skills, through our full time, intensive phlebotomy training program. All costs are covered and you will be paid throughout the program! To be successful in this position you’ll need a flexible schedule to work variable shifts, and have experience driving large&nbsp;trucks.</p>
+                        </div>
+                        <div class="requirements col-6">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>High school diploma or equivalent</span></li>
+                                <li><span>A current valid driver's license and good driving record</span></li>
+                                <li><span>A valid CDL (Class A or B) may be required in some locations</span></li>
+                                <li><span>Ability to lift, push and pull up to 75lbs</span></li>
+                                <li><span>DOT certification may be required in some locations</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
+                                <a href="#form-1-container">Contact Us</a>
+                            </div>
+                        </div><!-- END .requirements -->
                     </div><!-- END #tab-3 -->
                     <div id="tab-4" class="tab-content">
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <div class="col-12 bleed-x"></div>
+                        <h6>Use your passion for blood banking to support our life-saving&nbsp;mission.</h6>
+                        <div class="description col-6">
+                            <p>Before our blood products go to patients in need, our immunohematology reference labs perform critical testing for safety. In this role, you will conduct basic and advanced donor and patient tests to resolve compatibility issues, and consult with hospitals and transfusion services—all while adhering to standard operating procedures and regulatory&nbsp;requirements.</p>
+                        </div>
+                        <div class="requirements col-6">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <p class="job-title"><strong>Medical Technologist I</strong></p>
+                                <li><span>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor’s degree with major in biological science or chemistry plus 3 years blood banking experience<br>
+                                - or -<br>
+                                MLT (ASCP) certification plus 5 years laboratory experience
+                                </span></li>
+                            </ul>
+                            <ul>
+                                <p class="job-title"><strong>Medical Technologist II</strong></p>
+                                <li><span>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor's degree with major in biological science or chemistry plus 6 years blood banking experience<br>
+                                - or -<br>
+                                MLT (ASCP) certification plus 4 years laboratory experience
+                                </span></li>
+                            </ul>
+                            <ul>
+                                <p class="job-title"><strong>Medical Technologist III</strong></p>
+                                <li><span>MT (ASCP) and/or BB (ASCP) certification, or equivalent; plus Bachelor’s degree with major in biological science or chemistry plus blood banking experience</span></li>
+                            </ul>
+                            <ul>
+                                <p class="job-title"><strong>All</strong></p>
+                                <li><span>State license where applicable</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
+                                <a href="#form-1-container">Contact Us</a>
+                            </div>
+                        </div><!-- END .requirements -->
                     </div><!-- END #tab-4 -->
                     <div id="tab-5" class="tab-content">
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <div class="col-12"></div>
+                        <h6>Bring your business-to-business sales experience to a philanthropic&nbsp;venture!</h6>
+                        <div class="description col-6">
+                            <p>We’re looking for sales and marketing professionals who enjoy working with the public to set up, coordinate and promote blood drives with local businesses and civic organizations in their communities. We incentivize all hard work with bonuses and a supportive, growth-oriented atmosphere. All of our work centers around donors and volunteers, so great people skills, compassion and communication are priorities. Here, you’ll play a direct role in our life-saving mission, ensuring that others continue to receive the gift of life. Successful account managers should also be able to close deals and have a highly flexible schedule to accommodate the needs of our blood&nbsp;donors.</p>
+                        </div><!-- END .description -->
+                        <div class="requirements col-6">
+                            <h5>Requirements</h5>
+                            <ul>
+                                <li><span>Bachelor's degree in marketing, sales, or communications<br>
+                                - or -<br>
+                                Equivalent combination of related education and experience</span></li>
+                                <li><span>One year (minimum) related experience</span></li>
+                                <li><span>A current, valid driver's license and good driving record</span></li>
+                            </ul>
+                            <div class="btn-sml bleed-x">
+                                <a href="#form-1-container">Contact Us</a>
+                            </div>
+                        </div><!-- END .requirements -->
                     </div><!-- END #tab-5 -->
                 </div><!-- END .col-12 -->
             </div><!-- END .row -->
         </div><!-- END #tabs -->
-    </section>
+    </section><!-- END #hiring -->
     <!--======= End of WHO WE'RE HIRING =======-->
 
     <!--==========================================
@@ -597,7 +702,7 @@ if (isset($_POST['btnSubmit'])) {
             <div class="col-6">
                 <p>Watch this short video to learn more about the life-saving impact our employees have every&nbsp;day.</p>
                 <div class="video-container bleed-x">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kYLaY2wI3lg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hg3XJCA8RQ0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div><!-- END .video-container -->
             </div><!-- END .col-6 -->
         </div><!-- END .row -->
@@ -636,7 +741,5 @@ if (isset($_POST['btnSubmit'])) {
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/jasny-bootstrap.min.js"></script>
     <script src="js/app.min.js"></script>
-<!--     // <script src="js/scrolltop_accordion.js"></script> -->
-    <script src="js/accordion.js"></script>
 </body>
 </html>

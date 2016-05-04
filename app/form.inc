@@ -10,7 +10,7 @@
             <input type="tel" label="phone" name="txtPhone" class="form-control" placeholder="Phone*">
 
             <!-- SPECIAL FORM QUESTIONS-->
-            <label>Locations</label>
+            <label>Location*</label>
             <select class="selectpicker" name="location" id="location">
                 <option value="" disabled selected>Nothing Selected</option>
                 <?php
@@ -30,7 +30,7 @@
                 ?>
             </select>
 
-            <label>Positions</label>
+            <label>Position*</label>
             <select class="selectpicker" name="position" id="position">
                 <option value="" disabled selected>Please select a location first</option>
             </select>
@@ -38,12 +38,17 @@
             <p id="position-questions"></p>
 
             <!-- END SPECIAL FORM QUESTIONS -->
+            <p>
+            <label>Do you have a current valid driver's license and good driving record?*</label>
+            <input class="radio" type="radio" name="rdoDriveRecord" value="Yes"> Yes
+            <input class="radio" type="radio" name="rdoDriveRecord" value="No"> No
+            </p>
 
-            <label>Upload your resume</label>
+            <label>Resume</label>
             <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                 <span class="input-group-addon btn btn-default btn-file">
-                    <span class="fileinput-new">Upload</span>
-                    <span class="fileinput-exists">Upload</span>
+                    <span class="fileinput-new">BROWSE</span>
+                    <span class="fileinput-exists">BROWSE</span>
                     <input type="file" name="file_upload">
                 </span>
 
@@ -58,6 +63,6 @@
 
     <input class="submit-btn" type="submit" name="btnSubmit" value="CONTACT A RECRUITER NOW">
 
-    <p class="terms">By submitting my information, I agree to the <a href="http://bayardclient.com/tos.html" target="_blank">Terms &amp; Conditions.</a></p>
+    <p class="terms">By submitting my information, I agree to the<br><a href="http://bayardclient.com/tos.html" target="_blank">Terms &amp; Conditions.</a></p>
 </form><!-- END #form -->
 <!--===========  End of FORM  ===========-->

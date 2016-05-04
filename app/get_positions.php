@@ -35,13 +35,13 @@ if ($_GET['position']) {
 	if ($sltPosition == "Driver/Phlebotomist") {
 		echo "
 			<p>
-			Can you work a variable schedule?<br>
+			<label>Can you work a variable schedule?*</label><br>
 			<input type=\"radio\" name=\"rdoDriverPhlebSched\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoDriverPhlebSched\" value=\"No\"> No
 			</p>
 
 			<p>
-			Do you have your CD-L?<br>
+			<label>Do you have your CD-L?*</label><br>
 			<input type=\"radio\" name=\"rdoDriverPhlebCDL\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoDriverPhlebCDL\" value=\"No\"> No
 			</p>
@@ -50,13 +50,13 @@ if ($_GET['position']) {
 	if ($sltPosition == "Medical Technologist") {
 		echo "
 			<p>
-			Do you hold any state license?<br>
+			<label>Do you hold any state license?*</label><br>
 			<input type=\"radio\" name=\"rdoMedTechLicense\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoMedTechLicense\" value=\"No\"> No
 			</p>
 
 			<p>
-			What certifications/licenses do you have?<br>
+			<label>What certifications/licenses do you have?</label><br>
 			<textarea name=\"txtMedTechLicense\"></textarea>
 			</p>
 		";
@@ -64,7 +64,7 @@ if ($_GET['position']) {
 	if ($sltPosition == "Nurse") {
 		echo "
 			<p>
-			Are you a state-licensed RN or LPN?<br>
+			<label>Are you a state-licensed RN or LPN?*</label><br>
 			<input type=\"radio\" name=\"rdoNurseLicense\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoNurseLicense\" value=\"No\"> No
 			</p>
@@ -73,7 +73,7 @@ if ($_GET['position']) {
 	if ($sltPosition == "Phlebotomist") {
 		echo "
 			<p>
-			Can you work a variable schedule?<br>
+			<label>Can you work a variable schedule?*</label><br>
 			<input type=\"radio\" name=\"rdoPhlebSched\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoPhlebSched\" value=\"No\"> No
 			</p>
@@ -82,7 +82,7 @@ if ($_GET['position']) {
 	if ($sltPosition == "Phlebotomist (PT)") {
 		echo "
 			<p>
-			Can you work a variable schedule?<br>
+			<label>Can you work a variable schedule?*</label><br>
 			<input type=\"radio\" name=\"rdoPhlebPTSched\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoPhlebPTSched\" value=\"No\"> No
 			</p>

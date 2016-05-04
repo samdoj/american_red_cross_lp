@@ -10,26 +10,109 @@
 			margin: 0px;
 			padding: 0px;
 			list-style: none;
+			text-align: center;
 		}
 		ul.tabs li {
 			background: none;
 			color: $grey-4;
 			display: inline-block;
-			padding: 10px 15px;
+			@include padding($text-spacing-lg 0);
+			margin-right: 3rem;
 			cursor: pointer;
+			text-align: center;
+			line-height: $line-height-sml;
+			font-size: $h6;
+			font-weight: $font-bold;
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 
 		ul.tabs li.current{
-			// background: #ededed;
 			color: $red;
 		}
 		.tab-content{
 			display: none;
 			background: $white;
-			// padding: 15px;
 		}
 		.tab-content.current{
 			display: inherit;
+			h6 {
+				float: left;
+				margin-bottom: $box-spacing-md;
+				margin-top: $box-spacing-sml;
+			}
+			.description {
+				
+			}
+			.requirements {
+				@include last;
+				border: 2px solid $grey-1;
+				border-radius: 4px;
+				border-bottom: 2px solid transparent;
+				overflow: hidden;
+				h5 {
+					@include padding(1.25rem 1.25rem 0 1.25rem);
+					margin: 0;
+				}
+				ul {
+					@include padding(1rem 1.5rem 0 1.5rem);
+					li {
+						font-size: $p-desktop;
+					}
+				}
+				.btn-sml {
+					@include bleed-x
+				}
+				.job-title {
+					color: $black-1;
+				}
+			}
+		}
+		#tab-1 {
+	        .col-12 {
+	            background-image: url('../media/img/img_phlebotomist_1140.jpg');
+	            background-repeat: no-repeat;
+	            background-position: center top;
+	            background-size: cover;
+	            padding-bottom: 50%;
+	        }
+		}
+		#tab-2 {
+	        .col-12 {
+	            background-image: url('../media/img/img_nurse_1140.jpg');
+	            background-repeat: no-repeat;
+	            background-position: center top;
+	            background-size: cover;
+	            padding-bottom: 50%;
+	        }
+		}
+		#tab-3 {
+	        .col-12 {
+	            background-image: url('../media/img/img_driver_1140.jpg');
+	            background-repeat: no-repeat;
+	            background-position: center top;
+	            background-size: cover;
+	            padding-bottom: 50%;
+	        }
+		}
+		#tab-4 {
+	        .col-12 {
+	            background-image: url('../media/img/img_medtech_1140.jpg');
+	            background-repeat: no-repeat;
+	            background-position: center top;
+	            background-size: cover;
+	            padding-bottom: 50%;
+	        }
+		}
+		#tab-5 {
+	        .col-12 {
+	            background-image: url('../media/img/img_sales_1140.jpg');
+	            background-repeat: no-repeat;
+	            background-position: center top;
+	            background-size: cover;
+	            padding-bottom: 50%;
+	        }
 		}
 	}
 }
