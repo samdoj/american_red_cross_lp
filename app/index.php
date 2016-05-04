@@ -121,25 +121,30 @@ if (isset($_POST['btnSubmit'])) {
 		// end resume upload ================================================================
 
 		// create query to save submission to database
-		$txtFirstName           = mysql_real_escape_string($txtFirstName);
-		$txtLastName            = mysql_real_escape_string($txtLastName);
-		$txtEmail               = mysql_real_escape_string($txtEmail);
-		$txtPhone               = mysql_real_escape_string($txtPhone);
-		$strLocation            = mysql_real_escape_string($strLocation);
-		$strPosition            = mysql_real_escape_string($strPosition);
-		$strRecruiterContact    = mysql_real_escape_string($strRecruiterContact);
-		$rdoDriverPhlebSched    = mysql_real_escape_string($rdoDriverPhlebSched);
-		$rdoDriverPhlebCDL      = mysql_real_escape_string($rdoDriverPhlebCDL);
-		$rdoMedTechLicense      = mysql_real_escape_string($rdoMedTechLicense);
-		$txtMedTechLicense      = mysql_real_escape_string($txtMedTechLicense);
-		$rdoNurseLicense        = mysql_real_escape_string($rdoNurseLicense);
-		$rdoPhlebSched          = mysql_real_escape_string($rdoPhlebSched);
-		$rdoPhlebPTSched        = mysql_real_escape_string($rdoPhlebPTSched);
-		$rdoDriveRecord         = mysql_real_escape_string($rdoDriveRecord);
-		$strClientAttachment    = mysql_real_escape_string($strClientAttachment);
-		$strUtmSource           = mysql_real_escape_string($strUtmSource);
+		$txtFirstName        = mysql_real_escape_string($txtFirstName);
+		$txtLastName         = mysql_real_escape_string($txtLastName);
+		$txtEmail            = mysql_real_escape_string($txtEmail);
+		$txtPhone            = mysql_real_escape_string($txtPhone);
+		$strLocation         = mysql_real_escape_string($strLocation);
+		$strPosition         = mysql_real_escape_string($strPosition);
+		$strRecruiterContact = mysql_real_escape_string($strRecruiterContact);
+		$rdoCNurseRN         = mysql_real_escape_string($rdoCNurseRN);
+		$rdoCNurseApheresis  = mysql_real_escape_string($rdoCNurseApheresis);
+		$rdoDriverPhlebSched = mysql_real_escape_string($rdoDriverPhlebSched);
+		$rdoDriverPhlebCDL   = mysql_real_escape_string($rdoDriverPhlebCDL);
+		$rdoMedTechLicense   = mysql_real_escape_string($rdoMedTechLicense);
+		$txtMedTechLicense   = mysql_real_escape_string($txtMedTechLicense);
+		$rdoNurseLicense     = mysql_real_escape_string($rdoNurseLicense);
+		$rdoPhlebSched       = mysql_real_escape_string($rdoPhlebSched);
+		$rdoPhlebPTSched     = mysql_real_escape_string($rdoPhlebPTSched);
+		$rdoLabTechBioDegree = mysql_real_escape_string($rdoLabTechBioDegree);
+		$rdoDriveRecord      = mysql_real_escape_string($rdoDriveRecord);
+		$strClientAttachment = mysql_real_escape_string($strClientAttachment);
+		$strUtmCampaign      = mysql_real_escape_string($strUtmCampaign);
+		$strUtmMedium        = mysql_real_escape_string($strUtmMedium);
+		$strUtmSource        = mysql_real_escape_string($strUtmSource);
 
-		$sqlSaveSubmission = "INSERT INTO apps_biomed (first_name, last_name, email, phone, location, position, recruiter, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, driving_record, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$rdoDriveRecord', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
+		$sqlSaveSubmission = "INSERT INTO apps_biomed (first_name, last_name, email, phone, location, position, recruiter, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, driving_record, resume, utm_campaign, utm_medium, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$rdoDriveRecord', '$strClientAttachment', '$strUtmCampaign', '$strUtmMedium', '$strUtmSource', '$submitDateTime', '$submittedIP')";
 
 		// execute query
 		$sqlSaveSubmissionResult = mysql_query($sqlSaveSubmission);
@@ -151,6 +156,7 @@ if (isset($_POST['btnSubmit'])) {
 			// send email to the client -----------------------------------------------------------------
 			// update the To, From and Subject line to whatever the client requests
 			// $strClientTo = "email@yourcompany.com";
+			// $strClientTo = $strRecruiterContact;
 			$strClientTo = "mountain.taste@gmail.com";
 
 			$strClientFrom = "MIME-Version: 1.0" . "\r\n"
@@ -171,7 +177,6 @@ if (isset($_POST['btnSubmit'])) {
 						. "<p>Recruiter: " . $strRecruiterContact . "</p>"
 						. "<hr>"
 						. $sqlRecruiter;
-
 
 				// include link to the uploaded resume if there is one
 				if($strClientAttachment) {

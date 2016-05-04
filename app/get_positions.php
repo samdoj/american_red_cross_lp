@@ -30,7 +30,19 @@ if ($_GET['position']) {
 	// listed in Andrea's Excel file
 	// -- From Podio -- Sales Account selected "Do you have B2B sales experience?" yes/no
 	if ($sltPosition == "Clinical Services Nurse Specialist") {
-		echo "<p>Clinical Services Nurse Specialist questions go here.</p>";
+		echo "
+			<p>
+			<label>Are you an RN?</label><br>
+			<input type=\"radio\" name=\"rdoCNurseRN\" value=\"Yes\"> Yes
+			<input type=\"radio\" name=\"rdoCNurseRN\" value=\"No\"> No
+			</p>
+
+			<p>
+			<label>Do you have Apheresis experience?</label><br>
+			<input type=\"radio\" name=\"rdoCNurseApheresis\" value=\"Yes\"> Yes
+			<input type=\"radio\" name=\"rdoCNurseApheresis\" value=\"No\"> No
+			</p>
+		";
 	}
 	if ($sltPosition == "Driver/Phlebotomist") {
 		echo "
@@ -89,7 +101,13 @@ if ($_GET['position']) {
 		";
 	}
 	if ($sltPosition == "Senior Lab Technologist") {
-		echo "<p>Senior Lab Technologist questions go here.</p>";
+		echo "
+			<p>
+			<label>Do you have have BS degree in Biology or related field?</label><br>
+			<input type=\"radio\" name=\"rdoLabTechBioDegree\" value=\"Yes\"> Yes
+			<input type=\"radio\" name=\"rdoLabTechBioDegree\" value=\"No\"> No
+			</p>
+		";
 	}
 }
 ?>
