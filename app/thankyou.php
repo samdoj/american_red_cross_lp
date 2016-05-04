@@ -56,7 +56,7 @@
 	<section id="thank-you">
         <div class="row">
     		<div class="header">
-    			<img class="logo" id="header-logo" src="media/img/american_red_cross_logo.svg" alt="American Red Cross Logo">
+    			<img class="logo" id="header-logo" src="media/img/american_red_cross_logo.png" alt="American Red Cross Logo">
     		</div>
     		<div class="col-12">
     			<p><span>Thank you</span> for expressing interest in a position with the American Red Cross!</p>

@@ -268,7 +268,7 @@ if (isset($_POST['btnSubmit'])) {
 <body>
 	<header id="header" class="header closed-nav">
 		<div class="row">
-			<img class="logo" id="header-logo" src="media/img/american_red_cross_logo.svg" alt="American Red Cross Logo">
+			<img class="logo" id="header-logo" src="media/img/american_red_cross_logo.png" alt="American Red Cross Logo">
 			<div id="nav-btn">
 				<div class="nav-btn-line"></div>
 				<div class="nav-btn-line"></div>

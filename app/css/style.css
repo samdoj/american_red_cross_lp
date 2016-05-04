@@ -591,6 +591,12 @@ footer {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  #about .video-container {
+    margin-bottom: 4.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   #about .video-container {
     margin: 0;
@@ -1236,12 +1242,16 @@ ul {
   float: left;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  box-shadow: 0rem 0rem 0.3125rem 0rem rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  #form-1-container {
+    border-radius: 0.35rem;
+  }
 }
 
 @media (min-width: 1024px) {
   #form-1-container {
-    border-radius: 0.3125rem;
     padding: 1.5rem 1.24rem;
     margin: 0;
   }

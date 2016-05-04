@@ -324,6 +324,9 @@ footer {
 		@include padding(30px 0 56.25% 0);
 		@include size(auto 0);
 		overflow: hidden;
+		@include breakpoint($tablet) {
+			margin-bottom: $box-spacing-lg;
+		}
 		@include breakpoint($laptop) {
 			margin: 0;
 			margin-top: $box-spacing-md;
