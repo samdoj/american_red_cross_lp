@@ -38,6 +38,34 @@ if (isset($_POST['btnSubmit'])) {
             ${ $fldName } = $_POST["$fldName"];
         } // end foreach ($_POST as $fldName => $fldValue)
 
+        // get form values and assign them to PHP variables
+        $strLocation = $_POST["location"];
+        $strPosition = $_POST["position"];
+
+        // separate location into city and state
+        $strLocationParts = explode(",", $strLocation);
+        $strCity = $strLocationParts[0];
+        $strState = $strLocationParts[1];
+
+        // remove plus signs that were added to the city name
+        // for cities with multiple words to be recognized as one string in the URL
+        $strCity = str_replace('+', ' ', $strCity);
+
+        // reassign location variable to a pretty "city, state" string to save to the database
+        $strLocation = $strCity . ", " . $strState;
+
+        // remove plus signs that were added to the position name
+        // for positions with multiple words to be recognized as one string in the URL
+        $strPosition = str_replace('+', ' ', $strPosition);
+
+        // get the recruiter associated with the city, state, and position selected
+        $sqlRecruiter = "SELECT * FROM recruiters WHERE city LIKE '$strCity' AND state LIKE '$strState' AND position LIKE '$strPosition'";
+        $resRecruiter = mysql_query($sqlRecruiter);
+
+        while($row = mysql_fetch_array($resRecruiter)) {
+            // assign the recruiter's email address to a variable
+            $strRecruiterContact = $row['recruiter'];
+        }
         // get the user's ip address
         $submittedIP = $_SERVER['REMOTE_ADDR'];
 
@@ -87,8 +115,9 @@ if (isset($_POST['btnSubmit'])) {
         $txtLastName            = mysql_real_escape_string($txtLastName);
         $txtEmail               = mysql_real_escape_string($txtEmail);
         $txtPhone               = mysql_real_escape_string($txtPhone);
-        $location               = mysql_real_escape_string($location);
-        $position               = mysql_real_escape_string($position);
+        $strLocation            = mysql_real_escape_string($strLocation);
+        $strPosition            = mysql_real_escape_string($strPosition);
+        $strRecruiterContact    = mysql_real_escape_string($strRecruiterContact);
         $rdoDriverPhlebSched    = mysql_real_escape_string($rdoDriverPhlebSched);
         $rdoDriverPhlebCDL      = mysql_real_escape_string($rdoDriverPhlebCDL);
         $rdoMedTechLicense      = mysql_real_escape_string($rdoMedTechLicense);
@@ -99,7 +128,7 @@ if (isset($_POST['btnSubmit'])) {
         $strClientAttachment    = mysql_real_escape_string($strClientAttachment);
         $strUtmSource           = mysql_real_escape_string($strUtmSource);
 
-        $sqlSaveSubmission = "INSERT INTO apps_biomed_careers (first_name, last_name, email, phone, location, position, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$location', '$position', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
+        $sqlSaveSubmission = "INSERT INTO apps_biomed_careers (first_name, last_name, email, phone, location, position, recruiter, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, resume, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$strClientAttachment', '$strUtmSource', '$submitDateTime', '$submittedIP')";
 
         // execute query
         $sqlSaveSubmissionResult = mysql_query($sqlSaveSubmission);
@@ -111,7 +140,7 @@ if (isset($_POST['btnSubmit'])) {
             // send email to the client -----------------------------------------------------------------
             // update the To, From and Subject line to whatever the client requests
             // $strClientTo = "email@yourcompany.com";
-            $strClientTo = "joshl@bayardad.com";
+            $strClientTo = "mountain.taste@gmail.com";
 
             $strClientFrom = "MIME-Version: 1.0" . "\r\n"
                         . "Content-Type: text/html; charset=UTF-8" . "\r\n"
@@ -124,15 +153,14 @@ if (isset($_POST['btnSubmit'])) {
                         . "<strong>Name:</strong> " . $txtLastName . "<br>"
                         . "<strong>Email:</strong> " . $txtEmail . "<br>"
                         . "<strong>Phone:</strong> " . $txtPhone . "<br>"
-                        . "<strong>Are you 21 or older?</strong> " . $over21 . "<br>"
-                        . "<strongLocation:</strong> " . $location . "<br>"
-                        . "<strong>Years of (driver/delivery service) experience:</strong> " . $driverExperience . "<br>"
-                        . "<strong>Desired salary range:</strong> " . $txtSalary . "<br>"
-                        . "<strong>Desired type of employment:</strong> " . $typeEmployment . "<br>"
-                        . "<strong>Valid driver's license:</strong> " . $driverLicense . "<br>"
-                        . "<strong>Valid CDL:</strong> " . $cdl . "<br>"
-                        . "<strong>Do you have a Hazardous Materials Endorsement?</strong> " . $hazMatEndorsement . "<br>"
-                        . "<strong>Years of Hazardous Materials Endorsement:</strong> " . $hazMatExperience . "<br>";
+                        . "<p>City: " . $strCity . "</p>"
+                        . "<p>State: " . $strState . "</p>"
+                        . "<p>Pretty Location: " . $strLocation . "</p>"
+                        . "<p>Position: " . $strPosition . "</p>"
+                        . "<p>Recruiter: " . $strRecruiterContact . "</p>"
+                        . "<hr>"
+                        . $sqlRecruiter;
+
 
                 // include link to the uploaded resume if there is one
                 if($strClientAttachment) {
@@ -156,7 +184,7 @@ if (isset($_POST['btnSubmit'])) {
     } // end if (!$txtNewsletter)
 
     // redirect user to the thank you page
-    header('Location: ' . $thank_you_page . '');
+    // header('Location: ' . $thank_you_page . '');
 } // end if (isset($_POST['btnSubmit']))
 ?>
 
