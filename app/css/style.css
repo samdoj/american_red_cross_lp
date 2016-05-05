@@ -1667,22 +1667,35 @@ textarea {
     margin: 0 auto;
   }
   #tabs ul.tabs {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 0px;
     padding: 0px;
     list-style: none;
+    height: 146px;
+    width: 100%;
     text-align: center;
   }
   #tabs ul.tabs li {
     background: none;
     color: #565458;
     display: inline-block;
-    padding: 3rem 0;
     margin-right: 3rem;
     cursor: pointer;
     text-align: center;
     line-height: 1.25;
     font-size: 1.3rem;
     font-weight: 700;
+    width: 17.24138%;
+    float: left;
+    margin-right: 3.44828%;
   }
   #tabs ul.tabs li:last-child {
     margin-right: 0;
