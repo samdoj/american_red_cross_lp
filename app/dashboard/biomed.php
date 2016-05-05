@@ -2,7 +2,7 @@
 // --- begin template code ----------------------------------
 // buffer larger content areas like the main page content
 ob_start();
-$pagetitle = "Apria Dashboard";
+$pagetitle = "American Redcross BioMed Dashboard";
 // --- end template code ------------------------------------
 
 include('_session.php');
@@ -11,7 +11,7 @@ include('_session.php');
 include_once('login_info.php');
 
 //your table name
-$tbl_name="apps";
+$tbl_name="apps_biomed";
 
 // How many adjacent pages should be shown on each side?
 $adjacents = 3;
@@ -25,7 +25,7 @@ $total_pages = mysql_fetch_array(mysql_query($query));
 $total_pages = $total_pages[num];
 
 /* Setup vars for query. */
-$targetpage = "apps.php";            // your file name  (the name of this file)
+$targetpage = "biomed.php";            // your file name  (the name of this file)
 $limit = 25;                                // how many items to show per page
 $page = $_GET['page'];
 if($page)
@@ -129,21 +129,31 @@ if($lastpage > 1)
 }
 ?>
 
-<h1>Apps (<?= number_format($total_pages); ?> records)</h1>
+<h1>apps_biomed (<?= number_format($total_pages); ?> records)</h1>
 
 <div class="table-responsive">
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th nowrap="nowrap">ID</th>
-				<th nowrap="nowrap">Name</th>
+				<th nowrap="nowrap">First Name</th>
+				<th nowrap="nowrap">Last Name</th>
 				<th nowrap="nowrap">Email</th>
 				<th nowrap="nowrap">Phone</th>
-				<th nowrap="nowrap">Call experience</th>
+				<th nowrap="nowrap">Location</th>
 				<th nowrap="nowrap">Position</th>
-				<th nowrap="nowrap">Health experience</th>
+				<th nowrap="nowrap">Recruiter</th>
+				<th nowrap="nowrap">B2B Sales Experience</th>
+				<th nowrap="nowrap">CDL</th>
+				<th nowrap="nowrap">MedTech License</th>
+				<th nowrap="nowrap">MedTech Certification</th>
+				<th nowrap="nowrap">Nurse License</th>
+				<th nowrap="nowrap">Variable Schedule</th>
+				<th nowrap="nowrap">Driver's License/Good Driving Record</th>
 				<th nowrap="nowrap">Resume</th>
-				<th nowrap="nowrap">Submitted</th>
+				<th nowrap="nowrap">UTM Campaign</th>
+				<th nowrap="nowrap">UTM Medium</th>
+				<th nowrap="nowrap">UTM Source</th>
+				<th nowrap="nowrap">Date Submitted</th>
 				<th nowrap="nowrap">Submitted IP</th>
 			</tr>
 		</thead>
@@ -151,14 +161,24 @@ if($lastpage > 1)
 		<?php
 			while($row = mysql_fetch_array($result)) {
 				echo "<tr>\n";
-				echo "	<td nowrap=\"nowrap\">" . $row['id'] . "</td>\n";
-				echo "  <td nowrap=\"nowrap\">" . $row['name'] . "</td>\n";
-				echo "  <td nowrap=\"nowrap\">" . $row['email'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['first_name'] . "</td>\n";
+				echo "  <td nowrap=\"nowrap\">" . $row['last_name'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['email'] . "</td>\n";
 				echo "	<td nowrap=\"nowrap\">" . $row['phone'] . "</td>\n";
-				echo "	<td nowrap=\"nowrap\">" . $row['question1'] . "</td>\n";
-				echo "	<td nowrap=\"nowrap\">" . $row['question2'] . "</td>\n";
-				echo "	<td nowrap=\"nowrap\">" . $row['question3'] . "</td>\n";
-				echo "	<td nowrap=\"nowrap\"><a href=\"http://apria.careers/logistics/uploads/resumes/" . $row['resume'] . "\">" . $row['resume'] . "</a></td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['location'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['position'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['recruiter'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['b2b_sales_experience'] . "</td>\n";
+				echo "  <td nowrap=\"nowrap\">" . $row['phleb_cdl'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['medtech_license'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['medtech_cert'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['nurse_license'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['phleb_variable_sched'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['driving_record'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['resume'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['utm_campaign'] . "</td>\n";
+				echo "  <td nowrap=\"nowrap\">" . $row['utm_medium'] . "</td>\n";
+				echo "	<td nowrap=\"nowrap\">" . $row['utm_source'] . "</td>\n";
 				echo "	<td nowrap=\"nowrap\">" . $row['submitted'] . "</td>\n";
 				echo "	<td nowrap=\"nowrap\">" . $row['submitted_ip'] . "</td>\n";
 				echo "</tr>\n";
