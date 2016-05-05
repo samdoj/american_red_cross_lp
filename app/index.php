@@ -156,8 +156,8 @@ if (isset($_POST['btnSubmit'])) {
 				// send email to the client -----------------------------------------------------------------
 				// update the To, From and Subject line to whatever the client requests
 				// $strClientTo = "email@yourcompany.com";
-				// $strClientTo = $strRecruiterContact;
-				$strClientTo = "mountain.taste@gmail.com";
+				$strClientTo = $strRecruiterContact;
+				// $strClientTo = "mountain.taste@gmail.com";
 
 				$strClientFrom = "MIME-Version: 1.0" . "\r\n"
 							. "Content-Type: text/html; charset=UTF-8" . "\r\n"
