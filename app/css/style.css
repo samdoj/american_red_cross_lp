@@ -627,16 +627,27 @@ footer {
   padding: 1.5rem 0;
 }
 
+#footer .wrap {
+  text-align: center;
+}
+
 #footer p {
   color: #6d6e70;
+  text-align: left;
   font-size: 0.9375rem;
   max-width: 640px;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 #footer a {
-  font-weight: 700;
-  font-size: 44px;
+  clear: both;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #6d6e70;
+}
+
+#footer a:hover {
   color: #FFFFFF;
 }
 

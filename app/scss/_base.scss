@@ -354,16 +354,25 @@ footer {
 #footer {
 	background-color: $grey-1;
 	@include padding($box-spacing-sml 0);
+	.wrap {
+		text-align: center;
+	}
 	p {
 		color: $grey-2;
+		text-align: left;
 		font-size: $footer-font;
 		max-width: 640px;
 		margin: 0 auto;
+		margin-bottom: $text-spacing-md;
 	}
 	a {
-		font-weight: $font-bold;
-		font-size: 44px;
-		color: $white;
+		clear: both;
+		text-align: center;
+		font-size: $footer-font;
+		color: $grey-2;
+		&:hover {
+			color: $white;
+		}
 	}
 }
 

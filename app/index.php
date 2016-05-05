@@ -731,7 +731,7 @@ if (isset($_POST['btnSubmit'])) {
 		<div class="row">
 			<div class="wrap">
 				<p>The American Red Cross is an Equal Opportunity/Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to sex, gender identity, sexual orientation, race, color, religion, national origin, disability, protected veteran status, age, or any other characteristic protected by&nbsp;law.</p>
-				<!-- <a href="http://bayardad.com/careers/privacy-policy/" target="_blank">Privacy Policy</a> -->
+				<a class="privacy-policy" href="http://bayardad.com/careers/privacy-policy/" target="_blank">Privacy Policy</a>
 			</div>
 		</div>
 	</footer><!-- END #footer -->
