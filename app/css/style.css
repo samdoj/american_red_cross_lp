@@ -193,7 +193,7 @@ td, th {
 
 html {
   min-width: 320px;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -691,9 +691,11 @@ footer {
   color: #565458;
 }
 
-.fixed-footer {
-  position: absolute;
-  bottom: 0;
+@media (min-width: 768px) {
+  .fixed-footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 /************************************		TYPOGRAPHY AND LINKS

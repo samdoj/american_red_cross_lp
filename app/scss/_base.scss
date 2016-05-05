@@ -27,7 +27,7 @@ $susy: (
 
 html {
 	min-width: 320px;
-	height: 100%;
+	min-height: 100%;
 }
 
 body {
@@ -412,5 +412,7 @@ footer {
 }
 
 .fixed-footer {
-	@include position(absolute, null null 0 null);
+	@include breakpoint($tablet) {
+		@include position(absolute, null null 0 null);
+	}
 }
