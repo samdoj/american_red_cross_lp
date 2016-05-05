@@ -196,7 +196,7 @@ jQuery(document).ready(function() {
         $("#position").load("get_positions.php?location=" + $("#location").val());
         setTimeout(function() {
             $("#position").selectpicker('refresh');
-        }, 200);
+        }, 500);
 
         if ($("#position").val() !== '') {
             $('#position-questions').empty();
