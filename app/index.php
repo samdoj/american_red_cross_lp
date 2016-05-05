@@ -267,10 +267,6 @@ if (isset($_POST['btnSubmit'])) {
 <link rel="stylesheet" href="css/jasny-bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Typekit -->
-<script src="https://use.typekit.net/okk1ztn.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
 <!-- Outdated Browser Warning Script -->
 <script>
 	var $buoop = {vs:{i:8,f:25,o:17,s:6},c:2, text:"It looks like you are using an outdated browser. To see our site correctly, please update your browser."};
