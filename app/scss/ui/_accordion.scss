@@ -9,7 +9,7 @@
 .expandable-panel {
     position:relative;
     min-height: 45px;
-    overflow: auto;
+    overflow: hidden;
     margin-bottom: 0px;
     border-bottom: 2px solid white;
     @include bleed-x(6% 6%);
@@ -30,7 +30,7 @@
     }
     h6 {
         margin-bottom: 0;
-        @include padding(0.5rem 0);
+        @include padding(0.4rem 0);
         color:$white;
     }
 }
