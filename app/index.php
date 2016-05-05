@@ -150,49 +150,78 @@ if (isset($_POST['btnSubmit'])) {
 		// send email to client
 		if ($sqlSaveSubmissionResult) {
 
-			// send email to the client -----------------------------------------------------------------
-			// update the To, From and Subject line to whatever the client requests
-			// $strClientTo = "email@yourcompany.com";
-			// $strClientTo = $strRecruiterContact;
-			$strClientTo = "mountain.taste@gmail.com";
+			// send email if the recruiter is not "unassigned"
+			if ($strRecruiterContact != "Unassigned") {
 
-			$strClientFrom = "MIME-Version: 1.0" . "\r\n"
-						. "Content-Type: text/html; charset=UTF-8" . "\r\n"
-						. "From: American Red Cross BioMed Careers <noreply@redcrossbiomedcareers.org>";
+				// send email to the client -----------------------------------------------------------------
+				// update the To, From and Subject line to whatever the client requests
+				// $strClientTo = "email@yourcompany.com";
+				// $strClientTo = $strRecruiterContact;
+				$strClientTo = "mountain.taste@gmail.com";
 
-			$strClientSubject = "Interest in American Red Cross BioMed Careers";
+				$strClientFrom = "MIME-Version: 1.0" . "\r\n"
+							. "Content-Type: text/html; charset=UTF-8" . "\r\n"
+							. "From: American Red Cross BioMed Careers <noreply@redcrossbiomedcareers.org>";
 
-			$strClientFldMerge = "<html><body><p>"
-						. "<strong>First Name:</strong> " . $txtFirstName . "<br>"
-						. "<strong>Last Name:</strong> " . $txtLastName . "<br>"
-						. "<strong>Email:</strong> " . $txtEmail . "<br>"
-						. "<strong>Phone:</strong> " . $txtPhone . "<br>"
-						. "<p>Location: " . $strLocation . "</p>"
-						. "<p>Position: " . $strPosition . "</p>"
-						. "<p>Recruiter: " . $strRecruiterContact . "</p>";
+				$strClientSubject = "Interest in American Red Cross BioMed Careers";
 
-				// include link to the uploaded resume if there is one
-				if($strClientAttachment) {
-					// add the domain/folder prefix - $strClientAttachment just displays the filename
-					$strClientFldMerge .= "<p><strong>Resume:</strong> http://redcrossbiomedcareers.org/uploads/resumes/" . $strClientAttachment . "</p>";
-				}
-				// include the UTM parameter values if there are any
-				if($strUtmCampaign) {
-					$strClientFldMerge .= "<p><strong>UTM Campaign:</strong> " . $strUtmCampaign . "</p>";
-				}
-				if($strUtmMedium) {
-					$strClientFldMerge .= "<p><strong>UTM Medium:</strong> " . $strUtmMedium . "</p>";
-				}
-				if($strUtmSource) {
-					$strClientFldMerge .= "<p><strong>UTM Source:</strong> " . $strUtmSource . "</p>";
-				}
+				$strClientFldMerge = "<html><body><p>"
+							. "<strong>First Name:</strong> " . $txtFirstName . "<br>"
+							. "<strong>Last Name:</strong> " . $txtLastName . "<br>"
+							. "<strong>Email:</strong> " . $txtEmail . "<br>"
+							. "<strong>Phone:</strong> " . $txtPhone . "<br>"
+							. "<strong>Location:</strong> " . $strLocation . "<br>"
+							. "<strong>Position:</strong> " . $strPosition . "<br>";
 
-			$strClientFldMerge .= "</body></html>";
+					// begin -- display the appropriate position specific question
+					if ($strPosition == "Account Manager/DRD") {
+						$strClientFldMerge .= "<strong>Do you have B2B sales experience?</strong> " . $rdoAcctMgrB2B . "<br>";
+					}
+					if ($strPosition == "Driver/Phlebotomist") {
+						$strClientFldMerge .= "<strong>Do you have your CD-L?</strong> " . $rdoDriverPhlebCDL . "<br>";
+					}
+					if ($strPosition == "Medical Technologist") {
+						$strClientFldMerge .= "<strong>Do you hold any state license?</strong> " . $rdoMedTechLicense . "<br>"
+						. "<strong>What certifications/licenses do you have?</strong> " . $txtMedTechLicense . "<br>";
+					}
+					if ($strPosition == "Nurse") {
+						$strClientFldMerge .= "<strong>Are you a state-licensed RN or LPN?</strong> " . $rdoNurseLicense . "<br>";
+					}
+					if ($strPosition == "Phlebotomist") {
+						$strClientFldMerge .= "<strong>Can you work a variable schedule?</strong> " . $rdoPhlebSched . "<br>";
+					}
+					// end -- display the appropriate position specific question
 
-			$strClientMsg = wordwrap($strClientFldMerge, 70);
+					$strClientFldMerge .= "<strong>Do you have a current valid driver's license and good driving record?:</strong> " . $rdoDriveRecord . "</p>";
 
-			mail($strClientTo,$strClientSubject,$strClientMsg,$strClientFrom);
+					// remove this line after testing
+					$strClientFldMerge .= "<p>Recruiter: " . $strRecruiterContact . "</p>";
 
+					// include link to the uploaded resume if there is one
+					if($strClientAttachment) {
+						// add the domain/folder prefix - $strClientAttachment just displays the filename
+						$strClientFldMerge .= "<p><strong>Resume:</strong> http://redcrossbiomedcareers.org/uploads/resumes/" . $strClientAttachment . "</p>";
+					}
+
+					// begin -- display the UTM parameter values if there are any
+					if($strUtmCampaign) {
+						$strClientFldMerge .= "<div><strong>UTM Campaign:</strong> " . $strUtmCampaign . "</div>";
+					}
+					if($strUtmMedium) {
+						$strClientFldMerge .= "<div><strong>UTM Medium:</strong> " . $strUtmMedium . "</div>";
+					}
+					if($strUtmSource) {
+						$strClientFldMerge .= "<div><strong>UTM Source:</strong> " . $strUtmSource . "</div>";
+					}
+					// end -- display the UTM parameter values if there are any
+
+				$strClientFldMerge .= "</body></html>";
+
+				$strClientMsg = wordwrap($strClientFldMerge, 70);
+
+				mail($strClientTo,$strClientSubject,$strClientMsg,$strClientFrom);
+
+			} // end if ($strRecruiterContact != "Unassigned")
 		} // end if ($sqlSaveSubmissionResult)
 		else {
 			echo mysql_errno();
