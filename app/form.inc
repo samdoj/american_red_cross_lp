@@ -17,7 +17,7 @@
 				// connect to database
 				include("login_info.php");
 
-				$sqlLocations = "SELECT * FROM recruiters WHERE status LIKE 'on' GROUP BY city ORDER BY state, city ASC";
+				$sqlLocations = "SELECT * FROM recruiters WHERE status LIKE 'on' GROUP BY city, state ORDER BY state, city ASC";
 				$resLocations = mysql_query($sqlLocations);
 
 				while($row = mysql_fetch_array($resLocations)) {
