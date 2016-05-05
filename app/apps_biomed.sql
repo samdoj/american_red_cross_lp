@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.42)
 # Database: arc_biomed_database
-# Generation Time: 2016-05-05 16:15:32 +0000
+# Generation Time: 2016-05-05 16:35:30 +0000
 # ************************************************************
 
 
@@ -44,7 +44,7 @@ CREATE TABLE `apps_biomed` (
   `utm_campaign` varchar(50) DEFAULT NULL,
   `utm_medium` varchar(50) DEFAULT NULL,
   `utm_source` varchar(50) DEFAULT NULL,
-  `submitted` datetime DEFAULT NULL,
+  `submitted` varchar(50) DEFAULT NULL,
   `submitted_ip` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -77,7 +77,9 @@ VALUES
 	(21,'','','',0,'Charlotte, North+Carolina','Account Manager/DRD','','','','','','','','','','','','0000-00-00 00:00:00',1270),
 	(22,'','','',0,'Sacramento, California','Nurse','dena.gray@redcross.org','','','','No','','','','','','','0000-00-00 00:00:00',1270),
 	(23,'','','',0,'Pomona, California','Phlebotomist','dena.gray@redcross.org','','','','','No','','','','','','0000-00-00 00:00:00',1270),
-	(24,'TEST','test','test@test.com',888,'Pomona, California','Medical Technologist','sara.sutherland@redcross.org','','No','','','','No','05-05-2016-TESTtest-test-doc.docx','','','','0000-00-00 00:00:00',1270);
+	(24,'TEST','test','test@test.com',888,'Pomona, California','Medical Technologist','sara.sutherland@redcross.org','','No','','','','No','05-05-2016-TESTtest-test-doc.docx','','','','0000-00-00 00:00:00',1270),
+	(25,'josh','lester','mountain.taste@gmail.com',888,'Atlanta, Georgia','Medical Technologist','niki.bratchette@redcross.org','','Yes','med tech stuff','','','Yes','05-05-2016-joshlester-test-doc.pdf','','','','0000-00-00 00:00:00',1270),
+	(26,'test','test','mountain.taste@gmail.com',888,'Portland, Maine','Account Manager/DRD','Unassigned','','','','','','Yes','05-05-2016-testtest-test-doc.pdf','','','','05/05/2016 10:34:43 AM',1270);
 
 /*!40000 ALTER TABLE `apps_biomed` ENABLE KEYS */;
 UNLOCK TABLES;
