@@ -22,36 +22,20 @@ if ($_GET['location']) {
 }
 
 if ($_GET['position']) {
-
 	// display conditional questions based on selected position
 	$sltPosition= mysql_real_escape_string($_GET['position']);
 
-	// Sales Account question is listed in Podio but was not a position
-	// listed in Andrea's Excel file
-	// -- From Podio -- Sales Account selected "Do you have B2B sales experience?" yes/no
-	if ($sltPosition == "Clinical Services Nurse Specialist") {
+	if ($sltPosition == "Account Manager/DRD") {
 		echo "
 			<p>
-			<label>Are you an RN?</label><br>
-			<input type=\"radio\" name=\"rdoCNurseRN\" value=\"Yes\"> Yes
-			<input type=\"radio\" name=\"rdoCNurseRN\" value=\"No\"> No
-			</p>
-
-			<p>
-			<label>Do you have Apheresis experience?</label><br>
-			<input type=\"radio\" name=\"rdoCNurseApheresis\" value=\"Yes\"> Yes
-			<input type=\"radio\" name=\"rdoCNurseApheresis\" value=\"No\"> No
+			<label>Do you have B2B sales experience?</label><br>
+			<input type=\"radio\" name=\"rdoAcctMgrB2B\" value=\"Yes\"> Yes
+			<input type=\"radio\" name=\"rdoAcctMgrB2B\" value=\"No\"> No
 			</p>
 		";
 	}
 	if ($sltPosition == "Driver/Phlebotomist") {
 		echo "
-			<p>
-			<label>Can you work a variable schedule?*</label><br>
-			<input type=\"radio\" name=\"rdoDriverPhlebSched\" value=\"Yes\"> Yes
-			<input type=\"radio\" name=\"rdoDriverPhlebSched\" value=\"No\"> No
-			</p>
-
 			<p>
 			<label>Do you have your CD-L?*</label><br>
 			<input type=\"radio\" name=\"rdoDriverPhlebCDL\" value=\"Yes\"> Yes
@@ -88,24 +72,6 @@ if ($_GET['position']) {
 			<label>Can you work a variable schedule?*</label><br>
 			<input type=\"radio\" name=\"rdoPhlebSched\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoPhlebSched\" value=\"No\"> No
-			</p>
-		";
-	}
-	if ($sltPosition == "Phlebotomist (PT)") {
-		echo "
-			<p>
-			<label>Can you work a variable schedule?*</label><br>
-			<input type=\"radio\" name=\"rdoPhlebPTSched\" value=\"Yes\"> Yes
-			<input type=\"radio\" name=\"rdoPhlebPTSched\" value=\"No\"> No
-			</p>
-		";
-	}
-	if ($sltPosition == "Senior Lab Technologist") {
-		echo "
-			<p>
-			<label>Do you have have BS degree in Biology or related field?</label><br>
-			<input type=\"radio\" name=\"rdoLabTechBioDegree\" value=\"Yes\"> Yes
-			<input type=\"radio\" name=\"rdoLabTechBioDegree\" value=\"No\"> No
 			</p>
 		";
 	}

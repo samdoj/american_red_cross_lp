@@ -76,6 +76,7 @@ if (isset($_POST['btnSubmit'])) {
 			// assign the recruiter's email address to a variable
 			$strRecruiterContact = $row['recruiter'];
 		}
+
 		// get the user's ip address
 		$submittedIP = $_SERVER['REMOTE_ADDR'];
 
@@ -128,23 +129,19 @@ if (isset($_POST['btnSubmit'])) {
 		$strLocation         = mysql_real_escape_string($strLocation);
 		$strPosition         = mysql_real_escape_string($strPosition);
 		$strRecruiterContact = mysql_real_escape_string($strRecruiterContact);
-		$rdoCNurseRN         = mysql_real_escape_string($rdoCNurseRN);
-		$rdoCNurseApheresis  = mysql_real_escape_string($rdoCNurseApheresis);
-		$rdoDriverPhlebSched = mysql_real_escape_string($rdoDriverPhlebSched);
+		$rdoAcctMgrB2B       = mysql_real_escape_string($rdoAcctMgrB2B);
 		$rdoDriverPhlebCDL   = mysql_real_escape_string($rdoDriverPhlebCDL);
 		$rdoMedTechLicense   = mysql_real_escape_string($rdoMedTechLicense);
 		$txtMedTechLicense   = mysql_real_escape_string($txtMedTechLicense);
 		$rdoNurseLicense     = mysql_real_escape_string($rdoNurseLicense);
 		$rdoPhlebSched       = mysql_real_escape_string($rdoPhlebSched);
-		$rdoPhlebPTSched     = mysql_real_escape_string($rdoPhlebPTSched);
-		$rdoLabTechBioDegree = mysql_real_escape_string($rdoLabTechBioDegree);
 		$rdoDriveRecord      = mysql_real_escape_string($rdoDriveRecord);
 		$strClientAttachment = mysql_real_escape_string($strClientAttachment);
 		$strUtmCampaign      = mysql_real_escape_string($strUtmCampaign);
 		$strUtmMedium        = mysql_real_escape_string($strUtmMedium);
 		$strUtmSource        = mysql_real_escape_string($strUtmSource);
 
-		$sqlSaveSubmission = "INSERT INTO apps_biomed (first_name, last_name, email, phone, location, position, recruiter, phleb_driver_variable_sched, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, phleb_pt, driving_record, resume, utm_campaign, utm_medium, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebSched', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoPhlebPTSched', '$rdoDriveRecord', '$strClientAttachment', '$strUtmCampaign', '$strUtmMedium', '$strUtmSource', '$submitDateTime', '$submittedIP')";
+		$sqlSaveSubmission = "INSERT INTO apps_biomed (first_name, last_name, email, phone, location, position, recruiter, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, driving_record, resume, utm_campaign, utm_medium, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoDriveRecord', '$strClientAttachment', '$strUtmCampaign', '$strUtmMedium', '$strUtmSource', '$submitDateTime', '$submittedIP')";
 
 		// execute query
 		$sqlSaveSubmissionResult = mysql_query($sqlSaveSubmission);
@@ -166,27 +163,30 @@ if (isset($_POST['btnSubmit'])) {
 			$strClientSubject = "Interest in American Red Cross BioMed Careers";
 
 			$strClientFldMerge = "<html><body><p>"
-						. "<strong>Name:</strong> " . $txtFirstName . "<br>"
-						. "<strong>Name:</strong> " . $txtLastName . "<br>"
+						. "<strong>First Name:</strong> " . $txtFirstName . "<br>"
+						. "<strong>Last Name:</strong> " . $txtLastName . "<br>"
 						. "<strong>Email:</strong> " . $txtEmail . "<br>"
 						. "<strong>Phone:</strong> " . $txtPhone . "<br>"
-						. "<p>City: " . $strCity . "</p>"
-						. "<p>State: " . $strState . "</p>"
-						. "<p>Pretty Location: " . $strLocation . "</p>"
+						. "<p>Location: " . $strLocation . "</p>"
 						. "<p>Position: " . $strPosition . "</p>"
-						. "<p>Recruiter: " . $strRecruiterContact . "</p>"
-						. "<hr>"
-						. $sqlRecruiter;
+						. "<p>Recruiter: " . $strRecruiterContact . "</p>";
 
 				// include link to the uploaded resume if there is one
 				if($strClientAttachment) {
 					// add the domain/folder prefix - $strClientAttachment just displays the filename
 					$strClientFldMerge .= "<p><strong>Resume:</strong> http://redcrossbiomedcareers.org/uploads/resumes/" . $strClientAttachment . "</p>";
 				}
-				// include the UTM source parameter value if there is one
+				// include the UTM parameter values if there are any
+				if($strUtmCampaign) {
+					$strClientFldMerge .= "<p><strong>UTM Campaign:</strong> " . $strUtmCampaign . "</p>";
+				}
+				if($strUtmMedium) {
+					$strClientFldMerge .= "<p><strong>UTM Medium:</strong> " . $strUtmMedium . "</p>";
+				}
 				if($strUtmSource) {
 					$strClientFldMerge .= "<p><strong>UTM Source:</strong> " . $strUtmSource . "</p>";
 				}
+
 			$strClientFldMerge .= "</body></html>";
 
 			$strClientMsg = wordwrap($strClientFldMerge, 70);
