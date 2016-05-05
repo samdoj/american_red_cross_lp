@@ -198,7 +198,7 @@ jQuery(document).ready(function() {
             $("#position").selectpicker('refresh');
         }, 200);
 
-        if ($("#position").val().length > 1 ) {
+        if ($("#position").val() !== '') {
             $('#position-questions').empty();
         }
     });
