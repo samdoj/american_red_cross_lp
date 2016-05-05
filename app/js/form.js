@@ -73,6 +73,34 @@ jQuery(document).ready(function() {
             return false;
         } // end position validation
 
+
+        // CHECKING EACH POSITION IS SELECTED AND VALIDATING CONDITIONAL QUESTIONS FOR EACH.
+        // ACCT MANAGER VALIDATION
+        if($("#" + formprefix + " [name='position'] :selected").val() == 'Account+Manager/DRD') {
+            // B2B Sales Experience
+            if ($("#" + formprefix + " [name='rdoAcctMgrB2B']:checked").length > 0) {
+              // one ore more checkboxes are checked
+            }
+            else{
+                alert('Please check "Yes" or "No" for B2B sales experience.');
+                $("#" + formprefix + " [name='rdoAcctMgrB2B']").focus();
+                return false;
+            }
+        }
+
+        // DRIVER/PHLEBOTOMIST VALIDATION
+        if($("#" + formprefix + " [name='position'] :selected").val() == 'Driver/Phlebotomist') {
+            // Phlebotomist Driver CDL
+            if ($("#" + formprefix + " [name='rdoDriverPhlebCDL']:checked").length > 0) {
+              // one ore more checkboxes are checked
+            }
+            else{
+                alert('Please check "Yes" or "No" for CDL.');
+                $("#" + formprefix + " [name='rdoDriverPhlebCDL']").focus();
+                return false;
+            }
+        }
+
         // MED TECH VALIDATION
         if($("#" + formprefix + " [name='position'] :selected").val() == 'Medical+Technologist') {
             // Medical Technologist State License
@@ -111,36 +139,7 @@ jQuery(document).ready(function() {
                 return false;
             }
         }
-
-        // if ($("#" + formprefix + " [name='rdoDriverPhlebSched']:checked").length > 0) {
-        //   // one ore more checkboxes are checked
-        // }
-        // else{
-        //     alert('Please check "Yes" or "No" for variable schedule.');
-        //     $("#" + formprefix + " [name='rdoDriverPhlebSched']").focus();
-        //     return false;
-        // }
-
-        // // Phlebotomist Driver CDL
-        // if ($("#" + formprefix + " [name='rdoDriverPhlebCDL']:checked").length > 0) {
-        //   // one ore more checkboxes are checked
-        // }
-        // else{
-        //     alert('Please check "Yes" or "No" for CDL.');
-        //     $("#" + formprefix + " [name='rdoDriverPhlebCDL']").focus();
-        //     return false;
-        // }
-
-
-        // // Phlebotomist PT Variable Schedule
-        // if ($("#" + formprefix + " [name='rdoPhlebPTSched']:checked").length > 0) {
-        //   // one ore more checkboxes are checked
-        // }
-        // else{
-        //     alert('Please check "Yes" or "No" for variable schedule.');
-        //     $("#" + formprefix + " [name='rdoPhlebPTSched']").focus();
-        //     return false;
-        // }
+        // END OF CONDITIONAL VALIDATION
 
         // Driver's License and Driving Record Validation
         if ($("#" + formprefix + " [name='rdoDriveRecord']:checked").length > 0) {
