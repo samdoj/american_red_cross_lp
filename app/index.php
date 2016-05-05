@@ -141,7 +141,7 @@ if (isset($_POST['btnSubmit'])) {
 		$strUtmMedium        = mysql_real_escape_string($strUtmMedium);
 		$strUtmSource        = mysql_real_escape_string($strUtmSource);
 
-		$sqlSaveSubmission = "INSERT INTO apps_biomed (first_name, last_name, email, phone, location, position, recruiter, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, driving_record, resume, utm_campaign, utm_medium, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoDriveRecord', '$strClientAttachment', '$strUtmCampaign', '$strUtmMedium', '$strUtmSource', '$submitDateTime', '$submittedIP')";
+		$sqlSaveSubmission = "INSERT INTO apps_biomed (first_name, last_name, email, phone, location, position, recruiter, b2b_sales_experience, phleb_cdl, medtech_license, medtech_cert, nurse_license, phleb_variable_sched, driving_record, resume, utm_campaign, utm_medium, utm_source, submitted, submitted_ip) VALUES ('$txtFirstName','$txtLastName', '$txtEmail', '$txtPhone', '$strLocation', '$strPosition', '$strRecruiterContact', '$rdoAcctMgrB2B', '$rdoDriverPhlebCDL', '$rdoMedTechLicense', '$txtMedTechLicense', '$rdoNurseLicense', '$rdoPhlebSched', '$rdoDriveRecord', '$strClientAttachment', '$strUtmCampaign', '$strUtmMedium', '$strUtmSource', '$submitDateTime', '$submittedIP')";
 
 		// execute query
 		$sqlSaveSubmissionResult = mysql_query($sqlSaveSubmission);

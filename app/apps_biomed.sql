@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.42)
 # Database: arc_biomed_database
-# Generation Time: 2016-05-05 16:40:47 +0000
+# Generation Time: 2016-05-05 17:53:25 +0000
 # ************************************************************
 
 
@@ -34,6 +34,7 @@ CREATE TABLE `apps_biomed` (
   `location` varchar(50) DEFAULT NULL,
   `position` varchar(50) DEFAULT NULL,
   `recruiter` varchar(50) DEFAULT NULL,
+  `b2b_sales_experience` varchar(3) DEFAULT NULL,
   `phleb_cdl` varchar(3) DEFAULT NULL,
   `medtech_license` varchar(3) DEFAULT NULL,
   `medtech_cert` varchar(50) DEFAULT NULL,
