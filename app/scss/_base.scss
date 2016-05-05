@@ -392,6 +392,8 @@ footer {
 // \************************************/
 
 #thank-you {
+	padding-bottom: 8rem;
+	min-height: 100%;
 	.header {
 		margin-top: $box-spacing-md;
 		margin-bottom: $box-spacing-md;
@@ -413,6 +415,6 @@ footer {
 
 .fixed-footer {
 	@include breakpoint($tablet) {
-		@include position(absolute, null null 0 null);
+		@include position(fixed, null null 0 null);
 	}
 }

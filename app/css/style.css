@@ -667,6 +667,11 @@ footer {
   }
 }
 
+#thank-you {
+  padding-bottom: 8rem;
+  min-height: 100%;
+}
+
 #thank-you .header {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -693,7 +698,7 @@ footer {
 
 @media (min-width: 768px) {
   .fixed-footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
 }
