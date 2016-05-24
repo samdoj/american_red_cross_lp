@@ -60,7 +60,7 @@ mysql_close($cn);
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">apps_biomed <span class="badge"><?= number_format($totalStates); ?></span></h3>
+                    <h3 class="panel-title">apps_biomed <span class="badge"><?= number_format($totalApps); ?></span></h3>
                 </div><!-- panel-heading -->
                 <div class="panel-body">
                     <ul class="list-unstyled">
