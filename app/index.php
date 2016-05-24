@@ -61,6 +61,10 @@ if (isset($_POST['btnSubmit'])) {
 		// for cities with multiple words to be recognized as one string in the URL
 		$strCity = str_replace('+', ' ', $strCity);
 
+		// remove plus signs that were added to the state name
+		// for states with multiple words to be recognized as one string in the URL
+		$strState = str_replace('+', ' ', $strState);
+
 		// reassign location variable to a pretty "city, state" string to save to the database
 		$strLocation = $strCity . ", " . $strState;
 
