@@ -2,7 +2,8 @@
 	h5 {
 		font-size: 1.4rem;
 		margin-top: 0;
-		margin-bottom: 0;
+		margin-bottom: 1rem;
+		color: $red;
 	}
 	p {
 		font-size: 0.9375rem;
@@ -16,11 +17,12 @@
 	-moz-box-sizing: border-box;
 	background-color: $grey-1;
 	float: left;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	box-shadow: 0rem 0rem 0.3125rem 0rem rgba(0,0,0,0.25);
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	@include breakpoint($tablet) {
+		border-radius: 0.35rem;
+	}
 	@include breakpoint($laptop) {
-		border-radius: 0.3125rem;
 		@include padding(1.5rem 1.24rem);
 		margin: 0;
 	}
@@ -28,7 +30,14 @@
 		text-align: center;
 		font-size: 0.8125rem;
 		margin-top: 0.5rem;
-		line-height: 1.25;
+		line-height: 1.5;
+		a {
+			font-size: 0.8125rem;
+			color: $red;
+			&:hover {
+				color: $white;
+			}
+		}
 	}
 	em {
 		font-weight: $font-light;
@@ -37,7 +46,7 @@
 
 input {
 	font-size: $input;
-	color: $grey-3;
+	color: $grey-4;
 }
 .form-control {
 	width: 100%;
@@ -45,8 +54,10 @@ input {
 	background-color: $white;
 	color: $grey-5 !important;
 	font-size: $input;
-	border-radius: 0px;
-	margin-bottom: 0.5rem;
+	border-radius: 3px;
+	margin-bottom: 1rem;
+	border-color: transparent;
+	box-shadow: none;
 }
 .btn-group, .bootstrap-select {
 	width: 100% !important;
@@ -55,20 +66,20 @@ input {
 .btn-info {
 	background-color: $white;
 	color: $grey-5;
-	border: 1px solid #bac4c9;
+	border: 1px solid transparent;
 	&:hover {
-		background-color: $blue-1;
-		border: 1px solid #bac4c9;
+		background-color: $red;
+		border: 1px solid transparent;
 		color: $white;
 	}
 	&:focus {
-		background-color: $blue-1;
-		border-color: $white;
+		background-color: $red;
+		border-color: transparent;
 		color: $white;
 	}
 }
 .btn {
-	border-radius: 0px;
+	border-radius: 3px;
 	font-size: 1rem;
 }
 .bootstrap-select .dropdown-toggle:focus {
@@ -86,14 +97,14 @@ input {
 .open > .dropdown-toggle.btn-info,
 .open > .dropdown-toggle.btn-info.focus {
 	color: $white;
-	background-color: $blue-1;
-	border-color: $white;
+	background-color: $red;
+	border-color: transparent;
 }
 
 .bootstrap-select.btn-group .dropdown-menu li a {
 	transition: none;
 	&:hover {
-		background-color: $blue-1;
+		background-color: $red;
 		color: $white;
 		transition: none;
 	}
@@ -113,28 +124,6 @@ input {
     border-left: 6px solid transparent;
 }
 
-.radio-btns {
-	width: 100%;
-	float: left;
-	@include padding(0 0.25rem);
-	margin-bottom: 0.5rem;
-	label {
-		float: left;
-		width: auto;
-		display: inline-block;
-		margin-right: 1.5rem;
-		font-weight: $font-light;
-	}
-	input {
-		@include padding(0.05rem);
-		display: inline-block;
-		width: auto;
-		float: left;
-		margin-right: 0.25rem;
-		margin-top: -0.015rem;
-	}
-}
-
 .fileinput.input-group input[type=file] {
 	position: absolute;
 	top: -10px;
@@ -143,21 +132,23 @@ input {
 	height: 100px;
 	filter: alpha(opacity=0);
 	opacity: 0;
-	background-color: red;
+	background-color: $red;
 	cursor: pointer;
 }
 .fileinput.input-group .btn-file,
 .fileinput .input-group .btn-file {
-  border-radius: 0;
-  border-color: $grey-2;
-  background-color: $grey-2;
-  color: #fff;
-  font-weight: $font-bold;
-  transition: all 0.1s;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 3px 0px 0px 3px;
+	border-color: transparent;
+	background-color: $grey-4;
+	color: #fff;
+	font-weight: $font-bold;
+	transition: all 0.1s;
 }
 .fileinput.input-group .btn-file:hover {
-	border-color: #6084ac;
-	background-color: $blue-1;
+	border-color: transparent;
+	background-color: $red;
 	color: #fff;
 	transition: all 0.1s;
 }
@@ -165,11 +156,11 @@ input {
 .fileinput .input-group .btn-file.btn-xs,
 .fileinput.input-group .btn-file.btn-sm,
 .fileinput .input-group .btn-file.btn-sm {
-  border-radius: 0;
+  border-radius: 3px;
 }
 .fileinput.input-group .btn-file.btn-lg,
 .fileinput .input-group .btn-file.btn-lg {
-  border-radius: 0;
+  border-radius: 3px;
 }
 .fileinput .form-control {
 	cursor: pointer;
@@ -187,6 +178,7 @@ input {
 	font-weight: $font-black;
 	@include padding(0.75rem 0.5rem 0.55rem 0.5rem);
 	transition: all 0.2s;
+	margin-top: 1rem;
 	&:hover {
 		@include breakpoint($laptop) {
 			background-color: $grey-4;
@@ -196,8 +188,26 @@ input {
 }
 
 label {
-	color: $grey-5;
+	color: $grey-4;
 	font-size: $label;
 	font-weight: $font-bold;
 	width: 100%;
+	margin-top: 0.25rem;
+}
+
+textarea {
+	border: 1px solid transparent;
+	border-radius: 3px;
+	width: 100%;
+}
+
+.radio {
+	display: inline-block;
+	&:last-of-type {
+		margin-left: 0.85rem !important;
+	}
+}
+
+#position-questions {
+	margin: 0;
 }

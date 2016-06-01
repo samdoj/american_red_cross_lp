@@ -6,6 +6,7 @@ session_start();
 // variable to store error message
 $error = '';
 
+date_default_timezone_set("America/Denver");
 $submitDateTime = date('Y-m-d H:i:s');
 $submittedIP    = $_SERVER['REMOTE_ADDR'];
 

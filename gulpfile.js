@@ -9,7 +9,8 @@ var config = {
 	jsConcatFiles: [
 		'./app/js/main.js',
 		'./app/js/form.js',
-		'./app/js/smooth_scroll.js'
+		'./app/js/smooth_scroll.js',
+		'./app/js/accordion.js'
 	],
 	// tweenmaxBundle: [
 	// 	'./app/js/CSSPlugin.min.js',

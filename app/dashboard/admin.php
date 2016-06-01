@@ -2,7 +2,7 @@
 // --- begin template code ----------------------------------
 // buffer larger content areas like the main page content
 ob_start();
-$pagetitle = "Apria Dashboard";
+$pagetitle = "American Redcross BioMed Dashboard";
 // --- end template code ------------------------------------
 
 include('_session.php');

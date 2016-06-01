@@ -58,16 +58,6 @@ jQuery(document).ready(function() {
                 return false;
             }
         } // end txtPhone validation
-        
-        // Age Validation
-        if ($("input[name='over21']:checked").length > 0) {
-          // one ore more checkboxes are checked
-        }
-        else{
-            alert('Age confirmation is required.');
-            $("#" + formprefix + " [name='over21']").focus();
-            return false;
-        }
 
         // Location validation
         if($("#" + formprefix + " [name='location'] :selected").val() == '') {
@@ -76,66 +66,89 @@ jQuery(document).ready(function() {
             return false;
         } // end location validation
 
-        // Driver/Delivery service experience validation
-        if($("#" + formprefix + " [name='driverExperience'] :selected").val() == '') {
-            alert('"Years of (driver/delivery service) experience?" is a required field. Please select an answer from the dropdown menu.');
-            $("#" + formprefix + " [name='driverExperience']").focus();
+        // Position validation
+        if($("#" + formprefix + " [name='position'] :selected").val() == '') {
+            alert('Position is required.');
+            $("#" + formprefix + " [name='position']").focus();
             return false;
-        } // end driverExperience validation
+        } // end position validation
 
-        // Salary range validation/
-        if($("#" + formprefix + " [name='txtSalary']").val() == "") {
-            alert("Salary field is required.");
-            $("#" + formprefix + " [name='txtSalary']").focus();
-            return false;
-        } // end txtSalary validation
 
-        // Type of employment validation
-        // Multi-select
-        var chkLocation = 0;
-        if($("#" + formprefix + " [name='typeEmployment[]'] :selected").val() == null){
-            alert('Type of employment is required.');
-            $("#" + formprefix + " [name='typeEmployment[]']").focus();
-            return false;
-        } // end typeEmployment[] validation
-
-        // Driver's License Validation
-        if ($("#" + formprefix + " [name='driverLicense']:checked").length > 0) {
-          // one ore more checkboxes are checked
-        }
-        else{
-            alert('Please check "Yes" or "No" for driver\'s license.');
-            $("#" + formprefix + " [name='driverLicense']").focus();
-            return false;
-        }
-
-        // CDL Validation
-        if ($("#" + formprefix + " [name='cdl']:checked").length > 0) {
-          // one ore more checkboxes are checked
-        }
-        else{
-            alert('Please check "Yes" or "No" for commercial driver\'s license (CDL).');
-            $("#" + formprefix + " [name='cdl']").focus();
-            return false;
-        }
-
-        // Hazmat Endorsement Validation
-        if ($("#" + formprefix + " [name='hazMatEndorsement']:checked").length > 0) {
-          // one ore more checkboxes are checked
-        }
-        else{
-            alert('Please check "Yes" or "No" for hazmat endorsement.');
-            $("#" + formprefix + " [name='hazMatEndorsement']").focus();
-            return false;
-        }
-
-        // Hazmat experience validation
-        if ( $("#" + formprefix + " [name='hazMatEndorsement']:checked").val() == 'Yes') {
-            if($("#" + formprefix + " [name='hazMatExperience'] :selected").val() == '') {
-                alert('"Years of hazardous materials experience?" is a required field. Please select an answer from the dropdown menu.');
-                $("#" + formprefix + " [name='hazMatExperience']").focus();
+        // CHECKING EACH POSITION IS SELECTED AND VALIDATING CONDITIONAL QUESTIONS FOR EACH.
+        // ACCT MANAGER VALIDATION
+        if($("#" + formprefix + " [name='position'] :selected").val() == 'Account+Manager/DRD') {
+            // B2B Sales Experience
+            if ($("#" + formprefix + " [name='rdoAcctMgrB2B']:checked").length > 0) {
+              // one ore more checkboxes are checked
+            }
+            else{
+                alert('Please check "Yes" or "No" for B2B sales experience.');
+                $("#" + formprefix + " [name='rdoAcctMgrB2B']").focus();
                 return false;
-            } // end hazMatExperience validation
+            }
+        }
+
+        // DRIVER/PHLEBOTOMIST VALIDATION
+        if($("#" + formprefix + " [name='position'] :selected").val() == 'Driver/Phlebotomist') {
+            // Phlebotomist Driver CDL
+            if ($("#" + formprefix + " [name='rdoDriverPhlebCDL']:checked").length > 0) {
+              // one ore more checkboxes are checked
+            }
+            else{
+                alert('Please check "Yes" or "No" for CDL.');
+                $("#" + formprefix + " [name='rdoDriverPhlebCDL']").focus();
+                return false;
+            }
+        }
+
+        // MED TECH VALIDATION
+        if($("#" + formprefix + " [name='position'] :selected").val() == 'Medical+Technologist') {
+            // Medical Technologist State License
+            if ($("#" + formprefix + " [name='rdoMedTechLicense']:checked").length > 0) {
+              // one ore more checkboxes are checked
+            }
+            else{
+                alert('Please check "Yes" or "No" for state license.');
+                $("#" + formprefix + " [name='rdoMedTechLicense']").focus();
+                return false;
+            }
+        }
+        
+        // NURSE VALIDATION
+        if($("#" + formprefix + " [name='position'] :selected").val() == 'Nurse') {
+            // State licensed RN or LPN?
+            if ($("#" + formprefix + " [name='rdoNurseLicense']:checked").length > 0) {
+              // one ore more checkboxes are checked
+            }
+            else{
+                alert('Please check "Yes" or "No" for state licensed RN or LPN.');
+                $("#" + formprefix + " [name='rdoNurseLicense']").focus();
+                return false;
+            }
+        }
+
+        // PHLEBOTOMIST VALIDATION
+        if($("#" + formprefix + " [name='position'] :selected").val() == 'Phlebotomist') {
+            // Phlebotomist Variable Schedule
+            if ($("#" + formprefix + " [name='rdoPhlebSched']:checked").length > 0) {
+              // one ore more checkboxes are checked
+            }
+            else{
+                alert('Please check "Yes" or "No" for variable schedule.');
+                $("#" + formprefix + " [name='rdoPhlebSched']").focus();
+                return false;
+            }
+        }
+        // END OF CONDITIONAL VALIDATION
+
+        // Driver's License and Driving Record Validation
+        if ($("#" + formprefix + " [name='rdoDriveRecord']:checked").length > 0) {
+          // one ore more checkboxes are checked
+        }
+        else{
+            alert('Please check "Yes" or "No" for driver\'s license and driving record.');
+            $("#" + formprefix + " [name='rdoDriveRecord']").focus();
+            return false;
         }
 
         // begin resume upload validation
@@ -156,6 +169,7 @@ jQuery(document).ready(function() {
             }
         } // end resume upload validation
 
+        // DISABLE SUBMIT BUTTON FOR A BRIEF TIME TO PREVENT MULTIPLE SUBMITS
         var button = $(this).find("input[type='submit']");
     
         setTimeout(function() {
@@ -168,29 +182,6 @@ jQuery(document).ready(function() {
 
     }); // end $("form").submit(function()
 
-    // Hide the field initially
-    $("#form0 .conditional-answer").hide();
-    $("#form1 .conditional-answer").hide();
-
-    // Show the text field only when the 'yes' option is chosen
-    $('#form0 .conditional-question').change(function() {
-        if($('#form0  input[name="hazMatEndorsement"]:checked').val() === "Yes") {
-            $("#form0 .conditional-answer").show();
-        }
-        else {
-            $("#form0 .conditional-answer").hide();
-        }
-    });
-
-    $('#form1 .conditional-question').change(function() {
-        if($('#form1  input[name="hazMatEndorsement"]:checked').val() === "Yes") {
-            $("#form1 .conditional-answer").show();
-        }
-        else {
-            $("#form1 .conditional-answer").hide();
-        }
-    });
-
     $('input[type="file"]').change(function(){
       
       var f = this.files[0];  
@@ -198,5 +189,20 @@ jQuery(document).ready(function() {
       
       $(this).closest('.file-container').find('.upload-path').text(name);
       
+    });
+
+    // RETRIEVING FORM LOCATION & POSITION DATA
+    $("#location").change(function() {
+        $("#position").load("get_positions.php?location=" + $("#location").val());
+        setTimeout(function() {
+            $("#position").selectpicker('refresh');
+        }, 500);
+
+        if ($("#position").val() !== '') {
+            $('#position-questions').empty();
+        }
+    });
+    $("#position").change(function() {
+        $("#position-questions").load("get_positions.php?position=" + $("#position").val());
     });
 });
