@@ -37,7 +37,7 @@ if ($_GET['position']) {
 	if ($sltPosition == "Driver/Phlebotomist") {
 		echo "
 			<p>
-			<label>Do you have your CD-L?*</label><br>
+			<label>Do you have your CDL?*</label><br>
 			<input type=\"radio\" name=\"rdoDriverPhlebCDL\" value=\"Yes\"> Yes
 			<input type=\"radio\" name=\"rdoDriverPhlebCDL\" value=\"No\"> No
 			</p>
