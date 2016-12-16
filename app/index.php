@@ -6,9 +6,16 @@ $hostname = '127.0.0.1';
 $loginname = 'root';
 $loginpassword = 'root';
 
-$cn = mysql_connect($hostname, $loginname , $loginpassword) or die( mysql_error() );
-mysql_select_db("arc_biomed_database") or die( mysql_error() );
-
+$cn = mysql_connect($hostname, $loginname , $loginpassword); //Don't die immediately.  Let's log the issue.
+mysql_select_db("arc_biomed_database"); //Don't die immediately.  Let's log the issue.
+if($cn->connect_error)
+{
+      $handle = fopen("../logs/dberrors.log",'a'); //This directory will have to be created and writable by the 'nobody' user.
+      $result = fwrite($handle,date('m-d-y').$cn->connect_error.'\n');
+      fflush($handle);
+      fclose($handle);
+      die("<h1>Our website is temporarily out of service.  The incident has been logged.  Please try again later.\n".$cn->connect_error);
+}
 $thank_you_page = "thankyou.php";   // url of thank you page
 
 if (isset($_POST['btnSubmit'])) {
